@@ -9,7 +9,7 @@ class CreateBlogs < ActiveRecord::Migration[4.2]
       t.integer :blog_comments_count, :default => 0, :null => false
       t.integer :count, :null => false, :default => 0
       t.boolean :enable, :null => false, :default => true
-      t.timestamps :null => false
+      t.timestamps null: false
     end
 
     create_table :blog_contents do |t|
@@ -24,7 +24,7 @@ class CreateBlogs < ActiveRecord::Migration[4.2]
       t.string :salt, :limit => 40
       t.string :photo, :limit => 150
       t.text :content, :null => false
-      t.timestamps :null => false
+      t.timestamps null: false
     end
 
     add_index :blogs, :user_id

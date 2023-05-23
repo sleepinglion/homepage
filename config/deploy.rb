@@ -1,14 +1,14 @@
 # config valid for current version and patch releases of Capistrano
 #lock "~> 3.15.0"
 
-set :application, "sleepinglion"
+set :application, "jingyu"
 set :repo_url, "git@github.com:sleepinglion/homepage.git"
 
 # Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+set :branch, 'jingyu'
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/deploy/sleepinglion"
+set :deploy_to, "/home/deploy/jingyu"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh

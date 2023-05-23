@@ -3,7 +3,6 @@ class Admin < ApplicationRecord
     devise :database_authenticatable, :registerable, :trackable, :validatable, :timeoutable
     validates_length_of :login_id, within: 4..40
     default_scope {where(:admin => true)}
-    has_one :admin_picture, dependent: :destroy
 
     def timeout_in
         1.day

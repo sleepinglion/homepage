@@ -11,7 +11,6 @@ class Blog < ApplicationRecord
   has_many :blog_comment, :dependent => :destroy
   accepts_nested_attributes_for :blog_content, :allow_destroy => true
   accepts_nested_attributes_for :blog_comment, :allow_destroy => true
-  translates :title, :description
   mount_uploader :photo, BlogUploader
 
   def blog_content

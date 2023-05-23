@@ -29,7 +29,7 @@
 		</div>
 	</section>
 	<% end %>
-	<%=link_to t(:link_new_blog_comment_form),new_blog_blog_comment_path(@blog) %>
+	<!-- <%=link_to t(:link_new_blog_comment_form),new_blog_blog_comment_path(@blog) %> -->
 	<div id="sl_content_bottom_menu">
 		<% if(params[:blog_category_id]) %>
 		<%= link_to t(:link_list),blogs_path({:blog_category_id=>@blog.blog_category_id}) %>

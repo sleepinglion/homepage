@@ -43,7 +43,7 @@ class CreateDeviseToUsers < ActiveRecord::Migration[4.2]
       # t.string :authentication_token
       t.boolean :admin, :null=>false, :default => false
       t.boolean :enable, :null=>false, :default=>true
-      t.timestamps :null=>false
+      t.timestamps null: false
     # Uncomment below if timestamps were not included in your original model.
     # t.timestamps
     end

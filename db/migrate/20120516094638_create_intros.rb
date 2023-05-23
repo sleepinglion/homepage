@@ -30,7 +30,7 @@ class CreateIntros < ActiveRecord::Migration[4.2]
       t.string :title,:limit=>60, :null=>false
       t.boolean :hate, :null=>false, :default=>0           
       t.boolean :enable, :null=>false, :default=>1
-      t.timestamps :null=>false      
+      t.timestamps null: false
     end
     
     add_index :intros, :user_id

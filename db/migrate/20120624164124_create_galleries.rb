@@ -7,7 +7,7 @@ class CreateGalleries < ActiveRecord::Migration[6.0]
       t.integer :gallery_categories_count, :null=>false, :default=>0
       t.boolean :leaf, :default=>true
       t.boolean :enable, :null=>false, :default=>true
-      t.timestamps :null=>false
+      t.timestamps null: false
     end
 
     create_table :galleries do |t|
@@ -17,7 +17,7 @@ class CreateGalleries < ActiveRecord::Migration[6.0]
       t.string :photo,:null=>false
       t.string :content, :null=>false, :limit=>255
       t.boolean :enable, :null=>false, :default=>true
-      t.timestamps :null=>false
+      t.timestamps null: false
     end
   end
 end
