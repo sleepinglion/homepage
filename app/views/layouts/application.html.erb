@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="<%=I18n.locale %>">
+<head>
+<meta charset="utf-8">
+<%=display_meta_tags :site => t(:application_name),
+	:title=>@title,
+	:description => @meta_description,
+	:keywords => @meta_keywords,
+	:separator => t(:title_separator),
+	:viewport => 'width=device-width, initial-scale=1, shrink-to-fit=no',
+	:reverse => true %>
+<%=display_meta_tags og: {
+  	title:   @title,
+  	description: @meta_description,
+  	url:      t(:site_full_url),
+  	image:    @meta_image
+	} %>
+<meta name="author" content="Sleeping-Lion">
+<link rel="canonical" href="<%=t(:site_full_url) %>">
+<link rel="alternate" type="application/rss+xml" title="Sleeping-Lion RSS Feed" href="<%= t(:site_full_url) %>/feed?format=rss">
+<%= stylesheet_link_tag "front/application", :media => "all", "data-turbolinks-track" => true %>
+<%= favicon_link_tag 'favicon.ico' %>
+<%= csrf_meta_tags %>
+<%= csp_meta_tag -%>
+<!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<![endif]-->
+</head>
+<body itemscope itemtype="<%=@page_itemtype %>">
+<%= render :partial => 'layouts/header' %>
+<div id="mom">
+	<div id="main" class="container">
+		<% if current_page?(root_path) %>
+		<div class="jumbotron hero-unit text-center">
+			<h2><%=raw t(:home_main_title) %></h2>
+			<p class="lead"><%=raw t(:home_main_description) %></p>
+			<%=link_to '깨끗한 웹을 꿈꾸고 있습니다','/home/popup',:class=>'modal_link btn btn-large btn-success',:'data-toggle'=>"modal",:'data-target'=>"#myModal" %>
+		</div>
+		<hr class="none">
+		<div class="row">
+			<div id="main_main" class="sub_main col-12 col-xl-9">
+		<% else %>
+			<%= render 'layouts/page_header' %>
+			<div class="row">
+				<div class="sub_main col-12 col-xl-9">
+		<% end %>
+				<%= render 'layouts/ad' %>
+				<%=yield %>
+				</div>
+				<%= render 'layouts/aside' %>
+		</div>
+	</div>
+</div>
+<%= render :partial => 'layouts/footer' %>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog"></div>
+<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</body>
+</html>

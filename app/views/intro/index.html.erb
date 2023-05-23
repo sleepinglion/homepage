@@ -1,0 +1,41 @@
+<% breadcrumb :intro %>
+<section id="sl_intro_index" class="col-12">
+	<article itemscope itemtype="http://schema.org/Person" class="row">
+		<div id="sl_intro_left" class="col-12 col-lg-6">
+			<a href="https://sleepinglion.blob.core.windows.net/sleepinglion/intro_photo/photo/1/sl.jpg" class="simple_image" title="" itemprop="image">
+				<img src="https://sleepinglion.blob.core.windows.net/sleepinglion/intro_photo/photo/1/large_thumb_sl.jpg" class="img-responsive" alt="" />
+			</a>
+		</div>
+		<div id="sl_intro_right" class="col-12 col-lg-6">
+			<h3><%=t(:sl_intro_title) %></h3>
+			<dl>
+				<dt><%=t(:name) %></dt>
+				<dd itemprop="name"><%=raw t(:name_call) %></dd>
+				<dt><%=t(:sex) %></dt>
+				<dd itemprop="gender"><%=t(:male) %></dd>
+				<dt><%=t(:birthday) %></dt>
+				<dd itemprop="birthDate" datetime="1981-06-02"><%=t(:sl_birthday) %></dd>
+				<dt><%=t(:job) %></dt>
+				<dd itemprop="jobTitle"><%=t(:web_programer) %></dd>
+				<dt><%=t(:height) %></dt>
+				<dd>180cm</dd>
+				<dt><%=t(:weight) %></dt>
+				<dd>80kg</dd>
+				<dt><%=t(:like) %></dt>
+				<dd>
+					개 , 아이들 , 철도 , 프로그래밍 , 리눅스 , 중국요리
+				</dd>
+				<dt><%=t(:hate) %></dt>
+				<dd>
+
+					자동차 , 학교 , 군대 , 윈도우 , 주한미군
+        </dd>
+        <dt>E-mail</dt>
+        <dd><%=mail_to "admin@sleepinglion.pe.kr","admin@sleepinglion.pe.kr" %></dd>
+        <dt>텔레그램</dt>
+        <dd><%=link_to "@toughjjh","https://t.me/toughjjh" %></dd>
+			</dl>
+			<span class="none" itemprop="url">1</span>
+		</div>
+	</article>
+</section>
