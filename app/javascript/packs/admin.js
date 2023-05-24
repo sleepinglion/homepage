@@ -15,10 +15,10 @@ require("./jquery.uri");
 require("jquery.easing");
 require("@fancyapps/fancybox");
 
-require("trix")
+// require("trix")
 require("@rails/actiontext")
 
-import 'trix/dist/trix.css';
+// import 'trix/dist/trix.css';
 
 require("./common");
 require("./admin_index");
