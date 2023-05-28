@@ -55,14 +55,34 @@ BlogContent.create!(id: 1, content: '대통령제의 문제점이 대통령의 �
 탄핵이라는게 있지만 이것은 심각한 문제가 있을때 뿐이니
 내각제였으면 지금 지지율이면 이미 내각불신임해서 쉽게 교체되는데 이건뭐... 아직도 4년 넘게 남았나요??')
 
-Blog.create!(id: 2, user_id: 1, blog_category_id: 1,title: '아직도 4년이 남은 암담한 대한민국',description: '아직도 4년이 남은 암담한 대한민국')
-BlogContent.create!(id: 2, content: '아직도 4년이 남은 암담한 대한민국')
+Blog.create!(id: 2, user_id: 1, blog_category_id: 1,title: '아직도 4년이 남은 암담한 대한민국2',description: '대통령제의 폐해가 심각해서 의원내각제로 바꾸는게 좋을듯')
+BlogContent.create!(id: 2, content: '굥이 뽑이는거 같은 대통령제 폐해가 심각하다
+중간에 물리지도 못한다
+이런문제와 저런 지역불균형 문제를 해결할 방법이
+상하원 양원제, 내각책임제다
+상원인 지역별로 하원은 인구별로
+중간에 총리 물릴수 있는 양원제,내각 책임제로 바꾸자')
 
-Blog.create!(id: 3, user_id: 1, blog_category_id: 1,title: '아직도 4년이 남은 암담한 대한민국',description: '아직도 4년이 남은 암담한 대한민국')
-BlogContent.create!(id: 3, content: '아직도 4년이 남은 암담한 대한민국')
+Blog.create!(id: 3, user_id: 1, blog_category_id: 1,title: '인구가 국력인데 암담한 대한민국',description: '인구가 국력인 역사적 사실, 대한민국은....')
+BlogContent.create!(id: 3, content: '인구가 국력입니다.
 
-Blog.create!(id: 4, user_id: 1, blog_category_id: 1,title: '아직도 4년이 남은 암담한 대한민국',description: '아직도 4년이 남은 암담한 대한민국')
-BlogContent.create!(id: 4, content: '아직도 4년이 남은 암담한 대한민국')
+미국의 인구도 어디 꿀리지 않는 강대국의 면모지요
+역사적으로도 유럽이 셋던 이유도 사실 인구입니다.
+유럽은 중국,인도 못지 않게 인구가 많았습니다.
+
+그런 유럽이 인구 적었던 아프리카, 아메리카, 중동, 동남아시아등 으로 진출한것이고요
+유럽, 특히 프랑스는 동시대의 그 땅 넓던 오스만제국보다 인구가 많았습니다.
+특히 독일과 프랑스가 엎치락 뒤치락 할때를 살펴보면 인구가 더 많았을때 그 나라가 이깁니다.
+
+이렇듯 인구가 국력인데 우리나라는 암담하지요.....
+프랑스 처럼 대규모 이민을 받아서 인구를 늘려야 됩니다.')
+
+Blog.create!(id: 4, user_id: 1, blog_category_id: 1,title: '사실상 범죄자는 다 사형했던 일본',description: '일본에 비하면 형벌보다 교화를 중시한 자랑스러운 유교국가 조선')
+BlogContent.create!(id: 4, content: '옛날 일본(유신시대 이전)은 그냥 거의 사형이였다고 보면 됨
+좀도둑도 기본이 사형이고 운 좋으면 손목절단이였음
+
+반면 조선은 교화를 중요시 했으며 사형은 최대한 피하려고 하였음
+일본에 방문한 통신사가 일본에서는 잡범들도 무조건 참형에 처하니 질서를 감히 어기는 사람이 없다고 하였음')
 
 Blog.create!(id: 5, user_id: 1, blog_category_id: 1,title: '아직도 4년이 남은 암담한 대한민국',description: '아직도 4년이 남은 암담한 대한민국')
 BlogContent.create!(id: 5, content: '아직도 4년이 남은 암담한 대한민국')
