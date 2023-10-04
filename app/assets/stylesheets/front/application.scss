@@ -77,7 +77,7 @@ footer div {margin:0.3em 0 0}
 #mom {clear:both;float:left;width:100%;padding:0}
 .page-header {float:left;width:100%;margin:30px 0 10px;padding-bottom:7px;border-bottom:1px solid var(--bs-border-color)}
 .page-header h2 {float:left;margin-top:10px;margin-bottom:0;font-weight:bold}
-.page-header .breadcrumb  {float:right;margin:0}
+.page-header .breadcrumb  {float:right;margin:0;padding:0.5rem 1rem;background-color: $secondary-bg;border-radius:0.5rem }
 .alert-success {clear:both}
 #sl_ad {clear:both;margin-bottom:10px}
 #sl_tag_cloud {position:relative;float:left;width:100%;margin-bottom:100px}
@@ -107,6 +107,7 @@ header h1 a {display:block;margin:1.2em 0 0;padding:0}
 header nav { position: relative; z-index: 999; margin:20px 0 0; padding:0}
 header nav ul { float: right; margin: 1.5em 0 0 0; padding: 0}
 header nav li { float: left; list-style: none; margin: 0 0 0 20px}
+header nav li.active a {font-weight:bold}
 header nav li:last-child {margin-right:0}
 header nav ul.nav-pills > li + li {margin-left:20px}
 header nav a { float: left;  font-size:1.3em; text-decoration: none}
@@ -257,7 +258,7 @@ footer form {position:absolute;top:10px;right:10px}
 #faqCategoryList {margin-bottom:2rem}
 #faqList dt {border-top:1px solid var(--bs-border-color);margin:0;padding:0;border-bottom:1px solid var(--bs-border-color);margin-bottom:10px}
 #faqList dt a {display:block;padding:20px;position:relative;background:#fff}
-#faqList dt.on a {background:$default-color}
+#faqList dt.on a {background:#eee}
 #faqList dt a span {position:absolute;top:15px;right:10px;font-weight:bold}
 #faqList dd {background:$secondary-bg;padding:20px;margin-bottom:30px}
 
@@ -711,8 +712,9 @@ a.left:active {background-position: -60px 0}
     background-color: var(--bs-body-bg);
   }
 
+  #faqList dt.on a {background:#ccc}
   .page-header h1, .page-header h2 {color: var(--bs-body-color)}
-  header,.jumbotron,.media,.card-body,aside article,#faqList dt a.title,.modal-body, .modal-footer,.sl_content_header,.thead-default th,.box_header,.box_content,#faqList dd,#sl_blog_index .media {background-color:var(--bs-secondary-bg)}
+  header,.jumbotron,.media,.card-body,aside article,#faqList dt a.title,.modal-body, .modal-footer,.sl_content_header,.thead-default th,.box_header,.box_content,#faqList dd,#sl_blog_index .media,.page-header .breadcrumb  {background-color:var(--bs-secondary-bg)}
 }
 
 @include color-mode(light) {
@@ -728,4 +730,6 @@ a.left:active {background-position: -60px 0}
   a:active {
     color: #000
   }
+
+  a.btn-primary,a.btn-primary:visited {color:#fff}
 }
