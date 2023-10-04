@@ -1,14 +1,12 @@
-<article id="sl_main_gallery" class="col-12 carousel slide" data-ride="carousel" itemscope itemtype="http://schema.org/ImageObject">
+<article id="sl_main_gallery" class="col-12 carousel slide" data-ride="carousel" data-bs-slide="true" itemscope itemtype="http://schema.org/ImageObject">
   <h3><%= t('activerecord.models.gallery') %></h3>
   <% unless @galleries.empty? %>
     <% if @galleries.count > 5 %>
-      <ol class="carousel-indicators">
+      <div class="carousel-indicators">
         <% @galleries.each_slice(5).each_with_index do |gallery, index| %>
-          <li data-target="#sl_main_gallery" data-slide-to="<%= index %>"
-          <% if index.zero? %> class="active"
-          <% end %>></li>
+          <button type="button" data-bs-target="#carousel-model" data-bs-slide-to="<%= index %>" aria-current="true" aria-label="Slide <%= index %>" <% if index.zero? %>class="active"<% end %>></button>
         <% end %>
-      </ol>
+      </div>
     <% end %>
   <% end %>
   <% unless @galleries.empty? %>
@@ -45,15 +43,15 @@
 
   <!-- Controls -->
   <% if @galleries.count > 6 %>
-    <a class="carousel-control-prev" href="#sl_main_gallery" role="button" data-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#sl_main_gallery" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#sl_main_gallery" role="button" data-slide="next">
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#sl_main_gallery" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  <% end %>
+      <span class="visually-hidden">Next</span>
+    </button>
+<% end %>
 
   <%= link_to t(:link_more), galleries_path, :class => 'more' %>
 </article>

@@ -35,9 +35,8 @@ Rails.application.routes.draw do
   end
 
   get 'home/popup'=>'home#popup'
+  get 'home/no_aside'=>'home#no_aside'
   get 'feed',:to=>'home#feed'
-
-  get 'tags/:tag', to: 'tags#index', as: :tag
 
   get 'blogs/:blog_id/blog_comments/:id/password',:to=>'blog_comments#password'
   post 'blogs/:blog_id/blog_comments/:id/password',:to=>'blog_comments#password'

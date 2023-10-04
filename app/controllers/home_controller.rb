@@ -6,6 +6,21 @@ class HomeController < ApplicationController
     @blogs = Blog.order('id desc').where('photo IS NOT NULL').page(0).per(6)
   end
 
+  def no_aside
+    if params[:no_aside].present?
+      if params[:no_aside]
+        session[:no_aside]=true
+      else
+        session.delete(:no_aside)
+      end
+    end
+
+    respond_to do |format|
+      format.html {redirect_to root_path}
+      format.json { render :json => '{result: true}' }
+    end
+  end
+
   def feed
     @blogs = Blog.all.where(:enable=>true)
     respond_to do |format|

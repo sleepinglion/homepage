@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<%=I18n.locale %>">
+<html lang="<%=I18n.locale %>" data-bs-theme="auto">
 <head>
 <meta charset="utf-8">
 <%=display_meta_tags :site => t(:application_name),
@@ -29,21 +29,23 @@
 <body itemscope itemtype="<%=@page_itemtype %>">
 <%= render :partial => 'layouts/header' %>
 <div id="mom">
-	<div id="main" class="container">
+	<main id="main" class="container">
 		<% if current_page?(root_path) %>
 		<div class="row">
-			<div id="main_main" class="sub_main col-12 col-xl-9">
+			<div id="main_main" class="sub_main<% if session[:no_aside] %> col-12<% else %> col-12 col-xl-9<% end %>">
 		<% else %>
 			<%= render 'layouts/page_header' %>
 			<div class="row">
-				<div class="sub_main col-12 col-xl-9">
+				<div class="sub_main<% if session[:no_aside] %> col-12<% else %> col-12 col-xl-9<% end %>">
 		<% end %>
 				<%= render 'layouts/ad' %>
 				<%=yield %>
 				</div>
 				<%= render 'layouts/aside' %>
 		</div>
-	</div>
+		</div>
+		</div>
+	</main>
 </div>
 <%= render :partial => 'layouts/footer' %>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog"></div>
