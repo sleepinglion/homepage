@@ -48,9 +48,15 @@
 
 $default-bg : #ddd;
 $default-color: $body-color;
-$secondary-bg :#fff;
+$secondary-bg :#f1f1f1;
 
 $color-mode-type: data;
+
+:root {--bs-border-color : #ccc;}
+
+[data-bs-theme="dark"] {
+  --bs-border-color : #666
+}
 
 html,body {margin:0;padding:0; height:100%}
 body {background-color:$default-bg;color: $default-color; font-family: "Nanum Gothic", "나눔고딕", "Malgun Gothic", "맑은 고딕", "gulim","굴림","Dotum", "돋움", Arial, Helvetica, sans-serif;}
@@ -75,11 +81,11 @@ mark, rp, rt, ruby, summary, time {display:inline;}
 footer {clear:both;float:left;width:80%;margin:0 10%;;border-top:1px solid var(--bs-border-color);text-align: center}
 footer div {margin:0.3em 0 0}
 #mom {clear:both;float:left;width:100%;padding:0}
-.page-header {float:left;width:100%;margin:30px 0 10px;padding-bottom:7px;border-bottom:1px solid var(--bs-border-color)}
-.page-header h2 {float:left;margin-top:10px;margin-bottom:0;font-weight:bold}
+.page-header {float:left;width:100%;margin:1rem 0;padding-bottom:7px;border-bottom:1px solid var(--bs-border-color)}
+.page-header h2 {float:left;margin-top:0.5rem;margin-bottom:0.5rem;font-weight:bold}
 .page-header .breadcrumb  {float:right;margin:0;padding:0.5rem 1rem;background-color: $secondary-bg;border-radius:0.5rem }
 .alert-success {clear:both}
-#sl_ad {clear:both;margin-bottom:10px}
+#sl_ad {clear:both;margin-bottom:1.5rem}
 #sl_tag_cloud {position:relative;float:left;width:100%;margin-bottom:100px}
 #tags {float:left;width:100%}
 .css1 { font-size: 15px; color:orange}
@@ -170,7 +176,7 @@ footer form {position:absolute;top:10px;right:10px}
 #main_main article {position:relative;margin:0 0 3em;padding-left:0px}
 #main_main article ul {list-style: none outside none;margin-bottom:10px;padding:0}
 #main_main article ul li a img {width:100%}
-#main_main article h3 {margin:0 0 1em;padding:0.5em 0;border-bottom:1px solid #ccc}
+#main_main article h3 {margin:0 0 1em;padding:0.5em 0;border-bottom:1px solid var(--bs-border-color)}
 #main_main a.more {position:absolute;top:0.5em;right:15px;color:#999}
 #main_main .section_main2 article {margin-right:30px;width:220px}
 #main_main .section_main2 .article3 {float:right;margin-right:0}
