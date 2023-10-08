@@ -329,15 +329,6 @@ a.left:active {background-position: -60px 0}
 
 .adsbygoogle {width:100%}
 
-/*
-@media (prefers-color-scheme: dark) {
-  html,body {background: $main_dark_background}
-  body {color:$main_dark_font}
-  header {background: $header_dark_background}
-}
-*/
-
-
 @media all and (max-width: 767px) {
     .container {width: 100%;max-width:none}
     header {background:none;border-bottom:0;margin:0 0 2rem}
