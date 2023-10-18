@@ -11,7 +11,6 @@ require("jquery");
 require("jquery-ui")
 require("bootstrap");
 require("jquery-tagcanvas");
-require("lazyload");
 require("./jquery.uri");
 require("jquery.easing");
 require("@fancyapps/fancybox");

@@ -47,13 +47,19 @@
 }
 
 
-html,body {margin:0;padding:0;height: 100%}
+$default-bg : #ddd;
+$default-color: $body-color;
+$secondary-bg :#f1f1f1;
+$color-mode-type: data;
 
-html, body {margin: 0;padding: 0;height: 100%;background: #eee}
-body {
-  font-family: "Nanum Gothic", "나눔고딕", "Malgun Gothic", "맑은 고딕", "gulim","굴림","Dotum", "돋움", Arial, Helvetica, sans-serif;
-  color: #333
+
+[data-bs-theme="light"] {
+  --bs-border-color : #ccc
 }
+
+html,body {margin:0;padding:0; height:100%}
+body {background-color:$default-bg;color: $default-color; font-family: "Nanum Gothic", "나눔고딕", "Malgun Gothic", "맑은 고딕", "gulim","굴림","Dotum", "돋움", Arial, Helvetica, sans-serif}
+
 label {vertical-align:middle;cursor:pointer}
 a img {border:none}
 input {vertical-align:middle}
@@ -712,4 +718,35 @@ a.left:active {background-position: -60px 0}
           display: none !important;
       }
   }
-  
+
+
+
+@include color-mode(dark) {
+  body {
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+  }
+
+  .page-header h1, .page-header h2 {color: var(--bs-body-color)}
+  header,footer,.jumbotron,.media,.card-body,aside article,#faqList dt a.title,.modal-body, .modal-footer,.sl_content_header,.thead-default th {background-color:var(--bs-secondary-bg)}
+}
+
+@include color-mode(light) {
+  a {
+    color: #666
+  }
+  a:hover {
+    color: #333
+  }
+  a:visited {
+    color: #999
+  }
+  a:active {
+    color: #000
+  }
+
+  .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link,.nav-tabs {border-color:#ccc}
+  .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {border-bottom-color:#f1f1f1}
+  a.btn-primary,a.btn-primary:visited {color:#fff}
+  aside a,aside a:visited {color:#fff}
+}
