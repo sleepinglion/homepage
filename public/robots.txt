@@ -2,4 +2,4 @@
 User-agent: *
 Disallow: /users
 Disallow: /admin
-Sitemap: https://www.sleepinglion.pe.kr/sitemap.xml.gz
+Sitemap: https://www.jingyu.pe.kr/sitemap.xml.gz
