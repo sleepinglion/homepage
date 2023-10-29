@@ -65,22 +65,17 @@ a img {border:none}
 input {vertical-align:middle}
 fieldset {border:none}
 legend {display:none}
-a{color:#666;text-decoration:none;}
-a:active {color:red}
-a:hover{color:#333;text-decoration:underline;}
+a {text-decoration: none}
+a:hover{text-decoration:underline;}
 a img {border:none}
 
-h1 {font-size :180%}
-h2 {font-size :150%}
-h3 {font-size :130%}
-h4,h5,h6 {font-size : 110%}
 
 /* Getting the new tags to behave */
 article, aside, audio, canvas, command, datalist, details, embed, figcaption, figure, footer, header, hgroup, keygen, meter, nav, output, progress, section, source, video {display:block;}
 mark, rp, rt, ruby, summary, time {display:inline;}
 
 /* layout */
-footer {clear:both;float:left;width:80%;margin:0 10%;color:#666;text-align: center}
+footer {clear:both;float:left;width:80%;margin:0 10%;colotext-align: center}
 footer div {margin:0.3em 0 0}
 #mom {clear:both;float:left;width:100%;padding:0}
 .page-header {float:left;width:100%;margin:30px 0 10px;padding-bottom:7px;border-bottom:1px solid #ccc}
@@ -116,7 +111,7 @@ footer div {margin:0.3em 0 0}
 }
 
 /* header */
-header {position:relative;background:red}
+header {position:relative}
 header h1 {float:left;margin:1.2em 0 0;padding:0}
 header h1 a:active {color:red}
 header nav { position: relative; z-index: 999; margin:0; padding:0}
@@ -124,10 +119,7 @@ header nav ul { float: right; margin: 1.5em 0 0 0; padding: 0}
 header nav li { float: left; list-style: none; margin: 0 0 0 20px}
 header nav li:last-child {margin-right:0}
 header nav ul.nav-pills > li + li {margin-left:20px}
-header nav a { float: left; color: #333; font-size:1.3em; text-decoration: none}
-header nav a:hover {color:#000}
-header nav a:visited {color:#666}
-header nav a:active {color:red}
+header nav a { float: left; text-decoration: none}
 header nav ul li ul {position:absolute;display:none}
 header #top_menu {position:absolute;right:10px;top:5px;margin:0;padding:0;list-style:none;z-index:9}
 header #top_menu li {float:left;margin:0 15px 0 0;padding:0}
@@ -222,9 +214,9 @@ footer form {position:absolute;top:10px;right:10px}
 .slboard_main fieldset {border:none;margin:0;padding:0}
 .slboard_main legend,#slboard_main caption {display:none}
 .slboard_main .none {display:none}
-.slboard_main .sl_input {	border:1px solid #ccc;border-top-color:#999;border-left-color:#999;padding:4px 2px;font-size:12px}
+.slboard_main .sl_input {	border:1px solid #ccc;border-top-color:#999;border-left-color:#999;padding:4px 2px;}
 .slboard_main .sl_input:focus { background-color:#ffffdd}
-.slboard_overlay {position:relative;z-index:9999;display:none;width:400px;padding:35px;font-size:12px}
+.slboard_overlay {position:relative;z-index:9999;display:none;width:400px;padding:35px;}
 .slboard_main a:focus {outline:none}
 .sl_left {text-align:left}
 .sl_center {text-align:center}
@@ -233,8 +225,8 @@ footer form {position:absolute;top:10px;right:10px}
 
 /* popup */
 .check_password_form {float:left;width:300px;background:#fff;width:280px;margin:0;padding:0px}
-.check_password_form .section_top {float:left;width:100%;margin:0 0 10px;padding:0;height:27px;background:#ccc}
-.check_password_form .section_top h2 {float:left;display:inline;margin:7px 0 0 20px;padding:0;font-size:12px;color:#fff;}
+.check_password_form .section_top {float:left;width:100%;margin:0 0 10px;padding:0;height:27px}
+.check_password_form .section_top h2 {float:left;display:inline;margin:7px 0 0 20px;padding:0;}
 .check_password_form .section_top .close_popup {float:right;margin:5px 0 0;text-indent:-9999px;background: url("/assets/board/close_popup.png") no-repeat scroll 0 0 transparent;display: block;width:20px;height:20px;text-decoration: none;}
 .check_password_form form {margin:0;padding:0px 20px 20px}
 .check_password_form form label {text-indent:-9999px;display:block;height:1px}
@@ -338,14 +330,14 @@ a.left:active {background-position: -60px 0}
 	overflow: hidden;
 }
 
-.box_header h2 {font-size: 16px;line-height: 16px;float:left;margin-top: 2px;margin-bottom: 0;color: #646464;font-weight: normal;text-shadow: 0px 1px 0px #fff;}
+.box_header h2 {font-size: 1em;line-height: 16px;float:left;margin-top: 2px;margin-bottom: 0;color: #646464;font-weight: normal;text-shadow: 0px 1px 0px #fff;}
 .box_header h2 i{margin: 1px 3px 0px 5px;opacity: .4;}
 .box_header .break {border-left: 1px solid #fcfcfc;border-right: 1px solid #ddd;margin: -12px 10px -10px 10px;padding: 12px 0px 10px 0px;	}
 .box_header .box_icon {float:right;margin-top: 1px;}
 .box_header .box_icon i {-webkit-transition: all 0.1s ease-in-out;-moz-transition: all 0.1s ease-in-out;-o-transition: all 0.1s ease-in-out;-ms-transition: all 0.1s ease-in-out;transition: all 0.1s ease-in-out;opacity: .4;}
 .box_header .box_icon i:hover {opacity: .8;}
 .box_header .box_icon a {margin: 0px 5px;}
-.box_content {float:left;width:100%;margin-top: -1px;padding: 10px;border: 1px solid #ddd;background: #fcfcfc;-webkit-border-radius: 0px 0px 2px 2px;-moz-border-radius: 0px 0px 2px 2px;border-radius: 0px 0px 2px 2px;-webkit-box-shadow: 0 1px 0px rgba(255, 255, 255, .6);-moz-box-shadow: 0 1px 0px rgba(255, 255, 255, .6);box-shadow: 0 1px 0px rgba(255, 255, 255, .6);}
+.box_content {float:left;width:100%;margin-top: -1px;padding: 10px;border: 1px solid #ddd;-webkit-border-radius: 0px 0px 2px 2px;-moz-border-radius: 0px 0px 2px 2px;border-radius: 0px 0px 2px 2px;-webkit-box-shadow: 0 1px 0px rgba(255, 255, 255, .6);-moz-box-shadow: 0 1px 0px rgba(255, 255, 255, .6);box-shadow: 0 1px 0px rgba(255, 255, 255, .6);}
 
 
 .adsbygoogle {width:100%}
@@ -402,7 +394,7 @@ a.left:active {background-position: -60px 0}
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-    header {height:7em;border-bottom:1px solid #e7e7e7;background:#f8f8f8;}
+    header {height:7em;background:#f8f8f8;}
     #mom {clear:both;float:left;width:100%;padding:0}
     #mom {margin:-7em 0 -3em;min-height:100%}
     #main {padding-top:7em;padding-bottom:3em}
@@ -414,9 +406,9 @@ a.left:active {background-position: -60px 0}
 @media (min-width: 1200px) {
     .container {max-width: none }
     html,body {font-size:16px}
-	header {height:6em;background:#f8f8f8;border-bottom:1px solid #e7e7e7}
+	header {height:6em;background:#f8f8f8}
   aside .box {margin-top:0}
-	footer {height:5em;border-top:1px solid #e7e7e7}
+	footer {height:5em}
 	#mom {margin:-6em 0 -5em;min-height:100%}
 	#main {padding-top:6em;padding-bottom:5em}
 	.adsbygoogle {height: 100px}
@@ -719,7 +711,9 @@ a.left:active {background-position: -60px 0}
       }
   }
 
-
+.form-group {
+  margin-bottom:1.5rem
+}
 
 @include color-mode(dark) {
   body {
