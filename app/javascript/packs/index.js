@@ -4,16 +4,6 @@ $(document).ready(function(){
         return (str + '').replace(/([^>\r\n]?)(\r\n|\n\r|\r|\n)/g, '$1' + breakTag + '$2');
     }
 
-    $('#sl_main_gallery').on('slide.bs.carousel', function(e) {
-        var $nextImage = $(e.relatedTarget).find('img');
-
-        $nextImage.each(function(){
-            if($(this).attr('data-original')) {
-                $(this).attr('src', $(this).attr('data-original'));
-                $(this).removeAttr('data-original');
-            }
-        });
-    });
 
     $('#sl_main_gallery .carousel-inner .active img').each(function(){
         if($(this).attr('data-original')) {
