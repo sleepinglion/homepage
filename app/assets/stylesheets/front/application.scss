@@ -338,7 +338,7 @@ a.left:active {background-position: -60px 0}
 .box_header .box_icon i {-webkit-transition: all 0.1s ease-in-out;-moz-transition: all 0.1s ease-in-out;-o-transition: all 0.1s ease-in-out;-ms-transition: all 0.1s ease-in-out;transition: all 0.1s ease-in-out;opacity: .4}
 .box_header .box_icon i:hover {opacity: .8;}
 .box_header .box_icon a {margin: 0px 5px;}
-.box_content {float:left;width:100%;margin-top: -1px;padding: 10px;border: 1px solid var(--bs-border-color);border-radius: 0px 0px 2px 2px }
+.box_content {float:left;width:100%;margin-top: -1px;padding: 10px;border: 1px solid var(--bs-border-color);border-radius: 0px 0px 2px 2px;background-color:$secondary-bg}
 
 
 .adsbygoogle {width:100%}
@@ -723,7 +723,9 @@ a.left:active {background-position: -60px 0}
   }
 
   .page-header h1, .page-header h2 {color: var(--bs-body-color)}
-  header,footer,.jumbotron,.media,.card-body,aside article,#faqList dt a.title,.modal-body, .modal-footer,.sl_content_header,.thead-default th,.breadcrumb {background-color:var(--bs-secondary-bg)}
+  header,footer,.jumbotron,.media,.card-body,aside article,#faqList dt a.title,.modal-body, .modal-footer,.sl_content_header,.thead-default th,.breadcrumb,.box_content {background-color:var(--bs-secondary-bg)}
+  .box_header {background: #666;border-color:var(--bs-border-color)}
+  .box_header h2, .box_header .h2 {text-shadow: none}
 }
 
 @include color-mode(light) {
