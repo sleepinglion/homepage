@@ -724,7 +724,7 @@ a.left:active {background-position: -60px 0}
   .page-header h1, .page-header h2 {color: var(--bs-body-color)}
   header,footer,.jumbotron,.media,.card-body,aside article,#faqList dt a.title,.modal-body, .modal-footer,.sl_content_header,.thead-default th,.breadcrumb,.box_content {background-color:var(--bs-secondary-bg)}
   .box_header {background: #666;border-color:var(--bs-border-color)}
-  .box_header h2, .box_header .h2 {text-shadow: none;color:#ccc}
+  .box_header h2 {text-shadow: none;color:#ccc}
 }
 
 @include color-mode(light) {
