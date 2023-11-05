@@ -241,11 +241,11 @@ ko:
         one: 한달 전
         other:  '%{count}달 전'
       about_x_years:
-        one: 일년 전
-        other:  몇년 전
+        one: 1년 전
+        other:  몇 년 전
       almost_x_years:
-        one: 일년 이내
-        other: ! '%{count}년 전'
+        one: 1년 이내
+        other: ! '몇 년 전'
       half_a_minute: 30초
       less_than_x_minutes:
         one: 일분 이내
@@ -254,8 +254,8 @@ ko:
         one: 일초 이내
         other: ! '%{count}초 전'
       over_x_years:
-        one: 일년 전
-        other: 몇년 전
+        one: 1년 전
+        other: 몇 년 전
       x_days:
         one: 하루 전
         other: ! '%{count}일 전'
