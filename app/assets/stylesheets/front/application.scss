@@ -99,7 +99,6 @@ footer div {margin:0.3em 0 0}
 .clear{clear:both}
 .none{display:none}
 .wrapper {margin:0 auto;width:728px}
-.ad_test {background:red}
 .jumbotron {margin:30px 0}
 .sl_categories span.hidden-xs {display:inline!important}
 .c_pointer {cursor:pointer}
@@ -133,10 +132,9 @@ header #top_menu li {float:left;margin:0 15px 0 0;padding:0}
 .jumbotron {background:#fff}
 .jumbotron h2 {font-size:3em}
 
-/* */
+
 #sl_blog_categories ul li.active a {font-weight:bold}
 
-#sl_program_index article {background:#e7e7e7;border-radius:10px;margin:20px 0;padding:20px}
 
 /* footer */
 footer {position:relative}
@@ -344,15 +342,15 @@ a.left:active {background-position: -60px 0}
 .adsbygoogle {width:100%}
 
 @media all and (max-width: 767px) {
-    html,body {background:#ccc}
+   body {background:#eee}
     .container {width: 100%;max-width:none}
     header {background:none;border-bottom:0;margin:1% 0}
 	header h1 {margin:0;padding:0;font-size:1.6em}
-	header h1 a {float:left;background:none;text-indent:0;width:100%;font-weight:bold}
+	header h1 a {float:left;background:none;text-indent:0;width:100%;font-weight:bold;margin:10px;}
 	header h1 a:hover {text-decoration:none}
 	header h1 a:active {color:red}
-    header nav.col-12 {margin:0;padding:0}
-	header nav ul {width:100%;margin:2% 0 0;padding:0;background:#fff;border-radius:5px}
+    header nav  {margin:0;padding:0;background:#fff}
+	header nav ul {width:100%;margin:2% 0 0;padding:0;border-radius:5px}
 	header nav ul li,header ul li a {clear:both;float:left;width:100%;text-align:left}
 	header nav ul.nav-pills > li + li {margin-left:0}
 	header nav ul li {margin:0;padding:0}
@@ -362,7 +360,7 @@ a.left:active {background-position: -60px 0}
 	header nav ul li a .glyphicon {margin-right:1em}
 	.nav-pills > li + li {margin:0}
 	#mom {float:left;clear:both;width:100%;margin:0}
-	#main {float:left;margin:0;padding-top:2%;padding-bottom:2%;width:100%;border-radius:5px;background:#fff;}
+	#main {float:left;margin:0;padding-top:2%;padding-bottom:2%;width:100%;border-radius:5px}
 	#sl_main_gallery .carousel-inner a.m_nm {margin-right:0}
 	#sl_main_blog li {margin-bottom:10px}
 	#sl_main_blog li.m_nm {margin-right:0}
@@ -377,7 +375,7 @@ a.left:active {background-position: -60px 0}
 }
 
 @media all and (min-width: 768px) and (max-width: 1199px) {
-	header {height:8em;background:#f8f8f8;border-bottom:1px solid #e7e7e7}
+	header {height:8em;background:#f8f8f8}
     header h1 {margin:0.5em 0 0;padding:0;}
 	header nav ul li:first-child {margin-left:0}
 	footer {height:5em;border-top:1px solid #e7e7e7}
@@ -722,7 +720,7 @@ a.left:active {background-position: -60px 0}
   }
 
   .page-header h1, .page-header h2 {color: var(--bs-body-color)}
-  header,footer,.jumbotron,.media,.card-body,aside article,#faqList dt a.title,.modal-body, .modal-footer,.sl_content_header,.thead-default th,.breadcrumb,.box_content {background-color:var(--bs-secondary-bg)}
+  header,footer,.jumbotron,.media,.card-body,aside article,#faqList dt a.title,.modal-body, .modal-footer,.sl_content_header,.thead-default th,.breadcrumb,.box_content, header nav {background-color:var(--bs-secondary-bg)}
   .box_header {background: #666;border-color:var(--bs-border-color)}
   .box_header h2 {text-shadow: none;color:#ccc}
 }
