@@ -711,6 +711,7 @@ a.left:active {background-position: -60px 0}
   .page-header h1, .page-header h2 {color: var(--bs-body-color)}
   header,.jumbotron,.media,.card-body,aside article,#faqList dt a.title,.modal-body, .modal-footer,.sl_content_header,.thead-default th,.box_header,.box_content,#faqList dd,#sl_blog_index .media,.page-header .breadcrumb  {background-color:var(--bs-secondary-bg)}
   .box_header h2 {text-shadow: none;color:#ccc}
+  .box_content {box-shadow: none}
 }
 
 @include color-mode(light) {
