@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.1.1'
+gem 'rails', '~> 6.1.6'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server
@@ -25,7 +25,7 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
-gem 'bootstrap', '~> 5.3.1'
+gem 'bootstrap', '~> 5.3.2'
 gem 'sprockets', '~> 3.7.2'
 gem 'devise'
 gem 'cancancan'
@@ -58,7 +58,7 @@ group :development do
   # Capistrano
   gem 'capistrano'
   gem 'capistrano-rbenv'
-  gem 'capistrano-yarn'
+  gem 'capistrano-npm'
   gem 'capistrano-bundler'
   gem 'capistrano-passenger'
   gem 'capistrano-rails'
