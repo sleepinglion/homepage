@@ -1,0 +1,15 @@
+<aside id="main-menu" class="col-12 col-md-2 col-xxl-1">
+  <h1><%= t(:application_name) %></h1>
+  <nav>
+    <ul class="nav">
+      <li class="nav-item
+            <% if ['admin/blogs','admin/blog_categories'].include?(params[:controller]) %> active
+            <% end %>">
+        <%= link_to admin_blogs_path, :class => "nav-link" do %>
+          <i class="material-icons">local_cafe</i><span><%= t(:blog, scope: [:activerecord, :models]) %></span>
+        <% end %>
+      </li>
+    </ul>
+  </nav>
+</aside>
+

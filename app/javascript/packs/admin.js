@@ -8,12 +8,7 @@ require("@rails/ujs").start()
 ///require("@rails/activestorage").start()
 //require("channels")
 require("jquery");
-require("jquery-ui");
 require("bootstrap");
-//require("./jquery.lazyload.min");
-require("./jquery.uri");
-require("jquery.easing");
-require("@fancyapps/fancybox");
 
 // require("trix")
 require("@rails/actiontext")

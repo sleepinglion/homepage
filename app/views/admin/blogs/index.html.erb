@@ -5,7 +5,7 @@
 	</div>
 </div>
 <div class="table-responsive">
-  <table width="100%" cellpadding="0" cellspacing="0" class="table table-bordered table-striped">
+  <table class="table table-bordered table-striped">
     <colgroup>
       <col style="width:100px" />
       <col style="width:130px" />
@@ -39,9 +39,10 @@
         <td><%=admin_blog.id %></td>
         <td>
 					<% if admin_blog.photo? %>
-					<%=link_to admin_blog_path(admin_blog) do %>
-						<%=image_tag admin_blog.photo.small_thumb %>
-					<% end %>
+						<%=link_to image_tag(asset_path('ajax-loader.gif'),:alt=>admin_blog.title,:'data-original'=>sl_get_thumb(admin_blog.photo.to_s,'medium'),:class=>'lazy img-responsive'),admin_blog_path(admin_blog),:title=>admin_blog.title %>
+						<noscript>
+							<%=link_to image_tag(sl_get_thumb(admin_blog.photo.to_s,'medium'),:alt=>admin_blog.title,:class=>'img-responsive'),admin_blog_path(admin_blog),:title=>admin_blog.title %>
+						</noscript>
 					<% else %>
 					<%=t(:no_photo) %>
 					<% end %>

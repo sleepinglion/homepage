@@ -1,4 +1,4 @@
-User.create!(:email => 'toughjjh@gmail.com', :nickname=>'잠자는-사자', :password => '123456', :password_confirmation => '123456',:admin=>true)
+User.create!(email: 'admin@jedaeroweb.co.kr',nickname: '잠자는-사자', password: 'a12345', password_confirmation: 'a12345', admin: true)
 
 =begin 
 BlogCategory.create!(:id=>1,:user_id=>1,:blog_category_id=>nil,:title=>'잡생각',:blogs_count=>16,:blog_categories_count=>0,:leaf=>0,:enable=>1,:created_at=>'2013-12-24 18:26:41',:updated_at=>'2013-12-24 18:26:41')

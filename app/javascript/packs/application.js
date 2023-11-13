@@ -13,4 +13,5 @@ require("jquery-tagcanvas");
 require("./jquery.uri");
 require("jquery.easing");
 require("@fancyapps/fancybox");
+require("./common");
 require("./index");
