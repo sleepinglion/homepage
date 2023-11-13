@@ -21,7 +21,7 @@ set :passenger_restart_with_touch, true
 # Default value for :pty is false
 #set :pty, true
 set :rbenv_type, :user
-set :rbenv_ruby, "3.2.1"
+set :rbenv_ruby, "3.2.2"
 
 # Default value for :linked_files is []
 append :linked_files, "config/database.yml", ".env"
