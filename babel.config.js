@@ -37,22 +37,18 @@ module.exports = function(api) {
       ]
     ].filter(Boolean),
     plugins: [
-      "babel/plugin-transform-async-to-generator",
-      "babel/transform-arrow-functions",
-      "@babel/proposal-object-rest-spread",
-      "@babel/proposal-class-properties",
       'babel-plugin-macros',
       '@babel/plugin-syntax-dynamic-import',
       isTestEnv && 'babel-plugin-dynamic-import-node',
       '@babel/plugin-transform-destructuring',
       [
-        '@babel/plugin-proposal-class-properties',
+        '@babel/plugin-transform-class-properties',
         {
           loose: true
         }
       ],
       [
-        '@babel/plugin-proposal-object-rest-spread',
+        '@babel/plugin-transform-object-rest-spread',
         {
           useBuiltIns: true
         }
@@ -64,7 +60,7 @@ module.exports = function(api) {
         }
       ],
       [
-        '@babel/plugin-proposal-private-property-in-object',
+        '@babel/plugin-transform-private-property-in-object',
         {
           loose: true
         }
@@ -84,4 +80,3 @@ module.exports = function(api) {
     ].filter(Boolean)
   }
 }
-
