@@ -9,7 +9,6 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "5.4.4",
     "bootstrap": "^5.3.2",
-    "fsevents": "^2.3.3",
     "jquery": "^3.7.1",
     "jquery-tagcanvas": "^2.9.0",
     "jquery-ui-dist": "^1.12.1",
