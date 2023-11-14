@@ -18,10 +18,7 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^3"
-  },
-  "scripts": {
-    "serve": "set NODE_OPTIONS=--openssl-legacy-provider",
-    "build": "set NODE_OPTIONS=--openssl-legacy-provider"
   }
 }
