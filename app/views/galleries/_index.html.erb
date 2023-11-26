@@ -4,7 +4,7 @@
     <% if @galleries.count > 5 %>
       <div class="carousel-indicators">
         <% @galleries.each_slice(5).each_with_index do |gallery, index| %>
-          <button type="button" data-bs-target="#carousel-model" data-bs-slide-to="<%= index %>" aria-current="true" aria-label="Slide <%= index %>" <% if index.zero? %>class="active"<% end %>></button>
+          <button type="button" data-bs-target="#sl_main_gallery" data-bs-slide-to="<%= index %>" aria-current="true" aria-label="Slide <%= index %>" <% if index.zero? %>class="active"<% end %>></button>
         <% end %>
       </div>
     <% end %>
