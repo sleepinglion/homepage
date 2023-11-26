@@ -20,7 +20,7 @@
 				<% unless @notices.empty? %>
 				<% @notices.each do |notice| %>
 				<tr>
-					<td><p class="sl_name"><%= notice.user.name %></p></td>
+					<td class="sl_t_name hidden-sm hidden-xs"><%=userName(notice,10) %></td>
 					<td><p><%= link_to notice.title, notice  %></p></td>
 					<td class="sl_right"><%=notice.impressionist_count(:filter=>:ip_address) %></td>
 					<td class="sl_right"><%=notice.created_at.to_date %></td>
