@@ -245,13 +245,13 @@ GuestBook.create!(id: 1, title: '형님 안녕하세요', name: '동생', encryp
 GuestBookContent.create!(id: 1, content: '형님 빨리 또 만나서 술 한잔 해요')
 
 GuestBook.create!(id: 2, title: '회장님, 잘 지내시지요?', name: '회원', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 9.day.ago)
-GuestBookContent.create!(id: 2, content: '형님 빨리 또 만나서 술 한잔 해요')
+GuestBookContent.create!(id: 2, content: '회장님 고생하십니다.  조만간 또 뵙고 한 잔 하시지요~')
 
-GuestBook.create!(id: 3, title: '회장님, 잘 지내시지요?', name: '회원', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 7.day.ago)
-GuestBookContent.create!(id: 3, content: '형님 빨리 또 만나서 술 한잔 해요')
+GuestBook.create!(id: 3, title: '좋은 글들이네요', name: '지나가다', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 7.day.ago)
+GuestBookContent.create!(id: 3, content: '좋은글들 잘 읽었습니다. 계속 방문할께요')
 
-GuestBook.create!(id: 4, title: '회장님, 잘 지내시지요?', name: '회원', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 3.day.ago)
-GuestBookContent.create!(id: 4, content: '형님 빨리 또 만나서 술 한잔 해요')
+GuestBook.create!(id: 4, title: '좋은분인것 같아요', name: '손님', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 3.day.ago)
+GuestBookContent.create!(id: 4, content: '저장강박 잘 치료 받으시길 바랄께요')
 
-GuestBook.create!(id: 5, title: '회장님, 잘 지내시지요?', name: '회원', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 1.day.ago)
-GuestBookContent.create!(id: 5, content: '형님 빨리 또 만나서 술 한잔 해요')
+GuestBook.create!(id: 5, title: '접니다, ㅎㅎ', name: '나야나', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 1.day.ago)
+GuestBookContent.create!(id: 5, content: '형님, 보고싶네요,  그럼 또 연락드릴께요')
