@@ -17,7 +17,7 @@ SitemapGenerator::Sitemap.create do
   #
  # Add '/blogs'
   add intro_index_path, :priority => 0.9, :changefreq => 'monthly'
-  add galleries_path, :priority => 0.7, :changefreq => 'daily'
+  add galleries_path, :priority => 0.7, :changefreq => 'weekly'
   Gallery.find_each do |gallery|
     add gallery_path(gallery), :priority => 0.5, :lastmod => gallery.updated_at
   end
@@ -44,5 +44,11 @@ SitemapGenerator::Sitemap.create do
 
   Notice.find_each do |notice|
     add notice_path(notice), :lastmod => notice.updated_at
+  end
+
+  add faqs_path, :priority => 0.9, :changefreq => 'monthly'
+
+  Faq.find_each do |faq|
+    add faq_path(faq), :lastmod => faq.updated_at
   end
 end

@@ -13,4 +13,6 @@ require("bootstrap");
 require("./jquery.uri");
 require("jquery.easing");
 require("@fancyapps/fancybox");
-require("./index");
+
+require("./common");
+require("./index")
