@@ -26,7 +26,7 @@
 					<td class="sl_t_title"><%=checkPrivLink(question) %> &nbsp; <% if(question.secret?) %><%=image_tag('lock.png') %><% end %></td>
 					<td class="text-right"><% if question.question_comments_count? %><%=t(:answer) %><% else %><%=t(:no_answer) %><% end %></td>
 					<td class="text-right"><%=question.count+question.impressionist_count(:filter=>:ip_address) %></td>
-					<td class="text-center"><%=question.created_at.to_date %></td>
+					<td class="text-center"><%=time_ago_in_words question.created_at.to_date %></td>
 				</tr>
 				<% end %>
 				<% else %>

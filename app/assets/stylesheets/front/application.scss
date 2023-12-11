@@ -713,6 +713,7 @@ a.left:active {background-position: -60px 0}
   .box_header h2 {text-shadow: none;color:#ccc}
   .box_content {box-shadow: none}
   .carousel .carousel-control-prev-icon, .carousel .carousel-control-next-icon, .carousel .carousel-control-prev-icon, .carousel .carousel-control-next-icon {filter:none}
+  header nav .active a {color:lightskyblue}
 }
 
 @include color-mode(light) {
@@ -728,6 +729,9 @@ a.left:active {background-position: -60px 0}
   a:active {
     color: #000
   }
+
+  header a,  header a:visited {color:#666}
+  header nav .active a,header nav .active a:visited {font-weight:bold;color:#333}
 
   a.btn-primary,a.btn-primary:visited {color:#fff}
 }

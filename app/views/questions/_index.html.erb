@@ -6,6 +6,7 @@
 		<li>
 			<span class="sl_name"><%=userName(question,7) %></span>
 			<%= link_to question.title, question  %>
+			<span class="d-none d-lg-block text-muted" style="float:right;"><%=time_ago_in_words question.created_at.to_date %></span>
 		</li>
 		<% end %>
 		<% else %>

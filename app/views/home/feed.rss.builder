@@ -4,7 +4,7 @@ xml.rss :version => "2.0" do
     xml.title @application_name
     xml.author 'Jingyu'
     xml.description @meta_description
-    xml.link 'http://www.jingyu.pe.kr'
+    xml.link 'https://www.jingyu.pe.kr'
     xml.language I18n.locale.to_s
 
     for article in @blogs
@@ -16,7 +16,7 @@ xml.rss :version => "2.0" do
         end
         xml.author 'Jingyu'
         xml.pubDate article.created_at.to_s(:rfc822)
-        xml.link 'http://www.jingyu.pe.kr/blog/' + article.id.to_s
+        xml.link 'https://www.jingyu.pe.kr/blog/' + article.id.to_s
         xml.guid article.id
 
         text = article.blog_content.content

@@ -79,7 +79,7 @@ BlogCategory.create(id: 3, user_id: 1, title: '탁구')
 BlogCategory.create(id: 4, user_id: 1, title: '환경')
 
 
-Blog.create!(id: 1, user_id: 1, blog_category_id: 1,title: '아직도 4년이 남은 암담한 대한민국',description: '대통령제의 폐해가 심각해서 의원내각제로 바꾸는게 좋을듯')
+Blog.create!(id: 1, user_id: 1, blog_category_id: 1,title: '아직도 4년이 남은 암담한 대한민국',description: '대통령제의 폐해가 심각해서 의원내각제로 바꾸는게 좋을듯', created_at: 30.day.ago)
 BlogContent.create!(id: 1, content: '대통령제의 문제점이 대통령의 권한이 너무 막강하고 잘못 뽑으면 임기때 까지 바꾸지 못한다는거
 대한민국 대통령 권한이 조선의 왕 보다 세다는 이야기도 있지요
 또한 단원제 문제점도 상하(참의원, 중의원)의원 권한이 막강하고 한번에 해결하려고 되어 지금과 같은 문제점이 생긴다는것
@@ -91,7 +91,7 @@ BlogContent.create!(id: 1, content: '대통령제의 문제점이 대통령의 �
 탄핵이라는게 있지만 이것은 심각한 문제가 있을때 뿐이니
 내각제였으면 지금 지지율이면 이미 내각불신임해서 쉽게 교체되는데 이건뭐... 아직도 4년 넘게 남았나요??')
 
-Blog.create!(id: 2, user_id: 1, blog_category_id: 1,title: '아직도 4년이 남은 암담한 대한민국2',description: '대통령제의 폐해가 심각해서 의원내각제로 바꾸는게 좋을듯')
+Blog.create!(id: 2, user_id: 1, blog_category_id: 1,title: '아직도 4년이 남은 암담한 대한민국2',description: '대통령제의 폐해가 심각해서 의원내각제로 바꾸는게 좋을듯', created_at: 25.day.ago)
 BlogContent.create!(id: 2, content: '굥이 뽑이는거 같은 대통령제 폐해가 심각하다
 중간에 물리지도 못한다
 이런문제와 저런 지역불균형 문제를 해결할 방법이
@@ -99,7 +99,7 @@ BlogContent.create!(id: 2, content: '굥이 뽑이는거 같은 대통령제 폐
 상원인 지역별로 하원은 인구별로
 중간에 총리 물릴수 있는 양원제,내각 책임제로 바꾸자')
 
-Blog.create!(id: 3, user_id: 1, blog_category_id: 1,title: '인구가 국력인데 암담한 대한민국',description: '인구가 국력인 역사적 사실, 대한민국은....')
+Blog.create!(id: 3, user_id: 1, blog_category_id: 1,title: '인구가 국력인데 암담한 대한민국',description: '인구가 국력인 역사적 사실, 대한민국은....', created_at: 23.day.ago)
 BlogContent.create!(id: 3, content: '인구가 국력입니다.
 
 미국의 인구도 어디 꿀리지 않는 강대국의 면모지요
@@ -113,7 +113,7 @@ BlogContent.create!(id: 3, content: '인구가 국력입니다.
 이렇듯 인구가 국력인데 우리나라는 암담하지요.....
 프랑스 처럼 대규모 이민을 받아서 인구를 늘려야 됩니다.')
 
-Blog.create!(id: 4, user_id: 1, blog_category_id: 1,title: '사실상 범죄자는 다 사형했던 일본',description: '일본에 비하면 형벌보다 교화를 중시한 자랑스러운 유교국가 조선')
+Blog.create!(id: 4, user_id: 1, blog_category_id: 1,title: '사실상 범죄자는 다 사형했던 일본',description: '일본에 비하면 형벌보다 교화를 중시한 자랑스러운 유교국가 조선', created_at: 20.day.ago)
 BlogContent.create!(id: 4, content: '옛날 일본(유신시대 이전)은 그냥 거의 사형이였다고 보면 됨
 좀도둑도 기본이 사형이고 운 좋으면 손목절단이였음
 
@@ -121,7 +121,7 @@ BlogContent.create!(id: 4, content: '옛날 일본(유신시대 이전)은 그�
 일본에 방문한 통신사가 일본에서는 잡범들도 무조건 참형에 처하니 질서를 감히 어기는 사람이 없다고 하였음')
 
 
-Blog.create!(id: 5, user_id: 1, blog_category_id: 2,title: '연무동 맛집을 찿아서 연무 시장 꺼병이 떡볶이',description: '연무동 맛집을 찿아서')
+Blog.create!(id: 5, user_id: 1, blog_category_id: 2,title: '연무동 맛집을 찿아서 연무 시장 꺼병이 떡볶이',description: '연무동 맛집을 찿아서', created_at: 15.day.ago)
 BlogContent.create!(id: 5, content: '
 연무동도시재생 마을연구소에서 도로건널목을 건너 연무시장입구로 들어서서
 오른쪽으로 조금만가면 “꺼병이 떢볶이 집”상호의 분식집이있다.
@@ -155,7 +155,7 @@ P.S; 연무시장 “꺼병이떡복기” 인터뷰는 지난 10월26일 연무
 하려고했으나 주인이신 박영주 사장님이 너무바빠 하지못하고 11월2일 혼자방문하여 인터뷰한내용입니다. 이날도 찾는손님이 너무많은데도 인터뷰에 응해주신 사장님께 감사드립니다.')
 
 
-Blog.create!(id: 6, user_id: 1, blog_category_id: 2,title: '라떼의 희로애락(喜怒哀樂)',description: '라떼의 희로애락(喜怒哀樂)')
+Blog.create!(id: 6, user_id: 1, blog_category_id: 2,title: '라떼의 희로애락(喜怒哀樂)',description: '라떼의 희로애락(喜怒哀樂)', created_at: 10.day.ago)
 BlogContent.create!(id: 6, content: '나이가 60-70--그리고 햇수가 갈수록 보이지않고 불투명하고 불안한미래
 보다는 지나간 과거의 추억을되살려 생각하고 어리고 젊었을때의 기쁨.노여움.
 슬픔.즐거움을 혼자간직하고 회상하기보다는 누구인가에게 얘기하고 싶어한다.
@@ -236,7 +236,7 @@ BlogContent.create!(id: 6, content: '나이가 60-70--그리고 햇수가 갈수
 그래도 나에게는 아직도 라떼의 희.로.애.락 에대한 할말이 많이 남아았다.')
 
 
-Blog.create!(id: 7, user_id: 1, blog_category_id: 1,title: '체르노빌때 난리나던 일본, 후쿠시마에는',description: '일본의 블랙코미디, 웃어야 할까? 울어야 할까?')
+Blog.create!(id: 7, user_id: 1, blog_category_id: 1,title: '체르노빌때 난리나던 일본, 후쿠시마에는',description: '일본의 블랙코미디, 웃어야 할까? 울어야 할까?', created_at: 7.day.ago)
 BlogContent.create!(id: 7, content: '체르노빌사고로 방사는 누출 되었을때 일본에서는 당장 일본에 엄청난 피해가 되는것처럼 난리가 나고 패닉에 빠졌다고 한다.
 근데 상식적으로 체르노빌에서의 유럽의 거리와 일본의 거리를 생각하면 이렇게 우스운 일이 없다.
 일본까지 영향이 있다고 해도 중간에는 중국과 한국도 있으니 말이다.
@@ -249,7 +249,7 @@ BlogContent.create!(id: 7, content: '체르노빌사고로 방사는 누출 되�
 이게 어찌된 일일까요?? ㅎㅎㅎㅎㅎ
 ')
 
-Blog.create!(id: 8, user_id: 1, blog_category_id: 1,title: '나치의 사상 최고의 코미디!!!',description: '세계최고의 비극을 자행한 나치의 포복절도할 코미디')
+Blog.create!(id: 8, user_id: 1, blog_category_id: 1,title: '나치의 사상 최고의 코미디!!!',description: '세계최고의 비극을 자행한 나치의 포복절도할 코미디', created_at: 5.day.ago)
 BlogContent.create!(id: 8, content: '유태인에 대한 증오, 혐오주의를 조장하여 정권을 잡은 나치
 또한 이들이 주장한것이 우수한 아리아인
 그리하여 우수한 아리아인의 표준 모델이 필요하게 되었다.
@@ -264,6 +264,35 @@ BlogContent.create!(id: 8, content: '유태인에 대한 증오, 혐오주의를
 어리석은 인종, 종족 혐오의 우스움을 보여주는 예라고 할 수 있다.
 ')
 
+Blog.create!(id: 9, user_id: 1, blog_category_id: 1,title: '독재자들은 다 정신병이 걸립니다. 박정희도 걸렸었고요',description: '독재자들은 다 자기가 이니면 안된다는 정신병이 걸립니다.', created_at: 3.day.ago)
+BlogContent.create!(id: 9, content: '헌법은 국민이면 누구나 지켜야 되는 최상의 법입니다.
+
+박정희도 헌법대로 2번만 하고 내려왔으면 공이 훨씬 컸었을테지요
+하지만 3번 하는걸로 바꾸고 결국에는 평생 해쳐먹을래다가 여자끼고 술 먹다가 뒤진놈이지요
+양보해서 3번까지만 했어도 공이 있다고 할 수 있을텐데, 결국 또 뒤집고 죽을 때 까지 해먹으려고 했지요
+결국에는 해악이였습니다.
+헌법을 수호하는게 대통령의 의무이지만 지가 헌법을 유린했지요
+
+하지만 민주주의,헌법이 뭔지 아직도 모르는 저수준의 국민들은 그 딸을 뽑는 참사가.....
+옛날 그 딸이 시골에 방문했을때 공주마마 방문했다고 노인들이 길가로 나와 큰 절을 했다지요... -.-;;
+그러니 아직도 이리 띄우는 개짓거리도 하고 있지요
+
+박정희 아니래도 대한민국은 이 정도 발전했을겁니다. 아니 더 발전 했을겁니다.
+박정희 덕분에 발전했다??  저 시골의 공주마마에게 큰 절하던 사람들과 같은 수준의 사람들이지요
+
+근데 이게 독재자들의 공통점인데 자기가 아니면 이끌 사람이 없고 다른사람이 맡으면 망할거라고 생각한답니다.  공통의 정신병입니다.
+이놈도 이 정신병 걸린 놈이였습니다.')
+
+
+Blog.create!(id: 10, user_id: 1, blog_category_id: 2,title: '허용된 마약, 알콜...  알콜중독의 심각성',description: '우리나라의 합법적 마약 알콜, 그 심각성을 우습게 아는게 심각합니다.', created_at: 1.day.ago)
+BlogContent.create!(id: 10, content: '우리나라는 다른 마약에는 엄격하면서 술,담배에는 너무나 관대하지요
+술의 폐해는 일일히 말하기도 힘들 지경이고 알콜중독자는 계속 늘어나고만 있지요
+
+어렸을때만 해도 알콜중독자들이 폭력을 휘두르거나 운전하는것도 다 이해하고 넘어가던 사회 분위기였으니... 참 지금 생각하면 기가 막히지요
+마치 실내에서 흡연하던 것과 같은거였습니다.
+
+알콜중독 문제가 날이 갈 수록 심각해지는데....
+알콜중독 걸려 판단이 제대로 안되는 인간(?),멧돼지(?)가 대통령이니..... 이제 이 나라는 희망이 없습니다.')
 
 History.create!(user_id: 1, year: '1953년', title: '진규 태어나다',content: '응애 응애')
 History.create!(user_id: 1, year: '1981년', title: '결혼',content: '내가 어떻게 상금이와 결혼했을까?')
