@@ -31,6 +31,7 @@ ko:
   status_stop : '중지'
   flag_true : '사용'
   flag_false : '중지'
+  jedearoweb: '제대로웹'
   no_data : '글이 없습니다.'
   all : '전체'
   all_category : '전체'
