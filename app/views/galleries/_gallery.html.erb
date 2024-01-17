@@ -75,7 +75,7 @@
 		<% end %>
 
 		<!-- Controls -->
-		<% if galleries.count > 6 %>
+		<% if galleries.count > 5 %>
 			<button class="carousel-control-prev" type="button" data-bs-target="#sl_main_gallery" data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Previous</span>
@@ -87,7 +87,7 @@
 		<% end %>
 	</div>
 
-	<div class="col-xs-12">
+	<div class="col-12">
 		<% if can? :create, Gallery %>
 		<%= link_to t(:link_new),new_gallery_path(:gallery_category_id=>gallery_category_id),:rel=>"nofollow",:class=>"btn btn-default" %>
 		<% end %>
