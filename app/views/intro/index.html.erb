@@ -2,12 +2,12 @@
 <% if notice %>
 <%= render :partial => 'layouts/notice',:locals=>{:notice=>notice} %>
 <% end %>
-<section id="sl_intro_index">
-  <article id="intro_main_content" itemscope itemtype="http://schema.org/Person"  class="row">
+<section id="sl_intro_index" itemscope itemtype="http://schema.org/Person">
+  <article id="intro_main_content" class="row" itemprop="mainEntity">
     <div id="sl_intro_left" class="col-sm-12 col-md-6">
       <%=link_to image_tag('intro.jpg',:class=>'img-responsive',:alt=>'정진규'), asset_path('intro_large.jpg'), :class=>'simple_image', :title=>'허허허허', :itemprop=>"image" %>
     </div>
-    <div id="sl_intro_right" class="col-sm-12 col-md-6">
+    <div id="sl_intro_right" class="col-sm-12 col-md-6" itemprop="dateCreated" datetime="2024-01-02T17:00Z">
       <h3>정진규 극비 신상공개!!!</h3>
       <dl>
         <dt>이름</dt>
