@@ -403,7 +403,7 @@ BlogContent.create!(id: 18, content: '
 결국 이슬람이 합심하여 프랑크인들을 몰아내긴 하지만 역사는 또 반복되어져 지금에 이르게 됩니다')
 
 
-Blog.create!(id: 19, user_id: 1, blog_category_id: 4,title: '반중레밍스와의 대화, 사실 확인',description: '반중', created_at: 5.day.ago)
+Blog.create!(id: 19, user_id: 1, blog_category_id: 4,title: '반중레밍스와의 대화, 사실 확인',description: '반중혐오발언 생산하고 아무생각 없이 그걸 그냥 따라가는 레밍스들', created_at: 5.day.ago)
 BlogContent.create!(id: 19, content: '
 
 반중 레밍스가 어디서 한 마디를 듣고 와서 떠든다.
