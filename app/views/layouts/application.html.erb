@@ -25,7 +25,7 @@
 <body itemscope itemtype="<%=@page_itemtype %>">
 <%= render :partial => 'layouts/header' %>
 <div id="mom">
-	<div id="main" class="container">
+	<main id="main" class="container">
 		<% if current_page?(root_path) %>
 		<div class="jumbotron hero-unit text-center p-5 rounded">
 			<h2><%=raw t(:home_main_title) %></h2>
@@ -44,8 +44,9 @@
 				<%=yield %>
 				</div>
 				<%= render 'layouts/aside' %>
+			</div>
 		</div>
-	</div>
+	</main>
 </div>
 <%= render :partial => 'layouts/footer' %>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog"></div>
