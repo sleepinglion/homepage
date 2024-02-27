@@ -22,6 +22,7 @@
 <%= favicon_link_tag 'favicon.ico' %>
 <%= csrf_meta_tags %>
 <%= csp_meta_tag -%>
+</head>
 <body itemscope itemtype="<%=@page_itemtype %>">
 <%= render :partial => 'layouts/header' %>
 <div id="mom">
@@ -37,7 +38,7 @@
 			<%= render 'layouts/page_header' %>
 		<% end  %>
 		<div class="row">
-			<main <% if current_page?(root_path) %>id="main_main"<% end %> class="sub_main<% if session[:no_aside] %> col-12<% else %> col-12 col-xl-9<% end %>" itemprop="mainEntity">
+			<main <% if current_page?(root_path) %>id="main_main"<% end %> class="sub_main<% if session[:no_aside] %> col-12<% else %> col-12 col-xl-9<% end %>">
 				<%= render 'layouts/ad' %>
 				<%=yield %>
 			</main>

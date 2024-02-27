@@ -2,8 +2,8 @@
 <% if notice %>
 <%= render :partial => 'layouts/notice',:locals=>{:notice=>notice} %>
 <% end %>
-<div id="question_show" itemscope itemprop="article" itemtype="http://schema.org/Article">	
-	<div class="slboard_content" itemprop="mainEntity">
+<div id="question_show">
+	<div class="slboard_content" itemprop="mainEntity" itemscope itemtype="https://schema.org/Question">
 		<div class="sl_content_header box_header">
 			<h2 itemprop="name"><%= @question.title %></h2>
 			<p><%=t(:label_name)%> : <span  itemprop="author"><%=userName(@question,10) %></span>&nbsp;&nbsp;&nbsp; <%=t(:label_created_at)%> : <span itemprop="dateCreated"><%= @question.created_at %></span><span class="none" itemprop="dateModified"><%= @question.updated_at %></span></p>	
