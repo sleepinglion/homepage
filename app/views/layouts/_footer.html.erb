@@ -1,8 +1,11 @@
 <footer class="border-top">
 	<div class="container">
 		<div class="row">
-			<address class="col-12 col-lg-9">CopyLeft. 2012, SL. All wrongs reserved.&nbsp;&nbsp; <br class="visible-xs" />주소 : 아프리카 사자굴 &nbsp;&nbsp;</address>
-	<div class="col-12 col-lg-3 dropdown">
+			<address class="col-12 col-lg-9">CopyLeft. 2012, SL. All wrongs reserved.&nbsp;&nbsp; <br class="visible-xs" />주소 : 아프리카 사자굴 &nbsp;&nbsp;
+				<a href="https://www.youtube.com/@toughjjh" target="_blank"><%=image_tag('icon/youtube',  height: '28', width: '32') %></a>
+				<a href="https://www.instagram.com/sleepinglion.pe.kr/" target="_blank"><%=image_tag('icon/instagram',  height: '28', width: '32') %></a>
+			</address>
+	<div class="col-12 col-lg-3 dropdown text-end">
 		<%= link_to '#', { class: 'dropdown-toggle',role:"button",'data-bs-toggle': "dropdown",'aria-expanded':"false"} do %>
 			테마설정
 		<% end %>
