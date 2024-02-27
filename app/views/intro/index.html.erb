@@ -2,8 +2,8 @@
 <% if notice %>
 <%= render :partial => 'layouts/notice',:locals=>{:notice=>notice} %>
 <% end %>
-<section id="sl_intro_index" itemscope itemtype="http://schema.org/Person">
-  <article id="intro_main_content" class="row" itemprop="mainEntity">
+<section id="sl_intro_index" itemprop="mainEntity" itemtype="https://schema.org/Person" itemscope>
+  <article id="intro_main_content" class="row">
     <div id="sl_intro_left" class="col-sm-12 col-md-6">
       <%=link_to image_tag('intro.jpg',:class=>'img-responsive',:alt=>'정진규'), asset_path('intro_large.jpg'), :class=>'simple_image', :title=>'허허허허', :itemprop=>"image" %>
     </div>
