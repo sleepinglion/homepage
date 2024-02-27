@@ -2,9 +2,7 @@
 <section id="sl_intro_index" class="col-12">
 	<article class="row" itemprop="mainEntity" itemtype="https://schema.org/Person" itemscope>
 		<div id="sl_intro_left" class="col-12 col-lg-6">
-			<a href="https://jedaeroweb.blob.core.windows.net/sleepinglion/intro_photo/photo/1/sl.jpg" class="simple_image" title="">
-				<img src="https://jedaeroweb.blob.core.windows.net/sleepinglion/intro_photo/photo/1/large_thumb_sl.jpg" class="img-responsive" alt="" itemprop="image">
-			</a>
+			<%=link_to image_tag('intro/large_thumb_sl',:class=>'img-responsive',:alt=>'정종호'), asset_path('intro/sl'), :class=>'simple_image', :title=>'허허허허', :itemprop=>"image" %>
 		</div>
 		<div id="sl_intro_right" class="col-12 col-lg-6">
 			<h3><%=t(:sl_intro_title) %></h3>
