@@ -410,9 +410,9 @@ a.left:active {background-position: -60px 0}
     .container {max-width: none }
     html,body {font-size:16px}
 
-	header {height:6em;background:#f8f8f8}
+	header {height:6em;background:#fff}
   aside .box {margin-top:0}
-	footer {height:6em}
+	footer {height:6em;margin-left: 3%;margin-right:3%}
     footer address {line-height:180%}
 	#mom {margin:-6em 0 -6em;min-height:100%}
 	#main {padding-top:6em;padding-bottom:6em}
@@ -725,7 +725,7 @@ a.left:active {background-position: -60px 0}
   }
 
   .page-header h1, .page-header h2 {color: var(--bs-body-color)}
-  header,footer,.jumbotron,.media,.card-body,aside article,#faqList dt a.title,.modal-body, .modal-footer,.sl_content_header,.thead-default th,.breadcrumb,.box_content, header nav {background-color:var(--bs-secondary-bg)}
+  header,.jumbotron,.media,.card-body,aside article,#faqList dt a.title,.modal-body, .modal-footer,.sl_content_header,.thead-default th,.breadcrumb,.box_content, header nav {background-color:var(--bs-secondary-bg)}
   .box_header {background: #666;border-color:var(--bs-border-color)}
   .box_header h2 {text-shadow: none;color:#ccc}
 }
@@ -734,5 +734,6 @@ a.left:active {background-position: -60px 0}
   footer {color:#666;border-top-color:#ddd}
   .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link,.nav-tabs {border-color:#ccc}
   .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {border-bottom-color:#f1f1f1}
+  .media, aside .box_content {background-color:#fff}
   a.btn-primary,a.btn-primary:visited {color:#fff}
 }
