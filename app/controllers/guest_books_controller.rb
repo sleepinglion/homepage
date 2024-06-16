@@ -23,8 +23,7 @@ class GuestBooksController < AnonBoardController
   # GET /guest_books/1
   # GET /guest_books/1.json
   def show
-    @guest_book_comments = @guest_book.guest_book_comment.order(id: 'desc').page(params[:page]).per(15)
-    @guest_book_comment = GuestBookComment.new
+    @comment  = Comment.build_from(@guest_book, current_user, "")
 
     @title = @guest_book.title + t(:title_separator) + t(:application_name)
     @script = "board/show"
@@ -39,7 +38,6 @@ class GuestBooksController < AnonBoardController
   # GET /guest_books/new.json
   def new
     @guest_book = GuestBook.new
-    @guest_book.build_guest_book_content
 
     respond_to do |format|
       format.html # new.html.erb
@@ -121,6 +119,6 @@ class GuestBooksController < AnonBoardController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def guest_book_params
-    params.require(:guest_book).permit(:user_id, :name, :password, :title, guest_book_content_attributes: [:content], guest_book_comment_attributes: [:content]).merge(:user_id=>current_user)
+    params.require(:guest_book).permit(:user_id, :name, :password, :title, :content).merge(:user_id=>current_user)
   end
 end

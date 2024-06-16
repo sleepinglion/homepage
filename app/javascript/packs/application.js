@@ -8,11 +8,12 @@ require("@rails/ujs").start()
 ///require("@rails/activestorage").start()
 //require("channels")
 require("jquery");
-require("jquery-ui")
 require("bootstrap");
 require("./jquery.uri");
 require("jquery.easing");
 require("@fancyapps/fancybox");
-
+require("trix")
+require("@rails/actiontext")
+import 'trix/dist/trix.css';
 require("./common");
-require("./index")
+require("./index");

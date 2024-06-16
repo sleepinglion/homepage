@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'home#index'
+  resources :comments, only: [:create, :destroy]
 
   devise_for :admins, :controllers => { :sessions => "admins/sessions",:registrations => "admins/registrations" }, :path_names =>  {:sign_up=>'new',:sign_in => 'login', :sign_out => 'logout'} do
     get 'edit', :to => 'admins::Registrations#edit'

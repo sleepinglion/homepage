@@ -32,11 +32,9 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-   @blog_comments=@blog.blog_comment.order('id desc').page(params[:page]).per(10)
-   @blog_comment=BlogComment.new
+    @comment  = Comment.build_from(@blog, current_user, "")
 
-
-   @meta_keywords=@blog.tag_list+','+t(:meta_keywords)
+   @meta_keywords=@blog.tag_list+t(:meta_keywords)
    @title=@blog.title
 
     respond_to do |format|
@@ -48,7 +46,7 @@ class BlogsController < ApplicationController
   # GET /blogs/new
   def new
     @blog = Blog.new
-    @blog.build_blog_content
+    @blog.build_blog_picture
     if(params[:blog_category_id])
       @blog_category_id=params[:blog_category_id]
     end
@@ -108,6 +106,6 @@ class BlogsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def blog_params
-    params.require(:blog).permit(:blog_category_id, :title, :description, :tag_list, :photo, :photo_cache, blog_content_attributes: [:content]).merge(user_id: current_user.id)
+    params.require(:blog).permit(:blog_category_id, :title, :description, :tag_list, :content).merge(user_id: current_user.id)
   end
 end

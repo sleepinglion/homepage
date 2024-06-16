@@ -43,15 +43,11 @@
 			<%= f.hidden_field :photo_cache %>
 		</div>
 	</div>
-	<%= f.fields_for :blog_content do |c| %>
-	<div class="form-group">
-		<%= c.label :content %>
-		<div>
-  	<%= c.text_area :content, :class=>'form-control',  :id => "sl_content" %>
-  	</div>
+	<div class="col-12 form-group">
+		<h3><%= form.label :content %></h3>
+		<%= form.rich_text_area :content, style: 'min-height:20em;background:#fff' %>
 	</div>
-	<% end %>
 	<div class="form-group actions">
-  	<%= f.submit :class=>"btn btn-primary" %>
+  	<%= form.submit :class=>"btn btn-primary" %>
 	</div>
 <% end %>

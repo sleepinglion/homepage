@@ -1,4 +1,4 @@
-class CreateIntros < ActiveRecord::Migration[4.2]
+class CreateIntros < ActiveRecord::Migration[6.0]
   def change
     create_table :intros do |t|
       t.references :user, :null=>false      
@@ -32,9 +32,5 @@ class CreateIntros < ActiveRecord::Migration[4.2]
       t.boolean :enable, :null=>false, :default=>1
       t.timestamps null: false
     end
-    
-    add_index :intros, :user_id
-    add_index :intro_like_n_hates, :intro_id  
-    add_index :intro_photos, :intro_id        
   end
 end

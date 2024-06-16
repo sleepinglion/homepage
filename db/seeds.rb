@@ -20,12 +20,12 @@ History.create!(user_id: 1, year: '1981년', title: '결혼',content: '내가 �
 History.create!(user_id: 1, year: '1981년', title: '최고의 보물 종호를 얻다',content: '나의 모든것 종호가 태어남')
 History.create!(user_id: 1, year: '2013년', title: '2의 인생 시작',content: '제 2의 인생 시작중임')
 
-Notice.create!(id: 1, user_id: 1, title: '예쁘고 귀여운 진규의 집이 개장했습니다.')
-NoticeContent.create!(id: 1, content: '그동안 수많은 방문자에 비해서 준비되지 못하였는데 이제 보다 업그레이드된 모습으로 다시 찾아뵙게되었습니다.
+Notice.create!(id: 1, user_id: 1, title: '예쁘고 귀여운 진규의 집이 개장했습니다.',
+               content: '그동안 수많은 방문자에 비해서 준비되지 못하였는데 이제 보다 업그레이드된 모습으로 다시 찾아뵙게되었습니다.
     진규와 소통하는 공간으로 계속 많은 이용바랍니다.')
 
-Notice.create!(id: 2, user_id: 1, title: '연무동도시재생 주민협의회 위원장 취임사 -정진규')
-NoticeContent.create!(id: 2, content: '오늘 바쁘신 일정에도 불구하고 연무동도시재생 주민협의회 임시총회와
+Notice.create!(id: 2, user_id: 1, title: '연무동도시재생 주민협의회 위원장 취임사 -정진규',
+               content: '오늘 바쁘신 일정에도 불구하고 연무동도시재생 주민협의회 임시총회와
 제2기 주민협의회위원장 선거에 참여해주신 주민여러분 감사합니다.
 특히 오늘회의를 준비해주신 연무동도시재생센타장님과 직원여러분
 그리고 짧은일정에도 선거관리위원회를 꾸려주신 선거관리위원장님과
@@ -62,21 +62,13 @@ FaqCategory.create!(id: 1, title: '진규의 잘생김')
 FaqCategory.create!(id: 2, title: '진규의 귀여움')
 FaqCategory.create!(id: 3, title: '최고의 아내')
 
-Faq.create!(id: 1,:faq_category_id=>1, title: '진규는 어떻게 이렇게 잘생겼나요?')
-Faq.create!(id: 2,:faq_category_id=>1, title: '진규는 목이 어떻게 그리 긴가요?')
-Faq.create!(id: 3,:faq_category_id=>1, title: '키가 약간 아쉽내요?')
-Faq.create!(id: 4,:faq_category_id=>2, title: '진규의 귀여움을 배우고 싶어요')
-Faq.create!(id: 5,:faq_category_id=>2, title: '나이를 생각해서 애교를 삼가야 되지 않을까요?')
-Faq.create!(id: 6,:faq_category_id=>3, title: '진규는 어떻게 상금이 같은 아내를 얻었나요?')
-Faq.create!(id: 7,:faq_category_id=>3 ,title: '처가집 처가집 말뚝보고 매일 절하고 있나요?')
-
-FaqContent.create!(id: 1, content: '원래 태어날때부터 잘생겼습니다.')
-FaqContent.create!(id: 2, content: '사슴처럼 긴목 또한 태어날때부터 길었습니다.')
-FaqContent.create!(id: 3, content: '대신 빵빵한  배로 커버하고 있습니다.')
-FaqContent.create!(id: 4, content: '진규의 귀여움은 타고난것으로 쉽게 따라할수 없습니다.')
-FaqContent.create!(id: 5, content: '나이는 숫자일뿐, 진규의 귀여움은  계속 됩니다.')
-FaqContent.create!(id: 6, content: '그러게요 이건 정말 기적입니다.')
-FaqContent.create!(id: 7, content: '그러게요 그래도 모자를 판에 배째고 다니네요?')
+Faq.create!(id: 1,:faq_category_id=>1, title: '진규는 어떻게 이렇게 잘생겼나요?', content: '원래 태어날때부터 잘생겼습니다.')
+Faq.create!(id: 2,:faq_category_id=>1, title: '진규는 목이 어떻게 그리 긴가요?', content: '사슴처럼 긴목 또한 태어날때부터 길었습니다.')
+Faq.create!(id: 3,:faq_category_id=>1, title: '키가 약간 아쉽내요?', content: '대신 빵빵한  배로 커버하고 있습니다.')
+Faq.create!(id: 4,:faq_category_id=>2, title: '진규의 귀여움을 배우고 싶어요', content: '진규의 귀여움은 타고난것으로 쉽게 따라할수 없습니다.')
+Faq.create!(id: 5,:faq_category_id=>2, title: '나이를 생각해서 애교를 삼가야 되지 않을까요?', content: '나이는 숫자일뿐, 진규의 귀여움은  계속 됩니다.')
+Faq.create!(id: 6,:faq_category_id=>3, title: '진규는 어떻게 상금이 같은 아내를 얻었나요?', content: '그러게요 이건 정말 기적입니다.')
+Faq.create!(id: 7,:faq_category_id=>3 ,title: '처가집 처가집 말뚝보고 매일 절하고 있나요?', content: '그러게요 그래도 모자를 판에 배째고 다니네요?')
 
 BlogCategory.create(id: 1, user_id: 1, title: '정치,역사')
 BlogCategory.create(id: 2, user_id: 1, title: '사색')
@@ -84,8 +76,8 @@ BlogCategory.create(id: 3, user_id: 1, title: '탁구')
 BlogCategory.create(id: 4, user_id: 1, title: '환경')
 
 
-Blog.create!(id: 1, user_id: 1, blog_category_id: 1,title: '아직도 4년이 남은 암담한 대한민국',description: '대통령제의 폐해가 심각해서 의원내각제로 바꾸는게 좋을듯', created_at:100.day.ago)
-BlogContent.create!(id: 1, content: '대통령제의 문제점이 대통령의 권한이 너무 막강하고 잘못 뽑으면 임기때 까지 바꾸지 못한다는거
+Blog.create!(id: 1, user_id: 1, blog_category_id: 1,title: '아직도 4년이 남은 암담한 대한민국',description: '대통령제의 폐해가 심각해서 의원내각제로 바꾸는게 좋을듯', created_at:100.day.ago,
+             content: '대통령제의 문제점이 대통령의 권한이 너무 막강하고 잘못 뽑으면 임기때 까지 바꾸지 못한다는거
 대한민국 대통령 권한이 조선의 왕 보다 세다는 이야기도 있지요
 또한 단원제 문제점도 상하(참의원, 중의원)의원 권한이 막강하고 한번에 해결하려고 되어 지금과 같은 문제점이 생긴다는것
 그러고 보니 일본,미국,영국 기타 나라도 다 양원제 였던것 같은데  선진국중 단원제 하는 나라가 있던가??
@@ -96,16 +88,16 @@ BlogContent.create!(id: 1, content: '대통령제의 문제점이 대통령의 �
 탄핵이라는게 있지만 이것은 심각한 문제가 있을때 뿐이니
 내각제였으면 지금 지지율이면 이미 내각불신임해서 쉽게 교체되는데 이건뭐... 아직도 4년 넘게 남았나요??')
 
-Blog.create!(id: 2, user_id: 1, blog_category_id: 1,title: '아직도 4년이 남은 암담한 대한민국2',description: '대통령제의 폐해가 심각해서 의원내각제로 바꾸는게 좋을듯', created_at: 95.day.ago)
-BlogContent.create!(id: 2, content: '굥이 뽑이는거 같은 대통령제 폐해가 심각하다
+Blog.create!(id: 2, user_id: 1, blog_category_id: 1,title: '아직도 4년이 남은 암담한 대한민국2',description: '대통령제의 폐해가 심각해서 의원내각제로 바꾸는게 좋을듯', created_at: 95.day.ago,
+             content: '굥이 뽑이는거 같은 대통령제 폐해가 심각하다
 중간에 물리지도 못한다
 이런문제와 저런 지역불균형 문제를 해결할 방법이
 상하원 양원제, 내각책임제다
 상원인 지역별로 하원은 인구별로
 중간에 총리 물릴수 있는 양원제,내각 책임제로 바꾸자')
 
-Blog.create!(id: 3, user_id: 1, blog_category_id: 1,title: '인구가 국력인데 암담한 대한민국',description: '인구가 국력인 역사적 사실, 대한민국은....', created_at: 90.day.ago)
-BlogContent.create!(id: 3, content: '인구가 국력입니다.
+Blog.create!(id: 3, user_id: 1, blog_category_id: 1,title: '인구가 국력인데 암담한 대한민국',description: '인구가 국력인 역사적 사실, 대한민국은....', created_at: 90.day.ago,
+             content: '인구가 국력입니다.
 
 미국의 인구도 어디 꿀리지 않는 강대국의 면모지요
 역사적으로도 유럽이 셋던 이유도 사실 인구입니다.
@@ -118,16 +110,16 @@ BlogContent.create!(id: 3, content: '인구가 국력입니다.
 이렇듯 인구가 국력인데 우리나라는 암담하지요.....
 프랑스 처럼 대규모 이민을 받아서 인구를 늘려야 됩니다.')
 
-Blog.create!(id: 4, user_id: 1, blog_category_id: 1,title: '사실상 범죄자는 다 사형했던 일본',description: '일본에 비하면 형벌보다 교화를 중시한 자랑스러운 유교국가 조선', created_at: 80.day.ago)
-BlogContent.create!(id: 4, content: '옛날 일본(유신시대 이전)은 그냥 거의 사형이였다고 보면 됨
+Blog.create!(id: 4, user_id: 1, blog_category_id: 1,title: '사실상 범죄자는 다 사형했던 일본',description: '일본에 비하면 형벌보다 교화를 중시한 자랑스러운 유교국가 조선', created_at: 80.day.ago,
+             content: '옛날 일본(유신시대 이전)은 그냥 거의 사형이였다고 보면 됨
 좀도둑도 기본이 사형이고 운 좋으면 손목절단이였음
 
 반면 조선은 교화를 중요시 했으며 사형은 최대한 피하려고 하였음
 일본에 방문한 통신사가 일본에서는 잡범들도 무조건 참형에 처하니 질서를 감히 어기는 사람이 없다고 하였음')
 
 
-Blog.create!(id: 5, user_id: 1, blog_category_id: 2,title: '연무동 맛집을 찿아서 연무 시장 꺼병이 떡볶이',description: '연무동 맛집을 찿아서', created_at: 75.day.ago)
-BlogContent.create!(id: 5, content: '
+Blog.create!(id: 5, user_id: 1, blog_category_id: 2,title: '연무동 맛집을 찿아서 연무 시장 꺼병이 떡볶이',description: '연무동 맛집을 찿아서', created_at: 75.day.ago,
+             content: '
 연무동도시재생 마을연구소에서 도로건널목을 건너 연무시장입구로 들어서서
 오른쪽으로 조금만가면 “꺼병이 떢볶이 집”상호의 분식집이있다.
 연무마을신문 이번호에서는 서민들과 젊은이들이 부담없이 선호하는 분식집인
@@ -160,8 +152,8 @@ P.S; 연무시장 “꺼병이떡복기” 인터뷰는 지난 10월26일 연무
 하려고했으나 주인이신 박영주 사장님이 너무바빠 하지못하고 11월2일 혼자방문하여 인터뷰한내용입니다. 이날도 찾는손님이 너무많은데도 인터뷰에 응해주신 사장님께 감사드립니다.')
 
 
-Blog.create!(id: 6, user_id: 1, blog_category_id: 2,title: '라떼의 희로애락(喜怒哀樂)',description: '라떼의 희로애락(喜怒哀樂)', created_at: 70.day.ago)
-BlogContent.create!(id: 6, content: '나이가 60-70--그리고 햇수가 갈수록 보이지않고 불투명하고 불안한미래
+Blog.create!(id: 6, user_id: 1, blog_category_id: 2,title: '라떼의 희로애락(喜怒哀樂)',description: '라떼의 희로애락(喜怒哀樂)', created_at: 70.day.ago,
+             content: '나이가 60-70--그리고 햇수가 갈수록 보이지않고 불투명하고 불안한미래
 보다는 지나간 과거의 추억을되살려 생각하고 어리고 젊었을때의 기쁨.노여움.
 슬픔.즐거움을 혼자간직하고 회상하기보다는 누구인가에게 얘기하고 싶어한다.
 그래도 같은또래 비슷한세대에게는 같은감정과 동질감이있어 서로 호응하고
@@ -241,8 +233,8 @@ BlogContent.create!(id: 6, content: '나이가 60-70--그리고 햇수가 갈수
 그래도 나에게는 아직도 라떼의 희.로.애.락 에대한 할말이 많이 남아았다.')
 
 
-Blog.create!(id: 7, user_id: 1, blog_category_id: 1,title: '체르노빌때 난리나던 일본, 후쿠시마에는',description: '일본의 블랙코미디, 웃어야 할까? 울어야 할까?', created_at: 55.day.ago)
-BlogContent.create!(id: 7, content: '체르노빌사고로 방사는 누출 되었을때 일본에서는 당장 일본에 엄청난 피해가 되는것처럼 난리가 나고 패닉에 빠졌다고 한다.
+Blog.create!(id: 7, user_id: 1, blog_category_id: 1,title: '체르노빌때 난리나던 일본, 후쿠시마에는',description: '일본의 블랙코미디, 웃어야 할까? 울어야 할까?', created_at: 55.day.ago,
+             content: '체르노빌사고로 방사는 누출 되었을때 일본에서는 당장 일본에 엄청난 피해가 되는것처럼 난리가 나고 패닉에 빠졌다고 한다.
 근데 상식적으로 체르노빌에서의 유럽의 거리와 일본의 거리를 생각하면 이렇게 우스운 일이 없다.
 일본까지 영향이 있다고 해도 중간에는 중국과 한국도 있으니 말이다.
 
@@ -254,8 +246,8 @@ BlogContent.create!(id: 7, content: '체르노빌사고로 방사는 누출 되�
 이게 어찌된 일일까요?? ㅎㅎㅎㅎㅎ
 ')
 
-Blog.create!(id: 8, user_id: 1, blog_category_id: 1,title: '나치의 사상 최고의 코미디!!!',description: '세계최고의 비극을 자행한 나치의 포복절도할 코미디', created_at: 53.day.ago)
-BlogContent.create!(id: 8, content: '유태인에 대한 증오, 혐오주의를 조장하여 정권을 잡은 나치
+Blog.create!(id: 8, user_id: 1, blog_category_id: 1,title: '나치의 사상 최고의 코미디!!!',description: '세계최고의 비극을 자행한 나치의 포복절도할 코미디', created_at: 53.day.ago,
+             content: '유태인에 대한 증오, 혐오주의를 조장하여 정권을 잡은 나치
 또한 이들이 주장한것이 우수한 아리아인
 그리하여 우수한 아리아인의 표준 모델이 필요하게 되었다.
 
@@ -269,8 +261,8 @@ BlogContent.create!(id: 8, content: '유태인에 대한 증오, 혐오주의를
 어리석은 인종, 종족 혐오의 우스움을 보여주는 예라고 할 수 있다.
 ')
 
-Blog.create!(id: 9, user_id: 1, blog_category_id: 1,title: '독재자들은 다 정신병이 걸립니다. 박정희도 걸렸었고요',description: '독재자들은 다 자기가 이니면 안된다는 정신병이 걸립니다.', created_at: 41.day.ago)
-BlogContent.create!(id: 9, content: '헌법은 국민이면 누구나 지켜야 되는 최상의 법입니다.
+Blog.create!(id: 9, user_id: 1, blog_category_id: 1,title: '독재자들은 다 정신병이 걸립니다. 박정희도 걸렸었고요',description: '독재자들은 다 자기가 이니면 안된다는 정신병이 걸립니다.', created_at: 41.day.ago,
+             content: '헌법은 국민이면 누구나 지켜야 되는 최상의 법입니다.
 
 박정희도 헌법대로 2번만 하고 내려왔으면 공이 훨씬 컸었을테지요
 하지만 3번 하는걸로 바꾸고 결국에는 평생 해쳐먹을래다가 여자끼고 술 먹다가 뒤진놈이지요
@@ -289,8 +281,8 @@ BlogContent.create!(id: 9, content: '헌법은 국민이면 누구나 지켜야 
 이놈도 이 정신병 걸린 놈이였습니다.')
 
 
-Blog.create!(id: 10, user_id: 1, blog_category_id: 2,title: '허용된 마약, 알콜...  알콜중독의 심각성',description: '우리나라의 합법적 마약 알콜, 그 심각성을 우습게 아는게 심각합니다.', created_at: 39.day.ago)
-BlogContent.create!(id: 10, content: '우리나라는 다른 마약에는 엄격하면서 술,담배에는 너무나 관대하지요
+Blog.create!(id: 10, user_id: 1, blog_category_id: 2,title: '허용된 마약, 알콜...  알콜중독의 심각성',description: '우리나라의 합법적 마약 알콜, 그 심각성을 우습게 아는게 심각합니다.', created_at: 39.day.ago,
+             content: '우리나라는 다른 마약에는 엄격하면서 술,담배에는 너무나 관대하지요
 술의 폐해는 일일히 말하기도 힘들 지경이고 알콜중독자는 계속 늘어나고만 있지요
 
 어렸을때만 해도 알콜중독자들이 폭력을 휘두르거나 운전하는것도 다 이해하고 넘어가던 사회 분위기였으니... 참 지금 생각하면 기가 막히지요
@@ -301,30 +293,30 @@ BlogContent.create!(id: 10, content: '우리나라는 다른 마약에는 엄격
 
 
 
-Blog.create!(id: 11, user_id: 1, blog_category_id: 1,title: '일본의 앞선 해외진출',description: '일본이 동남아 진출 할 때, 조선은 한게 없다', created_at: 27.day.ago)
-BlogContent.create!(id: 11, content: '지금도 비행기 타고 한참가야 되는 베트남 호이안
+Blog.create!(id: 11, user_id: 1, blog_category_id: 1,title: '일본의 앞선 해외진출',description: '일본이 동남아 진출 할 때, 조선은 한게 없다', created_at: 27.day.ago,
+             content: '지금도 비행기 타고 한참가야 되는 베트남 호이안
 일본인들은 그 옛날부터 그곳 까지 가서 일본인 마을을 건설하고 무역을 했다.
 일부 사무라이들은 태국 까지 가서 용병으로 복무하기도 했다고 한다.
 
 일본인들이 그렇게 많이 왔다갔다 할 때
 조선은?...    베트남은 알고 있었겠지만 태국은 알고 있었나 모르겠네?')
 
-Blog.create!(id: 12, user_id: 1, blog_category_id: 1,title: '일본에 맞서려면 중국과 동맹이 필수',description: '임진왜란의 교훈을 되새게 중국과 손잡고 일본에 대항하자', created_at: 25.day.ago)
-BlogContent.create!(id: 12, content: '임진왜란때 우리를 구해준 혈맹 중국
+Blog.create!(id: 12, user_id: 1, blog_category_id: 1,title: '일본에 맞서려면 중국과 동맹이 필수',description: '임진왜란의 교훈을 되새게 중국과 손잡고 일본에 대항하자', created_at: 25.day.ago,
+             content: '임진왜란때 우리를 구해준 혈맹 중국
 그 옛날 중국과 손 잡고 일본놈들을 이 땅에서 몰아냈었지요
 이제 다시 일본과 싸우려면 중국과의 관계 증진이 더욱 필요합니다
 뭐 이미 수출입에서는 1위인 뗄수도 없는 관계이지요
 반일감정을 공유하는 중국과의 모든 장애물을 없애고 임진왜란때의 혈맹관계를 복구하여
 그때처럼 일본을 이겨야 된다~')
 
-Blog.create!(id: 13, user_id: 1, blog_category_id: 2,title: '엄청나게 먼 거리의 존재의 유무',description: '상호작용 할수 없는 존재는 존재하는것이냐? 아니냐?', created_at: 23.day.ago)
-BlogContent.create!(id: 13, content: '1광년 이상 거리에 있는것은 존재 하는것인가? 안 하는것인가?
+Blog.create!(id: 13, user_id: 1, blog_category_id: 2,title: '엄청나게 먼 거리의 존재의 유무',description: '상호작용 할수 없는 존재는 존재하는것이냐? 아니냐?', created_at: 23.day.ago,
+             content: '1광년 이상 거리에 있는것은 존재 하는것인가? 안 하는것인가?
 물론 갈 수도 없고, 아무런 상호 작용을 할 수 없다.
 1년 전에 없어진 것 인데도 현재 도착하는 빛으로는 있는 것으로 인식할수도 있다.
 그냥 있다고 상상하는것과 다른것이 무엇인가?')
 
-Blog.create!(id: 14, user_id: 1, blog_category_id: 1,title: '심각한 대한민국 저출산, 문제 해결책',description: '프로이센의 정책을 본받아 저출산 극복하자', created_at: 20.day.ago)
-BlogContent.create!(id: 14, content: '프리드리히 대왕이 성군인것을 알았었는데
+Blog.create!(id: 14, user_id: 1, blog_category_id: 1,title: '심각한 대한민국 저출산, 문제 해결책',description: '프로이센의 정책을 본받아 저출산 극복하자', created_at: 20.day.ago,
+             content: '프리드리히 대왕이 성군인것을 알았었는데
 
 이런거는 몰랐네요
 
@@ -347,8 +339,8 @@ BlogContent.create!(id: 14, content: '프리드리히 대왕이 성군인것을 
 
 시간이 없습니다!!...')
 
-Blog.create!(id: 15, user_id: 1, blog_category_id: 1,title: '의외로 일본이 민주주의가 우리나라보다 앞선점이 많네요',description: '의외로 앞선 일본 민주주의, 우리나라에서 공산당으로 이름 만들면 어찌 될까?', created_at: 17.day.ago)
-BlogContent.create!(id: 15, content: '오른쪽 자민당에서만 해 먹어서 그렇지
+Blog.create!(id: 15, user_id: 1, blog_category_id: 1,title: '의외로 일본이 민주주의가 우리나라보다 앞선점이 많네요',description: '의외로 앞선 일본 민주주의, 우리나라에서 공산당으로 이름 만들면 어찌 될까?', created_at: 17.day.ago,
+             content: '오른쪽 자민당에서만 해 먹어서 그렇지
 왼쪽으로는 공산당도 있고 자유로운 부분이 많네요
 예전보다 공산당 지지율도 많이 올랐다는데
 
@@ -358,16 +350,16 @@ BlogContent.create!(id: 15, content: '오른쪽 자민당에서만 해 먹어서
 ')
 
 
-Blog.create!(id: 16, user_id: 1, blog_category_id: 1,title: '인류사에 손 꼽을 안사의 난 인명피해',description: '그냥 알고 있던 안사의 난의 인명피해가 어마어마 하군요', created_at: 15.day.ago)
-BlogContent.create!(id: 16, content: '중국인구관련해서 보니 지금이 중국인구가 세계인구에서 비율이 높은편이 아니라네??!!
+Blog.create!(id: 16, user_id: 1, blog_category_id: 1,title: '인류사에 손 꼽을 안사의 난 인명피해',description: '그냥 알고 있던 안사의 난의 인명피해가 어마어마 하군요', created_at: 15.day.ago,
+             content: '중국인구관련해서 보니 지금이 중국인구가 세계인구에서 비율이 높은편이 아니라네??!!
 당나라 안녹산의 난 있기전 인구가 세계인구의 42%였었다니!!!
 안녹산의 난 없었으면 50% 돌파했을 수도??!!!
 
 안녹산의 난때 인명 피해가 당시 인구비율로는 인류사 최대 피해네.. 엄청나구만')
 
 
-Blog.create!(id: 17, user_id: 1, blog_category_id: 1,title: '우리의 생각과는 다른 북한군대',description: '일제 잔재의 구타,가혹행위 만연한 예전 한국군이 전세계 최악이였다.', created_at: 10.day.ago)
-BlogContent.create!(id: 17, content: '예전에 어느 탈북자가 북한군대에서 병사와 장군이 똑같은 전우라는 인식이 있고 <= (원래 공산주의 국가 군대는 계급도 없었었다고 함)
+Blog.create!(id: 17, user_id: 1, blog_category_id: 1,title: '우리의 생각과는 다른 북한군대',description: '일제 잔재의 구타,가혹행위 만연한 예전 한국군이 전세계 최악이였다.', created_at: 10.day.ago,
+             content: '예전에 어느 탈북자가 북한군대에서 병사와 장군이 똑같은 전우라는 인식이 있고 <= (원래 공산주의 국가 군대는 계급도 없었었다고 함)
 장군이 야전에서 텐트에서 병사들이랑 똑같이 잤다는 이야기
 한국군대가 계급별로 너무 권위적이라 놀랐다는 이야기
 구타,가혹행위 같은거는 전혀 없었다는 이야기 듣고 <= (이것도 다 일제군대의 문화라고 하지요)
@@ -376,8 +368,8 @@ BlogContent.create!(id: 17, content: '예전에 어느 탈북자가 북한군대
 어쩌면 우리나라 군대 3년 병사로 복무했을때랑 비교하면 당시 북한군 10년 복무한것이 더 생활하기 좋았을지도 모르겠다는 생각도 듬')
 
 
-Blog.create!(id: 18, user_id: 1, blog_category_id: 1,title: '십자군시대때 이슬람과 프랑크',description: '문명의 이슬람 야만(?)의 프랑크', created_at: 7.day.ago)
-BlogContent.create!(id: 18, content: '
+Blog.create!(id: 18, user_id: 1, blog_category_id: 1,title: '십자군시대때 이슬람과 프랑크',description: '문명의 이슬람 야만(?)의 프랑크', created_at: 7.day.ago,
+             content: '
 옛날 십자군전쟁때는 이슬람이 문명이 더 발달하고 서유럽이 이제 미개에서 깨어났을때이지요
 뭐 하여간 십자군원정이 성공하여 지금의 이스라엘 지역에 기독교 왕국이 알박기처럼 이슬람 한복판에 세워졌지요 <= 지금도 그렇습니다만
 
@@ -403,8 +395,8 @@ BlogContent.create!(id: 18, content: '
 결국 이슬람이 합심하여 프랑크인들을 몰아내긴 하지만 역사는 또 반복되어져 지금에 이르게 됩니다')
 
 
-Blog.create!(id: 19, user_id: 1, blog_category_id: 4,title: '반중레밍스와의 대화, 사실 확인',description: '반중혐오발언 생산하고 아무생각 없이 그걸 그냥 따라가는 레밍스들', created_at: 5.day.ago)
-BlogContent.create!(id: 19, content: '
+Blog.create!(id: 19, user_id: 1, blog_category_id: 4,title: '반중레밍스와의 대화, 사실 확인',description: '반중혐오발언 생산하고 아무생각 없이 그걸 그냥 따라가는 레밍스들', created_at: 5.day.ago,
+             content: '
 
 반중 레밍스가 어디서 한 마디를 듣고 와서 떠든다.
 
@@ -421,8 +413,8 @@ BlogContent.create!(id: 19, content: '
 ')
 
 
-Blog.create!(id: 20, user_id: 1, blog_category_id: 3,title: '저장강박증 환자인 나',description: '강박증의 일종인 저장강박증', created_at: 1.day.ago)
-BlogContent.create!(id: 20, content: '
+Blog.create!(id: 20, user_id: 1, blog_category_id: 3,title: '저장강박증 환자인 나',description: '강박증의 일종인 저장강박증', created_at: 1.day.ago,
+             content: '
 나는 저장 강박증 환자이다.
 저장 강박증은 강박증의 일종으로 물건을 쌓아두고 버리지 못하는 정신병이다.
 누가봐도 필요없는 물건이 분명한것도 나중에 필요할지 모른다는 강박으로 인해 물건을 버리지 못한다.
@@ -431,33 +423,34 @@ BlogContent.create!(id: 20, content: '
 
 
 
-Question.create!(id: 1, title: '홈페이지 너무 좋네요', name: '나야나', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 10.day.ago)
-QuestionContent.create!(id: 1, content: '저도 이런 홈페이지 만들고 싶은데 어떻게 하면 될지 알려주시면 감사하겠습니다.')
+Question.create!(id: 1, title: '홈페이지 너무 좋네요', name: '나야나', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 10.day.ago,
+                 content: '저도 이런 홈페이지 만들고 싶은데 어떻게 하면 될지 알려주시면 감사하겠습니다.')
 
-Question.create!(id: 2, title: '안녕하세요 궁금해서 그러는데요', name: '궁금궁금', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 7.day.ago)
-QuestionContent.create!(id: 2, content: '연락해서 물어볼수 있는 연락처좀 알 수 있을까요?')
+Question.create!(id: 2, title: '안녕하세요 궁금해서 그러는데요', name: '궁금궁금', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 7.day.ago,
+                 content: '연락해서 물어볼수 있는 연락처좀 알 수 있을까요?')
 
-Question.create!(id: 3, title: '연무동 도시재생 사업에 참여하고 싶은데요', name: '주민', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 3.day.ago)
-QuestionContent.create!(id: 3, content: '연무동 도시재생 사업에 참여하고 싶은데, 어떻게 하면 될까요?')
+Question.create!(id: 3, title: '연무동 도시재생 사업에 참여하고 싶은데요', name: '주민', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 3.day.ago,
+                 content: '연무동 도시재생 사업에 참여하고 싶은데, 어떻게 하면 될까요?')
 
 
-GuestBook.create!(id: 1, title: '형님 안녕하세요', name: '동생', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 11.day.ago)
-GuestBookContent.create!(id: 1, content: '형님 빨리 또 만나서 술 한잔 해요')
+GuestBook.create!(id: 1, title: '형님 안녕하세요', name: '동생', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 11.day.ago,
+                  content: '형님 빨리 또 만나서 술 한잔 해요')
 
-GuestBook.create!(id: 2, title: '회장님, 잘 지내시지요?', name: '회원', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 9.day.ago)
-GuestBookContent.create!(id: 2, content: '회장님 고생하십니다.  조만간 또 뵙고 한 잔 하시지요~')
+GuestBook.create!(id: 2, title: '회장님, 잘 지내시지요?', name: '회원', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 9.day.ago,
+                  content: '회장님 고생하십니다.  조만간 또 뵙고 한 잔 하시지요~')
 
-GuestBook.create!(id: 3, title: '좋은 글들이네요', name: '지나가다', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 7.day.ago)
-GuestBookContent.create!(id: 3, content: '좋은글들 잘 읽었습니다. 계속 방문할께요')
+GuestBook.create!(id: 3, title: '좋은 글들이네요', name: '지나가다', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 7.day.ago,
+                  content: '좋은글들 잘 읽었습니다. 계속 방문할께요')
 
-GuestBook.create!(id: 4, title: '좋은분인것 같아요', name: '손님', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 3.day.ago)
-GuestBookContent.create!(id: 4, content: '저장강박 잘 치료 받으시길 바랄께요')
+GuestBook.create!(id: 4, title: '좋은분인것 같아요', name: '손님', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 3.day.ago,
+                  content: '저장강박 잘 치료 받으시길 바랄께요')
 
-GuestBook.create!(id: 5, title: '접니다, ㅎㅎ', name: '나야나', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 1.day.ago)
-GuestBookContent.create!(id: 5, content: '형님, 보고싶네요,  그럼 또 연락드릴께요')
+GuestBook.create!(id: 5, title: '접니다, ㅎㅎ', name: '나야나', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 1.day.ago,
+                  content: '형님, 보고싶네요,  그럼 또 연락드릴께요')
 
-GuestBook.create!(id: 6, title: '잘보고 갑니다, ㅎㅎ', name: '손님', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 1.day.ago)
-GuestBookContent.create!(id: 6, content: '좋은글, 사진 잘 보고 갑니다.  다음에 또 올께요')
+
+GuestBook.create!(id: 6, title: '잘보고 갑니다, ㅎㅎ', name: '손님', encrypted_password: 'dfa8d92e78a1d994f5228703c418e00b6e40d826', salt: '2257200.7532190434930376', created_at: 1.day.ago,
+                  content: '좋은글, 사진 잘 보고 갑니다.  다음에 또 올께요')
 
 
 

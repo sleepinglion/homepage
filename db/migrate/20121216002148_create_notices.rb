@@ -1,4 +1,4 @@
-class CreateNotices < ActiveRecord::Migration[4.2]
+class CreateNotices < ActiveRecord::Migration[6.0]
   def change
     create_table :notices do |t|
       t.references :user,:null=>false
@@ -7,11 +7,5 @@ class CreateNotices < ActiveRecord::Migration[4.2]
       t.integer :count, :null=>false, :default=>0
       t.timestamps null: false
     end
-    
-    create_table :notice_contents do |t|
-      t.text :content,:null=>false
-    end
-    
-    add_index :notices, :user_id
   end
 end

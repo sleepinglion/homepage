@@ -1,4 +1,4 @@
-class CreateBlogCategories < ActiveRecord::Migration[4.2]
+class CreateBlogCategories < ActiveRecord::Migration[6.0]
   def change
     create_table :blog_categories do |t|
       t.references :user, :null=>false
@@ -9,6 +9,5 @@ class CreateBlogCategories < ActiveRecord::Migration[4.2]
     end
 
     add_index :blog_categories, :title,  :unique => true
-    add_index :blog_categories, :user_id
   end
 end

@@ -26,8 +26,7 @@ class QuestionsController < AnonBoardController
   # GET /questions/1
   # GET /questions/1.json
   def show
-    @question_comments=@question.question_comment.order('id desc').page(params[:page]).per(10)
-    @question_comment=QuestionComment.new
+    @comment  = Comment.build_from(@question, current_user, "")
 
     @script="board/show"
 
@@ -41,7 +40,6 @@ class QuestionsController < AnonBoardController
   # GET /questions/new.json
   def new
     @question = Question.new
-    @question.build_question_content
     @script="board/new"
 
     respond_to do |format|
@@ -124,6 +122,6 @@ class QuestionsController < AnonBoardController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def question_params
-    params.require(:question).permit(:user_id,:title,:name,:password,question_content_attributes: [:content],question_answer_attributes: [:content]).merge(:user_id=>current_user)
+    params.require(:question).permit(:user_id,:title,:name,:password, :content).merge(:user_id=>current_user)
   end
 end
