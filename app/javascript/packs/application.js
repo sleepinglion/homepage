@@ -15,5 +15,6 @@ require("@fancyapps/fancybox");
 require("trix")
 require("@rails/actiontext")
 import 'trix/dist/trix.css';
+require("jquery-tagcanvas");
 require("./common");
 require("./index");
