@@ -9,9 +9,12 @@ require("@rails/ujs").start()
 //require("channels")
 require("jquery");
 require("bootstrap");
-require("jquery-tagcanvas");
 require("./jquery.uri");
 require("jquery.easing");
 require("@fancyapps/fancybox");
+require("trix")
+require("@rails/actiontext")
+import 'trix/dist/trix.css';
+require("jquery-tagcanvas");
 require("./common");
 require("./index");
