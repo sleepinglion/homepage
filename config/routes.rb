@@ -50,7 +50,7 @@ Rails.application.routes.draw do
   post 'guest_books/:guest_book_id/guest_book_comments/:id/password',:to=>'guest_book_comments#password'
 
 
-
+  get 'tags/:tag', to: 'tags#index', as: :tag
 
   scope 'admin', module: 'admin', as: 'admin' do
     get '/' => 'admin_home#index'

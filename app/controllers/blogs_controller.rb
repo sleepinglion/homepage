@@ -20,9 +20,6 @@ class BlogsController < ApplicationController
           @blogs = Blog.order(:id=>'desc').page(params[:page]).per(15)
         end
 
-
-    @template='/blogs/index_default'
-
     respond_to do |format|
       format.html { render @template }
       format.json { render json: @blogs }

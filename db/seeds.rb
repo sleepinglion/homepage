@@ -76,7 +76,7 @@ BlogCategory.create(id: 3, user_id: 1, title: '탁구')
 BlogCategory.create(id: 4, user_id: 1, title: '환경')
 
 
-Blog.create!(id: 1, user_id: 1, blog_category_id: 1,title: '아직도 4년이 남은 암담한 대한민국',description: '대통령제의 폐해가 심각해서 의원내각제로 바꾸는게 좋을듯', created_at:100.day.ago,
+Blog.create!(id: 1, user_id: 1, blog_category_id: 1,title: '아직도 4년이 남은 암담한 대한민국',description: '대통령제의 폐해가 심각해서 의원내각제로 바꾸는게 좋을듯', created_at:100.day.ago, tag_list: 'awesome,slick',
              content: '대통령제의 문제점이 대통령의 권한이 너무 막강하고 잘못 뽑으면 임기때 까지 바꾸지 못한다는거
 대한민국 대통령 권한이 조선의 왕 보다 세다는 이야기도 있지요
 또한 단원제 문제점도 상하(참의원, 중의원)의원 권한이 막강하고 한번에 해결하려고 되어 지금과 같은 문제점이 생긴다는것
@@ -87,6 +87,7 @@ Blog.create!(id: 1, user_id: 1, blog_category_id: 1,title: '아직도 4년이 �
 대통령제의 문제가 지금 같이 잘못 뽑았을 경우도 바꾸지도 못하고 임기를 채워야 된다는것
 탄핵이라는게 있지만 이것은 심각한 문제가 있을때 뿐이니
 내각제였으면 지금 지지율이면 이미 내각불신임해서 쉽게 교체되는데 이건뭐... 아직도 4년 넘게 남았나요??')
+
 
 Blog.create!(id: 2, user_id: 1, blog_category_id: 1,title: '아직도 4년이 남은 암담한 대한민국2',description: '대통령제의 폐해가 심각해서 의원내각제로 바꾸는게 좋을듯', created_at: 95.day.ago,
              content: '굥이 뽑이는거 같은 대통령제 폐해가 심각하다
