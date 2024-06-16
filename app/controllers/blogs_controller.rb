@@ -35,13 +35,12 @@ class BlogsController < ApplicationController
    @blog_comments=@blog.blog_comment.order('id desc').page(params[:page]).per(10)
    @blog_comment=BlogComment.new
 
-
    @meta_keywords=@blog.tag_list+','+t(:meta_keywords)
    @title=@blog.title
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render :json => @blog_comments }
+      format.json { render :json => @blog }
     end
   end
 
