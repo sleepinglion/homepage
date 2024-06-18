@@ -55,6 +55,6 @@ SitemapGenerator::Sitemap.create do
   Tag.find_each do |tag|
     next if tag.taggings_count.zero?
 
-    add tag_path(tag), :lastmod => tag.taggings.first.created_at
+    add tag_path(:tag => tag.name), :lastmod => tag.taggings.first.created_at
   end
 end
