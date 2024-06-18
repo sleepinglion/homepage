@@ -53,6 +53,6 @@ SitemapGenerator::Sitemap.create do
   end
 
   Tag.find_each do |tag|
-    add tags_path(tag), :lastmod => tag.updated_at
+    add tag_path(tag), :lastmod => tag.taggins.first.created_at
   end
 end
