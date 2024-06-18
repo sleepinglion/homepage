@@ -51,4 +51,8 @@ SitemapGenerator::Sitemap.create do
   Faq.find_each do |faq|
     add faq_path(faq), :lastmod => faq.updated_at
   end
+
+  Tag.find_each do |tag|
+    add tags_path(tag), :lastmod => tag.updated_at
+  end
 end
