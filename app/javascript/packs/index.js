@@ -165,7 +165,7 @@ $(document).ready(function(){
             $("#faqList dt").removeClass('active').find('i').text('add');
             $("#faqList dd").hide();
             parent.addClass('on').find('i').text('remove');
-            parent.next().effect('highlight').html('<p>'+nl2br(value.content)+'</p>').slideDown();
+            parent.next().effect('highlight').html('<p>'+nl2br(value.body)+'</p>').slideDown();
             if (history && history.pushState) {
                 history.pushState('','faq_'+value.id,'/faqs/'+value.id);
             }

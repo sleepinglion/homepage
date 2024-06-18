@@ -40,7 +40,7 @@
 			</dt>
 			<% if(@faq)%>
 			<% if(faq.id==@faq.id) %>
-					<dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><%=simple_format(@faq.faq_content.content) %></dd>
+					<dd itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><%=simple_format(@faq.content.to_s) %></dd>
 			<% end %>
 			<% end %>
 

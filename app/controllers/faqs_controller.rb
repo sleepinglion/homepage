@@ -46,7 +46,7 @@ class FaqsController < ApplicationController
 
     respond_to do |format|
       format.html # _slide.html.erb
-      format.json { render json: @faq.faq_content}
+      format.json { render json: @faq.content}
     end
   end
 
