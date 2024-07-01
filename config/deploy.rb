@@ -8,7 +8,7 @@ set :repo_url, "git@github.com:sleepinglion/homepage.git"
 set :branch, 'jingyu'
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/deploy/jingyu"
+set :deploy_to, "/var/www/html/jingyu"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
