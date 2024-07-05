@@ -30,8 +30,8 @@
   <% @blogs.each do |blog| %>
   <article class="media p-3 rounded" itemscope itemprop="blogPost" itemtype="http://schema.org/Blog">
     <%=link_to blog_path(blog),:class=>"pull-left" do %>
-    <% if blog.photo? %>
-      <%=image_tag sl_get_thumb(blog.photo.to_s,'small'), :class=>"media-object",:itemprop=>"thumbnailUrl",:alt=>"..." %>
+    <% unless blog.blog_pictures_count.zero? %>
+      <%=image_tag sl_get_thumb(blog.blog_picture.picture.to_s,'small'), :class=>"media-object",:itemprop=>"thumbnailUrl",:alt=>"..." %>
     <% end %>
     <% end %>
     <div class="media-body">

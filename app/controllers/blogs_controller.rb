@@ -32,9 +32,6 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-   @blog_comments=@blog.blog_comment.order('id desc').page(params[:page]).per(10)
-   @blog_comment=BlogComment.new
-
    @meta_keywords=@blog.tag_list+','+t(:meta_keywords)
    @title=@blog.title
 

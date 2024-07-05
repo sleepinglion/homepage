@@ -12,6 +12,7 @@ en:
   meta_image : 'http://images.sleepinglion.pe.kr/sl.jpg'
   meta_url : 'http://www.sleepinglion.pe.kr'
   title_separator : '-'
+  default_title : '깨끗한 웹세상을 만들어가는 웹프로그래머'
 
   korean : '한국어'
   english : '영어'

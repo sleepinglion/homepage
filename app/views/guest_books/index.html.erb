@@ -24,7 +24,7 @@
 				<tr>
 					<td class="sl_t_name hidden-sm hidden-xs"><%=userName(guest_book,10) %></td>
 					<td class="sl_t_title"><%= link_to guest_book.title, guest_book  %></td>
-					<td class="text-right"><%= guest_book.guest_book_comments_count %></td>
+					<td class="text-right"><%= guest_book.comment_threads.count %></td>
 					<td class="text-right"><%=guest_book.count+guest_book.impressionist_count(:filter=>:ip_address) %></td>
 					<td class="text-center"><%=time_ago_in_words guest_book.created_at.to_date %></td>
 				</tr>

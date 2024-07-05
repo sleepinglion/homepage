@@ -23,9 +23,6 @@ class GuestBooksController < AnonBoardController
   # GET /guest_books/1
   # GET /guest_books/1.json
   def show
-    @guest_book_comments = @guest_book.guest_book_comment.order(id: 'desc').page(params[:page]).per(15)
-    @guest_book_comment = GuestBookComment.new
-
     @title = @guest_book.title + t(:title_separator) + t(:application_name)
     @script = "board/show"
 
@@ -39,7 +36,6 @@ class GuestBooksController < AnonBoardController
   # GET /guest_books/new.json
   def new
     @guest_book = GuestBook.new
-    @guest_book.build_guest_book_content
 
     respond_to do |format|
       format.html # new.html.erb

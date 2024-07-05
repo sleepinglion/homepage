@@ -26,9 +26,6 @@ class QuestionsController < AnonBoardController
   # GET /questions/1
   # GET /questions/1.json
   def show
-    @question_comments=@question.question_comment.order('id desc').page(params[:page]).per(10)
-    @question_comment=QuestionComment.new
-
     @script="board/show"
 
     respond_to do |format|
@@ -41,7 +38,6 @@ class QuestionsController < AnonBoardController
   # GET /questions/new.json
   def new
     @question = Question.new
-    @question.build_question_content
     @script="board/new"
 
     respond_to do |format|

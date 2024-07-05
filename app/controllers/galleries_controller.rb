@@ -32,7 +32,7 @@ class GalleriesController < BoardController
 
     if @gallery
       @title = @gallery.title
-      @meta_description = @gallery.content
+      @meta_description = @gallery.content.to_s
     end
 
     respond_to do |format|
@@ -50,7 +50,7 @@ class GalleriesController < BoardController
 
     if @gallery
       @title = @gallery.title
-      @meta_description = @gallery.content
+      @meta_description = @gallery.content.to_s
     end
   end
 

@@ -3,7 +3,7 @@ class HomeController < ApplicationController
     @notices = Notice.order('id desc').page(0).per(5)
     @questions = Question.order('id desc').page(0).per(5)
     @galleries = Gallery.order('id desc').page(0).per(24)
-    @blogs = Blog.order('id desc').where('photo IS NOT NULL').page(0).per(6)
+    @blogs = Blog.order('id desc').where('blog_pictures_count>0').page(0).per(6)
   end
 
   def feed

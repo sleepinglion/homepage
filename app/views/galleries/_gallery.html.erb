@@ -34,7 +34,7 @@
 	</div>
 	<div id="sl_gallery_right" class="col-12 col-lg-7">
 		<div itemprop="description">
-			<%= simple_format gallery.content %>
+			<%= simple_format gallery.content.to_s %>
 		</div>
 		<div class="add_info">
       <span itemprop="dateCreated" datetime="<%= gallery.created_at %>"><%= time_ago_in_words(gallery.created_at.to_date) %></span><span class="none" itemprop="dateModified" datetime="<%= gallery.updated_at %>"><%=time_ago_in_words gallery.updated_at.to_date %></span>
