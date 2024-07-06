@@ -147,7 +147,9 @@ GEM
       warden (~> 1.2.3)
     drb (2.2.1)
     erubi (1.13.0)
+    ffi (1.17.0)
     ffi (1.17.0-arm64-darwin)
+    ffi (1.17.0-x86_64-linux-gnu)
     globalid (1.2.1)
       activesupport (>= 6.1)
     gretel (5.0.0)
@@ -196,6 +198,7 @@ GEM
       actionpack (>= 6.0.0, < 7.2)
     mini_magick (4.13.1)
     mini_mime (1.1.5)
+    mini_portile2 (2.8.7)
     minitest (5.24.1)
     msgpack (1.7.2)
     mutex_m (0.2.0)
@@ -214,7 +217,12 @@ GEM
       net-protocol
     net-ssh (7.2.3)
     nio4r (2.7.3)
+    nokogiri (1.16.6)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     nokogiri (1.16.6-arm64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.16.6-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     psych (5.1.2)
@@ -293,7 +301,10 @@ GEM
       actionpack (>= 6.1)
       activesupport (>= 6.1)
       sprockets (>= 3.0.0)
+    sqlite3 (1.7.3)
+      mini_portile2 (~> 2.8.0)
     sqlite3 (1.7.3-arm64-darwin)
+    sqlite3 (1.7.3-x86_64-linux)
     sshkit (1.23.0)
       base64
       net-scp (>= 1.1.2)
@@ -324,6 +335,8 @@ GEM
 
 PLATFORMS
   arm64-darwin
+  x86_64-linux
+  x86_64-unknown
 
 DEPENDENCIES
   acts-as-taggable-on
