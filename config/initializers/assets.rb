@@ -25,3 +25,4 @@ Rails.application.config.assets.precompile << Proc.new { |path|
     true
   end
 }
+s
