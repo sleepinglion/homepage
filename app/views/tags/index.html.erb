@@ -5,8 +5,8 @@
   <% @blogs.each do |blog| %>
   <article class="media p-3 rounded" itemscope itemprop="blogPost" itemtype="http://schema.org/Blog">
     <%=link_to blog_path(blog), class: "pull-left",rel: "nofollow" do %>
-    <% if blog.photo? %>
-      <%=image_tag blog.photo.small_thumb.url, :class=>"media-object",:itemprop=>"thumbnailUrl",:alt=>"..." %>
+    <% unless blog.blog_pictures_count.zero? %>
+      <%=image_tag blog.blog_picture.picture.small_thumb.url, :class=>"media-object",:itemprop=>"thumbnailUrl",:alt=>"..." %>
     <% end %>
     <% end %>
     <div class="media-body">

@@ -1,14 +1,14 @@
 # config valid for current version and patch releases of Capistrano
 #lock "~> 3.15.0"
 
-set :application, "sleepinglion"
+set :application, "jingyu"
 set :repo_url, "git@github.com:sleepinglion/homepage.git"
 
 # Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+set :branch, 'jingyu'
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/var/www/html/sleepinglion"
+set :deploy_to, "/var/www/html/jingyu"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
@@ -26,7 +26,7 @@ set :ssh_options, verify_host_key: :never
 set :default_env, {'NODE_OPTIONS'=>'--openssl-legacy-provider'}
 
 # Default value for :linked_files is []
-append :linked_files, "config/database.yml", "config/master.key", ".env"
+append :linked_files, "config/database.yml", ".env"
 
 # Default value for linked_dirs is []
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets",  "public/uploads"
@@ -38,7 +38,7 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets",  "public/upl
 # set :local_user, -> { `git config user.name`.chomp }
 
 # Default value for keep_releases is 5
-set :keep_releases, 5
+set :keep_releases, 3
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure

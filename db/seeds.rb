@@ -1,10 +1,9 @@
 User.create!(email: 'admin@jedaeroweb.co.kr',nickname: '잠자는-사자', password: 'a12345', password_confirmation: 'a12345', admin: true)
 
-BlogCategory.create!(id: 1, title: '잡생각')
-BlogCategory.create!(id: 2, title: '헬조선')
+
 
 GalleryCategory.create!(id: 1, title: '일상')
-GalleryCategory.create!(id: 2, title: '멍멍이')
+GalleryCategory.create!(id: 2, title: '동물')
 GalleryCategory.create!(id: 3, title: '가족들')
 GalleryCategory.create!(id: 4, title: '풍경')
 GalleryCategory.create!(id: 5, title: '기타')
@@ -35,7 +34,8 @@ GuestBook.create!(id: 7, title: 'slboard 게시판을 쓰시네요', name: '한�
 GuestBook.create!(id: 8, title: '2351235', name: 'a', count: 0, content: '2135235')
 
 
-Notice.create!(id: 1, user_id: 1, title: '잠자는-사자의 집이 다시 개장했습니다.', content: '그동안 수많은 방문자에 비해서 준비되지 못하였는데 이제 보다 업그레이드된 모습으로 다시 찾아뵙게되었습니다.     잠자는-사자와 소통하는 공간으로 계속 많은 이용바랍니다.')
+Notice.create!(id: 1, user_id: 1, title: '잠자는-사자의 집이 다시 개장했습니다.', content: '그동안 수많은 방문자에 비해서 준비되지 못하였는데 이제 보다 업그레이드된 모습으로 다시 찾아뵙게되었습니다.
+잠자는-사자와 소통하는 공간으로 계속 많은 이용바랍니다.')
 Notice.create!(id: 2, user_id: 1, title: '잠자는-사자의 집 계속적인 업데이트', content: '<p>웹프로그래머 잠자는-사자의 집을 찾아주신 여러분께 감사드립니다.</p>
  <p>이제는 한시적인 업데이트가 아닌 계속적인 업데이트로 매일매일 달라지고 있으니</p>
  <p>자주자주 방문해주세요~~</p>
@@ -59,56 +59,105 @@ Question.create!(id: 3, title: '웹프로그래머가 되려고 하는데요', n
 Question.create!(id: 4, title: '홈페이지 분석의뢰', name: '까까', content: '홈페이지 분석을 하고 싶습니다
  홈피는 인터파크 홈페이지이고 한페이지 입니다
  분석에 필요한 시간과 금액을 알고싶습니다')
-Question.create!(id: 5, title: '안녕하세요? 5억짜리 싸이트 제작 의뢰 문의드립니다.', name: '고리타', content: '안녕하세요? 저희가 이번에 거래싸이트 5억짜리를 구성하고 있습니다.
-
- 자세한건 전화로 통화하면서 문의드리고 싶은데요.
-
- 연락한번 부탁드립니다.
-
- 02-3397-1206')
-Question.create!(id: 6, title: '임민야옹', name: '으으으', content: '잘살아라')
+Question.create!(id: 5, title: '임민야옹', name: '으으으', content: '잘살아라')
 
 
 
 
-Gallery.create!(id: 1, gallery_category_id: 1, title:'벌서는 짬순이',photo: File.open(Rails.root.join("app", "assets", "images","gallery","dog.jpg")), content: '아무데나 오줌싸서 혼나는 짬순이
+Gallery.create!(id: 1, gallery_category_id: 2, title:'벌서는 짬순이',photo: File.open(Rails.root.join("app", "assets", "images","gallery","dog.jpg")), content: '아무데나 오줌싸서 혼나는 짬순이
  이놈! 아무데나 오줌싸~!!')
-Gallery.create!(id: 2, gallery_category_id: 1, title:'소양호(양구)',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "soyangho.jpg")), content: '양구에서 찍은 평화로운 소양호 모습')
-Gallery.create!(id: 3, gallery_category_id: 1, title:'소양호(양구)',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "soyangho2.jpg")), content: '양구에서 본 평화로운 소양호수')
-Gallery.create!(id: 4, gallery_category_id: 1, title:'소양댐',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "soyangho3.jpg")), content: '소양댐에서 펼쳐진 산들')
-Gallery.create!(id: 5, gallery_category_id: 1, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "taebaek_mountains.jpg")), content: '파란하늘의 가을날')
-Gallery.create!(id: 6, gallery_category_id: 1, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "taebaek_mountains2.jpg")), content: '태백산 중턱에서 보이는 풍경')
-Gallery.create!(id: 7, gallery_category_id: 1, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "taebaek_mountains3.jpg")), content: '태백산에서 보이는 풍경')
-Gallery.create!(id: 8, gallery_category_id: 1, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "taebaek_mountains4.jpg")), content: '태백산에서 보이는 풍경, 푸른하늘')
-Gallery.create!(id: 9, gallery_category_id: 1, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "taebaek_mountains5.jpg")), content: '태백산에서 보이는 풍경')
-Gallery.create!(id: 10, gallery_category_id: 1, title:'칠보산 청설모',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "red_squirrel.jpg")), content: '칠보산 정상에서 만나 청설모
+Gallery.create!(id: 2, gallery_category_id: 4, title:'소양호(양구)',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "soyangho.jpg")), content: '양구에서 찍은 평화로운 소양호 모습')
+Gallery.create!(id: 3, gallery_category_id: 4, title:'소양호(양구)',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "soyangho2.jpg")), content: '양구에서 본 평화로운 소양호수')
+Gallery.create!(id: 4, gallery_category_id: 4, title:'소양댐',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "soyangho3.jpg")), content: '소양댐에서 펼쳐진 산들')
+Gallery.create!(id: 5, gallery_category_id: 4, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "taebaek_mountains.jpg")), content: '파란하늘의 가을날')
+Gallery.create!(id: 6, gallery_category_id: 4, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "taebaek_mountains2.jpg")), content: '태백산 중턱에서 보이는 풍경')
+Gallery.create!(id: 7, gallery_category_id: 4, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "taebaek_mountains3.jpg")), content: '태백산에서 보이는 풍경')
+Gallery.create!(id: 8, gallery_category_id: 4, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "taebaek_mountains4.jpg")), content: '태백산에서 보이는 풍경, 푸른하늘')
+Gallery.create!(id: 9, gallery_category_id: 4, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "taebaek_mountains5.jpg")), content: '태백산에서 보이는 풍경')
+Gallery.create!(id: 10, gallery_category_id: 2, title:'칠보산 청설모',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "red_squirrel.jpg")), content: '칠보산 정상에서 만나 청설모
  사람 무서워하지도 않네')
-Gallery.create!(id: 11, gallery_category_id: 1, title:'칠보산에서 만난 청설모',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "red_squirrel2.jpg")), content: '먹을거 안주니 가버리는 청설모')
-Gallery.create!(id: 12, gallery_category_id: 1, title:'짬순이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "dog_in_house.jpg")), content: '집에 들어가서 대가리만 내민 짬순이')
-Gallery.create!(id: 13, gallery_category_id: 1, title:'짬순이 새끼들',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "puppy.jpg")), content: '짬순이 새끼들인 땡글, 식혜 , 장군, 멍군')
-Gallery.create!(id: 14, gallery_category_id: 1, title:'개집 탈출을 시도하는 개새끼',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "puppy2.jpg")), content: '탈출하는 짬순이 새끼, 누구일까? ')
-Gallery.create!(id: 15, gallery_category_id: 1, title:'멍군이와 동네산책',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "dog_go.jpg")), content: '귀여운 멍군이와 동네 산책 풍경')
+Gallery.create!(id: 11, gallery_category_id: 2, title:'칠보산에서 만난 청설모',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "red_squirrel2.jpg")), content: '먹을거 안주니 가버리는 청설모')
+Gallery.create!(id: 12, gallery_category_id: 2, title:'짬순이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "dog_in_house.jpg")), content: '집에 들어가서 대가리만 내민 짬순이')
+Gallery.create!(id: 13, gallery_category_id: 2, title:'짬순이 새끼들',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "puppy.jpg")), content: '짬순이 새끼들인 땡글, 식혜 , 장군, 멍군')
+Gallery.create!(id: 14, gallery_category_id: 2, title:'개집 탈출을 시도하는 개새끼',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "puppy2.jpg")), content: '탈출하는 짬순이 새끼, 누구일까? ')
+Gallery.create!(id: 15, gallery_category_id: 2, title:'멍군이와 동네산책',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "dog_go.jpg")), content: '귀여운 멍군이와 동네 산책 풍경')
+Gallery.create!(id: 16, gallery_category_id: 4, title:'상하이 와이탄 야경',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "waitan.jpg")), content: '상하이 와이탄 야경')
+Gallery.create!(id: 17, gallery_category_id: 4, title:'상하이 와이탄 야경',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "waitan2.jpg")), content: '상하이 와이탄 야경')
+Gallery.create!(id: 18, gallery_category_id: 4, title:'상하이 와이탄 야경',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "shanghai.jpg")), content: '상하이 와이탄 야경')
+Gallery.create!(id: 19, gallery_category_id: 3, title:'우는 모습도 너무나 귀여운 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "crying_baby.jpg")), content: '우는 모습도 너무나 귀여운 내 아들 주영이입니다.')
+Gallery.create!(id: 20, gallery_category_id: 4, title:'상하이 길거리 모습',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "shanghai_street_1.jpg")), content: '숙소에서 본 상하이 길거리 모습')
+Gallery.create!(id: 21, gallery_category_id: 4, title:'상하이 길거리 모습',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "shanghai_street_2.jpg")), content: '숙소에서 바라본 상하이 길거리 풍경')
+Gallery.create!(id: 22, gallery_category_id: 4, title:'끝없이 이어져있는 상하이 빌딩',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "shanghai_building.jpg")), content: '끝없이 이어져있는 상하이 빌딩들의 모습')
+Gallery.create!(id: 23, gallery_category_id: 4, title:'태백산 계곡',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "taebaeksan.jpg")), content: '맑은 물의 푸르른 태백산 계곡')
+Gallery.create!(id: 24, gallery_category_id: 4, title:'칠보산 정상에서',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "chilbosan.jpg")), content: '칠보산 정상에서 내려다본 모습, 금방이라도 비올꺼 같네')
+Gallery.create!(id: 25, gallery_category_id: 4, title:'눈덮인 호매실동',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "homaesil.jpg")), content: '눈덮인 호매실 논밭과 저멀리 광교산 모습')
+Gallery.create!(id: 26, gallery_category_id: 4, title:'눈덮인 호매실동',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "homaesil_2.jpg")), content: '눈덮인 호매실 논밭과 저멀리 광교산 모습')
+Gallery.create!(id: 27, gallery_category_id: 3, title:'낮잠자는 나와 아들',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "i_and_baby.jpg")), content: '주말에 꿈나라를 헤메이고 있는 나와 아들')
+Gallery.create!(id: 28, gallery_category_id: 3, title:'천사의 자는 모습인 내 아들 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "sleeping_baby.jpg")), content: '내아들 주영이, 잘때는 천사  울때는..... ㅜ.ㅜ')
+Gallery.create!(id: 29, gallery_category_id: 3, title:'목욕하기 싫은 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "crying_baby2.jpg")), content: '나 목욕하기 싫어......  으아아아앙~~~')
+Gallery.create!(id: 30, gallery_category_id: 3, title:'보행기에 앉아있는 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "baby.jpg")), content: '보행기에 앉아있는 주영이')
+Gallery.create!(id: 31, gallery_category_id: 3, title:'주먹올리고 잠자는 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "sleeping_baby.jpg")), content: '주먹쥐고 손올리고 자는 우리 주영이
+ 팔 안아프니?')
+Gallery.create!(id: 32, gallery_category_id: 3, title:'엉덩이도 너무 예뻐',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "baby_hip.jpg")), content: '엉덩이까지 너무 예쁜 우리 주영이')
+Gallery.create!(id: 33, gallery_category_id: 3, title:'너무 섹시한 우리 주영이 엉덩이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "baby_hip2.jpg")), content: '거부할수 없는 매력의 무한 섹시 엉덩이')
+Gallery.create!(id: 34, gallery_category_id: 3, title:'천사같은 주영이 100일 사진',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "baby_smile1.jpg")), content: '너무 예쁘고 귀여운 우리 주영이 100일 사진
+ 천사사진이 따로 없네?')
+Gallery.create!(id: 35, gallery_category_id: 3, title:'귀여운 주영이 100일 사진',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "baby_smile2.jpg")), content: '예쁘고 귀여운 우리 주영이 100일 사진 두번째')
+Gallery.create!(id: 36, gallery_category_id: 3, title:'상반신 노출!!  주영이 100일 사진',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "baby_smile3.jpg")), content: '너무나 매력적인 노출
+ 예쁘고 귀여운 우리 주영이 100일 사진 세번째')
+Gallery.create!(id: 37, gallery_category_id: 3, title:'흰옷의 천사, 주영이 100일 사진',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "baby_smile4.jpg")), content: '흰옷의 천사
+ 예쁘고 귀여운 우리 주영이 100일 사진 네번째')
+Gallery.create!(id: 38, gallery_category_id: 3, title:'눈물 가득 엉엉 우는 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "crying_baby.jpg")), content: '빨개진 얼굴 눈물 가득 엉엉 우는 주영이
+ 뭐가 그리 서럽니?')
+Gallery.create!(id: 39, gallery_category_id: 3, title:'보행기에서 노는 귀여운 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "baby1.jpg")), content: '보행이에서 숟가락 물고 노는 귀여운 주영이입니다.')
+Gallery.create!(id: 40, gallery_category_id: 2, title:'잠자는 멍군 형제들',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_4dogs.jpg")), content: '떙글, 식혜, 장군, 멍군
+ 다시 다 같이 모였으면 좋겠네')
+Gallery.create!(id: 41, gallery_category_id: 2, title:'모여서 누어있는 멍군형제들',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_4dogs2.jpg")), content: '귀여운 땡글, 식혜, 장군, 멍군')
+Gallery.create!(id: 42, gallery_category_id: 2, title:'끼어자는 새끼',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "sleeping_dog.jpg")), content: '그렇게 끼어자니 편하니?? ㅎㅎ
+ 끼어서 정신없이 자는 귀여운 새끼')
+Gallery.create!(id: 43, gallery_category_id: 2, title:'엎드려 있는 장군이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "puppy.jpg")), content: '보고싶은 장군이')
+Gallery.create!(id: 44, gallery_category_id: 2, title:'멍자',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_dog.jpg")), content: '멍군이 자식 멍자')
+Gallery.create!(id: 45, gallery_category_id: 2, title:'귀여운 멍군이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_dog1.jpg")), content: '멍군이 진짜 귀엽네 ㅎㅎ')
+Gallery.create!(id: 46, gallery_category_id: 2, title:'귀여운 짬순이 새끼',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_puppy.jpg")), content: '나온지 얼마 안된 귀여운 짬순이 새끼')
+Gallery.create!(id: 47, gallery_category_id: 2, title:'멍군이와 짬순이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "dogs.jpg")), content: '귀여운 멍군이와 짬순이')
+Gallery.create!(id: 48, gallery_category_id: 4, title:'아름다운 가을날 단풍',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "red_and_yellow.jpg")), content: '햇빛좋고 날좋은 가을날 아름다운 단풍')
+Gallery.create!(id: 49, gallery_category_id: 4, title:'장안문',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "jangan_gate.jpg")), content: '수원 화성의 정문 장안문입니다.')
+Gallery.create!(id: 50, gallery_category_id: 2, title:'엄마 염소와 새끼염소',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "goat.jpg")), content: '염소')
+Gallery.create!(id: 51, gallery_category_id: 3, title:'귀여운 주영이 잔디밭에서',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "juyoung.jpg")), content: '날 좋은날 잔디밭의 즐거운 주영이')
 
-Gallery.create!(id: 16, gallery_category_id: 1, title:'상하이 와이탄 야경',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "waitan.jpg")), content: '상하이 와이탄 야경')
-Gallery.create!(id: 17, gallery_category_id: 1, title:'상하이 와이탄 야경',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "waitan2.jpg")), content: '상하이 와이탄 야경')
-Gallery.create!(id: 18, gallery_category_id: 1, title:'상하이 와이탄 야경',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "shanghai.jpg")), content: '상하이 와이탄 야경')
-Gallery.create!(id: 19, gallery_category_id: 1, title:'우는 모습도 너무나 귀여운 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "crying_baby.jpg")), content: '우는 모습도 너무나 귀여운 내 아들 주영이입니다.')
-Gallery.create!(id: 20, gallery_category_id: 1, title:'상하이 길거리 모습',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "shanghai_street_1.jpg")), content: '숙소에서 본 상하이 길거리 모습')
 
-Gallery.create!(id: 21, gallery_category_id: 1, title:'상하이 길거리 모습',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "shanghai_street_2.jpg")), content: '숙소에서 바라본 상하이 길거리 풍경')
-Gallery.create!(id: 22, gallery_category_id: 1, title:'끝없이 이어져있는 상하이 빌딩',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "shanghai_building.jpg")), content: '끝없이 이어져있는 상하이 빌딩들의 모습')
-Gallery.create!(id: 23, gallery_category_id: 1, title:'태백산 계곡',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "taebaeksan.jpg")), content: '맑은 물의 푸르른 태백산 계곡')
-Gallery.create!(id: 24, gallery_category_id: 1, title:'칠보산 정상에서',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "chilbosan.jpg")), content: '칠보산 정상에서 내려다본 모습, 금방이라도 비올꺼 같네')
-Gallery.create!(id: 25, gallery_category_id: 1, title:'눈덮인 호매실동',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "homaesil.jpg")), content: '눈덮인 호매실 논밭과 저멀리 광교산 모습')
+Gallery.create!(id: 52, gallery_category_id: 4, title:'수원화성 야경',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "hwasung.jpg")), content: '수원화성의 아름다운 야경모습')
+Gallery.create!(id: 53, gallery_category_id: 4, title:'수원 시내 풍경1',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "suwon.jpg")), content: '팔달산에서 본 수원풍경')
+Gallery.create!(id: 54, gallery_category_id: 4, title:'수원 시내 풍경2',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "suwon2.jpg")), content: '팔달산에서 본 수원풍경')
+Gallery.create!(id: 55, gallery_category_id: 4, title:'화성 방화수류정',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "hwasung2.jpg")), content: '화성 방화수류정의 모습')
+Gallery.create!(id: 56, gallery_category_id: 4, title:'수원화성',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "hwasung3.jpg")), content: '용연에서 본 수원화성')
+Gallery.create!(id: 57, gallery_category_id: 3, title:'귀여운 주영이 도청에서',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "juyoung3.jpg")), content: '2015년 햇빛좋은 가을, 도청에서 귀여운 주영이 모습')
+Gallery.create!(id: 58, gallery_category_id: 3, title:'환하게 웃는 귀여운 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "juyoung_smile.jpg")), content: '환하게 웃는 귀여운 주영이, 천사가 따로 없네')
+Gallery.create!(id: 59, gallery_category_id: 4, title:'눈내린 장안공원',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "snow.jpg")), content: '눈내린 아침의 장안공원의 모습니다')
+Gallery.create!(id: 60, gallery_category_id: 3, title:'주영이 풀밭에서',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_juyoung.jpg")), content: '풀밭에서 천사같은 주영이')
 
-Gallery.create!(id: 26, gallery_category_id: 1, title:'눈덮인 호매실동',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "homaesil_2.jpg")), content: '눈덮인 호매실 논밭과 저멀리 광교산 모습')
-Gallery.create!(id: 27, gallery_category_id: 1, title:'낮잠자는 나와 아들',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "i_and_baby.jpg")), content: '주말에 꿈나라를 헤메이고 있는 나와 아들')
-Gallery.create!(id: 28, gallery_category_id: 1, title:'천사의 자는 모습인 내 아들 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "sleeping_baby.jpg")), content: '내아들 주영이, 잘때는 천사  울때는..... ㅜ.ㅜ')
-Gallery.create!(id: 29, gallery_category_id: 1, title:'목욕하기 싫은 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "crying_baby2.jpg")), content: '나 목욕하기 싫어......  으아아아앙~~~')
-Gallery.create!(id: 30, gallery_category_id: 1, title:'보행기에 앉아있는 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "dog_go.jpg")), content: '보행기에 앉아있는 주영이')
 
-Blog.create!(id: 1, blog_category_id: 1, user_id: 1, title:'공포의 요로결석, 해방되다', description: '생성될때부터 나를 괴롭히던 요로결석, 속시원하게 밖에 나오다',blog_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images", "stone_3.jpg"))},
-content: '
+Gallery.create!(id: 61, gallery_category_id: 3, title:'잠자는 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "sleeping_juyoung2.jpg")), content: '평화로운 낮잠을 즐기는 주영이')
+Gallery.create!(id: 62, gallery_category_id: 3, title:'미끄럼틀 타고 내려온 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "slide_juyoung.jpg")), content: '미끄럼틀 타고 내려온 주영이')
+Gallery.create!(id: 63, gallery_category_id: 3, title:'주영이 풀밭에서',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_juyoung2.jpg")), content: '주영이 풀밭에서')
+Gallery.create!(id: 64, gallery_category_id: 3, title:'주영이 풀밭에서',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_juyoung3.jpg")), content: '주영이 풀밭에서')
+Gallery.create!(id: 65, gallery_category_id: 3, title:'주영이 풀밭에서',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_juyoung4.jpg")), content: '귀주영이 풀밭에서')
+Gallery.create!(id: 66, gallery_category_id: 3, title:'귀여운 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_juyoung5.jpg")), content: '귀여운 주영이')
+Gallery.create!(id: 67, gallery_category_id: 3, title:'멋있고 귀여운 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cool_juyoung.jpg")), content: '그냥 찍어도 모델같은 멋있고 귀여운 주영이')
+Gallery.create!(id: 68, gallery_category_id: 1, title:'놀이터에서 고양이랑',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "with_cat.jpg")), content: '동네놀이터에서 고양이랑
+ 고양이도 종호를 너무 좋아해요')
+Gallery.create!(id: 69, gallery_category_id: 3, title:'백운호수에서 멋있는 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cool_juyoung2.jpg")), content: '백운호수에서 멋있는 주영이')
+Gallery.create!(id: 70, gallery_category_id: 1, title:'선자령에서 멋진 종호',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "snow_mountain.jpg")), content: '선자령에서 멋진 종호')
+Gallery.create!(id: 71, gallery_category_id: 4, title:'구봉도에서 본 낙조지는 영흥도',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "gubongdo.jpg")), content: '구봉도에서 본 낙조지는 영흥도')
+
+
+
+BlogCategory.create!(id: 1, title: '일상')
+BlogCategory.create!(id: 2, title: '잡생각')
+BlogCategory.create!(id: 3, title: '헬조선')
+
+Blog.create!(id: 1, blog_category_id: 1, user_id: 1, title:'공포의 요로결석, 해방되다', description: '생성될때부터 나를 괴롭히던 요로결석, 속시원하게 밖에 나오다',tag_list: '요로결석',blog_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images", "blog", "stone_3.jpg"))},
+             content: '
 <p>2013년 봄날이였습니다.</p>
 
          <p>그 때쯤에는 물섭취가 거의 없는 반면 맥주를 많이 먹었습니다.</p>
@@ -240,10 +289,965 @@ content: '
  <p>&quot;물은 생명이다&quot;</p>')
 
 
-=begin
-맛있는 중국라면
-상하이에 있을때 먹던 맛있는 중국라면(마라라면)
+Blog.create!(id: 2, blog_category_id: 1, user_id: 1, title:'맛있는 중국라면', description: '상하이에 있을때 먹던 맛있는 중국라면(마라라면)',tag_list: '라면,마라,중국,중국라면,마라라면,중화요리',blog_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images", "blog", "ramen.jpg"))},
+content: '<p>중국의 먹을것은 그야말로 무궁무진하지만 오늘은 한국인들도 좋아하는 라면입니다.</p>
 
-중국 두부요리
-중국의 대표적인 두부요리인 마파두부와 취두부
-=end
+<p>면요리는 중국이 원조이면서 그 방대함 또한 따를수 있는 나라가 없지요</p>
+
+<p>라면 역시 중국이 원조이고 지금도 길거리 곳곳에 라면집이 많이 있습니다.</p>
+
+<p>&nbsp;</p>
+
+<p>저는 회사에서 제일 가까웠던 대만식 라면집에서 많이 먹었는데요</p>
+
+<p>상하이에 있을때 먹던 중국라면입니다.</p>
+
+<p><img alt="" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/13/content_ramen.jpg"  class="img-responsive" /></p>
+
+<p>마라라면(마라는 맵다는 뜻입니다), 한국 사람들한테 딱 맞을 매운 맛입니다.</p>
+
+<p>이거 말고 다른 라면은 조금 느끼하긴 하더라고요,&nbsp; 면발도 딱 우리가 생각하는 생 라면 면발~~</p>
+
+<p>이런 생라면을 우리나라 인스턴스라면 끓여주는 가격에 먹을수 있습니다.</p>
+
+<p>먹기 시작하면 땀흘리면서 순식간에 먹게됩니다.</p>
+
+<p>&nbsp;</p>
+
+<p>그러므로 그전에 넣어야 될것! 바로</p>
+
+<p>맛있는 고수(상차이)</p>
+
+<p><img alt="" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/14/content_gosu.jpg"  class="img-responsive" /></p>
+
+<p>맛있는 고수도 듬뿍 넣어서 먹는게 매력이지요</p>
+
+<p>&nbsp;</p>
+
+<p>이 몸에도 좋고 맛있는것을 한국사람들이 별로 안먹어서 안타까운 마음입니다.</p>
+
+<p>이렇게 매운 라면을 순식간에 먹고나서는 입가심을 해야겠지요?</p>
+
+<p>&nbsp;</p>
+
+<p>그래서 시키는</p>
+
+<p>망고빙수~~</p>
+
+<p><img alt="" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/15/content_mango_ice.jpg"  class="img-responsive" /></p>
+
+<p>마라라면을 먹고나서 그런가?&nbsp; 이 망고빙수 정말 맛있습니다.</p>
+
+<p>망고의 맛이 그대로 살아 있더라고요 망고도 듬뿍 들어있지요</p>
+
+<p>전 팥빙수보다 망고빙수만 먹고 싶더라고요</p>
+
+<p>지금도 생각나는 중국라면+망고빙수입니다.</p>
+')
+
+
+Blog.create!(id: 3, blog_category_id: 1, user_id: 1, title:'중국 두부요리', description: '중국의 대표적인 두부요리인 마파두부와 취두부',tag_list: '두부,마파두부,취두부,중화요리',blog_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images", "blog", "chui.jpg"))},
+content: '<p>먹어도 먹어도 맛있는 두부</p>
+
+<p>콩으로 어떻게 이렇게 맛있는것을 만들었는지 지금 생각해도 대단하다고 밖에 생각이 안됩니다.</p>
+
+<p>콩이 원래 흡수율이 낮은데(먹어도 반은 그냥 X으로 나온다고 하는...) 두부로 먹을경우에는</p>
+
+<p>콩의 영양소 거의를 흡수한다고 합니다.</p>
+
+<p>이렇게 맛도 좋고 몸에도 좋은 사랑스러운 두부~~</p>
+
+<p>&nbsp;</p>
+
+<p>두부 또한 중국에서 시작된 요리로서 한나라때부터 먹기 시작한것으로 알려져 있습니다.</p>
+
+<p>중국 두부요리하면 두가지가 떠오르는데 바로 마파두부와 취두부입니다</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h3>마파두부</h3>
+
+<p>&nbsp;</p>
+
+<p>사천성요리의 대표로 손색이 없는 요리지요</p>
+
+<p>사천요리답게 매콤한 맛이 일품이라 한국사람들도 너무나 좋아하는 요리입니다</p>
+
+<p>두부가 이렇게 맛있어 지다니~!!!</p>
+
+<p>그런데....!!</p>
+
+<p>중국의 마파두부는 향미가 한국에서 먹는 마파두부와 너무나 다르지요</p>
+
+<p>우선 화자오(<span>花椒</span>)라고 하는 중국 산초 열매가 들어가는데 먹으면 얼얼해지는 그맛 또한 중독성입니다.</p>
+
+<p>그런데 한국 마파두부에선 다 안들어 가지요</p>
+
+<p>특히나 원래 마파두부는 두반장(중국식 고추장?)이 들어가야 되는데 그냥 고추장으로 해버리는 경우도 많습니다.</p>
+
+<p>"이거 마파두부 아니라 해~"</p>
+
+<p>&nbsp;</p>
+
+<p>하여간 마파두부는 영원히 사랑받을만한 요리입니다.</p>
+
+<p><br />
+<img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/20/content_mafa1.jpg" /></p>
+
+<p>중국에서 요리로 먹은 마파두부,그 밖에 다른 요리와 먹고 있습니다.</p>
+
+<p>특히 마파두부는 밥에 비벼먹으면 그 맛은 정말~ 환상이지요?</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/21/content_mafa2.jpg" /></p>
+
+<p>입에 넣으면 살살 녹는 두부와 매콤한맛!! ㅠ.ㅠ  감동입니다......</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<h3>취두부</h3>
+
+<p>&nbsp;</p>
+
+<p>취두부, 이름 그대로 냄새나는 두부로서 발효된 두부입니다</p>
+
+<p>한국에는 없는 발효된 두부 취두부입니다</p>
+
+<p>발효라고는 하지만 그 냄새는 바로 두부썩은 냄새겠지요?</p>
+
+<p>처음 그 냄새를 맡으면 기겁하기 일쑤지요</p>
+
+<p>하지만 먹다보면 그 냄새(X) => 향기(O)가 나면 군침이 먼저 돌게되는 취두부~!</p>
+
+<p>&nbsp;</p>
+
+<p><img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/18/content_chui1.jpg" /></p>
+
+<p>취두부는 보통 살짝 튀겨서 먹는데 당연히 일반 두부튀김과 모양은 다르지 않게 보이지요?</p>
+
+<p>하지만 일반 두부튀김에 없는 취두부의 향긋한 향기~~</p>
+
+<p>먹는 순간에도 향이 입안에 퍼지면서 두부의 또 다른 신세계를 경험할수 있습니다.</p>
+
+<p>&nbsp;</p>
+
+<p>취두부는 길거리에서도 간식으로 많이 파는데</p>
+
+<p><img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/19/content_chui2.jpg" /></p>
+
+<p>이런식으로 하나 먹으면 든든해집니다.</p>
+
+<p>&nbsp;</p>
+
+<p>역시 두부의 본고장 답게 중국의 두부요리는 환상적이지요</p>
+
+<p>어떻게 먹어도 맛있는 두부를 가장 맛있게 먹는 두가지 요리~</p>
+
+<p>마파두부와 취두부였습니다.</p>
+')
+
+Blog.create!(id: 4, blog_category_id: 1, user_id: 1, title:'과일의 황제 두리안', description: '환상적인 과일, 두리안을 소개합니다.',tag_list: '두리안,과일',blog_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images", "blog", "durian.jpg"))},
+content: '<p>여러 과일을 좋아하는 나이지만</p>
+
+<p>두리안이라는 과일은 얼핏 듣기는 했지만 신경쓰지 않고 살아왔었지요</p>
+
+             <p>그러다가 30살이 넘어서야 맛본 두리안은 정말 환상 그 자체였습니다</p>
+
+<p>&nbsp;</p>
+
+             <p>생긴것 부터 너무나 맛있게 생긴(?) 두리안</p>
+
+<p><img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/22/content_durian1.jpg" /></p>
+
+<p>겉 껍질은 보다시피 날카로운 가시이므로 조심스럽게 열어야지요~</p>
+
+<p>&nbsp;</p>
+
+<p>반으로 열은 모습입니다.</p>
+
+<p><img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/23/content_durian2.jpg" /></p>
+
+<p>껍질 속에 있는 맛있는 속살이 보입니다.</p>
+
+<p>&nbsp;</p>
+
+<p>또 반으로 쪼개면 속살을 쉽게 털어낼수 있습니다.</p>
+
+<p><img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/24/content_durian3.jpg" /></p>
+
+<p>&nbsp;</p>
+
+<p>속살을 털어낸 껍데기</p>
+
+<p><img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/25/content_durian4.jpg" /></p>
+
+<p>&nbsp;</p>
+
+<p>이렇게 맛있는 속살을 분리하였고 속살은 스푼등으로 퍼서 먹으면됩니다.</p>
+
+<p><img alt="" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/31/content_durian5.jpg" class="img-responsive" /></p>
+
+<p>두리안을 먹는 느낌은 아이스크림을 먹는 느낌이랄까?</p>
+
+<p>그 살살녹는 속살과 향긋한 향기가 입안에 가득 퍼지며 달콤함이 마구 느껴집니다</p>
+
+<p>&quot;과일의 황제&quot; 라는 별명은 정말 너무나 정확한 별명이지요</p>
+
+<p>&nbsp;</p>
+
+<p>지구상에는 이보다 맛있는 과일은 없을 듯 합니다.</p>')
+
+Blog.create!(id: 5, blog_category_id: 1, user_id: 1, title:'중국 유자', description: '크기와 달콤함이 일품인 중국 유자',tag_list: '유자,과일',blog_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images", "blog", "yuzi.jpg"))},
+content: '<p>우리말과 똑같은 유자(귤)라고 하지만</p>
+<p>우리나라에는 없는 유자입니다</p>
+<p>&nbsp;</p>
+<p>사실상 자몽에 가까운 과일이지요</p>
+<p>크기부터 어마어마 합니다.</p>
+<p><img alt="" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/27/content_yuz1.jpg"  class="img-responsive" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>껍질 벗기는거 부터가 장난이 아닙니다.</p>
+<p>미국산 오렌지 껍질 벗기는거 정도의 힘들기에 크기는 저정도이니깐요</p>
+<p><img alt="" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/29/content_yuz3.jpg"  class="img-responsive" /></p>
+<p>헉! 헉!&nbsp; , 힘들게 껍질을 벗기면 속살이 드러납니다.</p>
+<p>자몽과 크게 다르지 않습니다</p>
+<p>&nbsp;</p>
+<p><img alt="" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/30/content_yuz4.jpg"  class="img-responsive" /></p>
+<p>이렇게 해서 속살을 먹으면 됩니다</p>
+<p>이때는 힘들게 껍질깐 보람이 느껴집니다</p>
+<p>달콤한 속살은 저 한통도 다 먹게 하지요</p>')
+
+Blog.create!(id: 6, blog_category_id: 3, user_id: 1, title:'주민등록번호 빨리 폐기해야',tag_list: '주민등록번호', description: '정보유출로 문제가 더욱더 드러난 주민번호, 주민번호를 당연히 있어야 하는것으로 아는 한국인들',
+content: '<p>나이를 먹고 주민등록증을 만들러 갔을때 지문 열 손가락을 찍어야 했다.</p>
+<p>어린 나이였지만 아주 기분이 좋지 않았다.</p>
+<p>&nbsp;</p>
+<p>커서 생각하니 역시 기분이 나쁠수 밖에 없는 일</p>
+<p>국민 모두를 잠재적 범죄자로 보고 각 개인의 정보를 국가가 보관하는것이였다.</p>
+<p>이것 뿐이랴</p>
+<p>&nbsp;</p>
+<p>이미 나는 나도 모르는 사이에(어려서) 국가가 지급한 번호를 받아놓았다.</p>
+<p>상점 바코드와 다를것이 없는 번호!! 바로 주민등록 번호다.</p>
+<p>전 국민의 번호부여!!!</p>
+<p>참 대단하다.</p>
+<p>이 대단한 일을 한분은 역시 우리나라에서 그 유래를 찾기 힘든 독재자 박정희의 작품~</p>
+<p>그런 독재자(아무도 반항못하는) 아니였으면 하기 힘든 일이였을것이다.</p>
+<p>그래도 생각있던 사람들은 그 때도 반대했었다고 한다</p>
+<p>하지만 안보(?)를 내세우는 독재자의 뜻을 꺽지는 못하였다.</p>
+<p>그 후에 태어난 사람들은 주민등록 번호가 당연한것으로 받아들이고 아무대서나 주민번호를 요구하여 입력하면서 살고 있다.</p>
+<p>하지만 그 정보들은 해당 직원들이 빼돌려서 한명당 얼마에 파는 정보가 되었음은 다들 알고 있을것이다.</p>
+<p>문제가 생기자 그제서야 주민번호 못 받게 하는 모양이지만</p>
+<p>근본적으로 주민번호가 문제라는것은 알면서도 그러는지 아님 정말 이제는 문제의식이 없는건지는 모르겠다.</p>
+<p>하지만 상당수 국민들은 이제 주민번호 없는 세상에 대해서 생각조차 못하고 있는 실정이다.</p>
+<p>전국민의 코드화를 실행시킨 위대한 나라, 대한민국</p>
+<p>이제 이런 x거리 그만둬야할때가 되지 않았나 싶다.</p>
+<p>우리가 할일은</p>
+<p>&nbsp;</p>
+<p><span xss="removed"><span xss="removed">주민등록번호 폐지</span>!!!!</span> 뿐이다</p>')
+
+Blog.create!(id: 7, blog_category_id: 3, user_id: 1, title:'우리는 불심검문 거부할수 있는 권리가 있습니다.',tag_list: '불심검문,거부', description: '과거에도 지금도 시행되고 있는 불심검문!!  응하지 않아도 되요',
+content: '<p>당하기만 해도 기분 더러워지는 불심검문</p>
+<p>경찰이 행사할수 있는 당연한 권리인줄 알았더니</p>
+<p>거부하고 싶으면 거부해도 되는거였어요</p>
+<p>진작 알았으면 거부했을텐데 역시 아는게 힘이지요?</p>
+<p>임의동행요구도 당연히 거부가능</p>
+<p>주민번호 물어보지말고 그냥 이마에 바코드 새겨넣고 멀리서 스캔해 10+8</p>
+<p>이게 니들이 원하는 세상이잖어?</p>
+<p>참... 요즘사람들은 믿기 어렵겠지만 옛날에는 숙박업소도 돌면서 검문했다네요</p>
+<p>숙박업소에서 자는 사람 깨워서 주민증 확인했었다니 믿어지세요??</p>
+<p>편하게 쉬는 사람들 깨우면서 뭐하던 짓거리인지</p>
+ <p>참 대단하던 시절이네요</p>')
+
+Blog.create!(id: 8, blog_category_id: 3, user_id: 1, title:'누가 나 찍으라고 했어??!!!',tag_list: 'CCTV,거부', description: '길거리에 계속 늘어가는 CCTV, 나는 네가 지난 여름에 한일을 알고 있다.',
+content: '<p>범죄 예방을&nbsp; 위한다는 명목으로 늘어가는 CCTV</p>
+<p>안보를 위해서는 사생활 침해는 해도 된다고?</p>
+<p>10손가락 지문 다 찍어놓고도 모자르냐??</p>
+<p>나를 찍어도 좋다고 한적이 없는데도 마음대로 나를 찍어대는 카메라</p>
+<p>동의도 없이 저렇게 찍어되도 되는건가?</p>
+<p>동의없이 저렇게 찍어도 되는거면 나도 길가는 여자 그냥 계속 찍어도 되는거 아닌가?</p>
+<p>그건 왜 범죄인데?</p>
+<p>또한 CCTV보는 놈들 또한 저런 마음으로 보고 있을지 알게 뭐냐?</p>
+<p>목욕탕주인이 지마음대로 CCTV설치하는 웃긴나라</p>
+<p>&nbsp;</p>
+<p>점점 모든 골목이 CCTV로 도배되고 있다.</p>
+<p>그냥 화장실, 목욕탕, 침실 다 CCTV로 도배해라.</p>
+<p>나도 집 앞에 CCTV나 설치해서 CCTV보고 있을 놈들의 심정을 한번 느껴봐야겠다.</p>')
+
+Blog.create!(id: 9, blog_category_id: 3, user_id: 1, title:'사는게 힘들어도 살자, 자살은 절대 안돼~!!!',tag_list: 'CCTV,거부', description: '사는게 힘들어도 살자, 자살공화국에서 사는법',
+content: '<p><br />
+남자의 30대 중반이 행복도가 가장 떨어진다고 한다는 조사 결과는 참 맞는것 같습니다.</p>
+<p>&nbsp;</p>
+<p>사는것은 정말 힘듭니다.</p>
+<p>&nbsp;</p>
+<p>나이가 들수록 삶의 무게가 짓눌려 옵니다.</p>
+<p>작은거 하나도 힘이들고 기운이 나지 않습니다.</p>
+<p>세상일에 열정이 없어지자 분노,기쁨등의 감정조차 거의 느끼지 못하고 살고 있습니다.</p>
+<p>&nbsp;</p>
+<p>전쟁이 따로 있는게 아니라 사는거 자체가 전쟁입니다.</p>
+<p>범죄, 자살</p>
+<p>이런거는 다른 세상 이야기인줄만 알고 살아왔는데</p>
+<p>그런것들을 택한 사람들이 이해가 되기 시작합니다.</p>
+<p>물론 범죄자나 자살자를 옹호 할 수는 없지만</p>
+<p>그들이 점점더 깊게 이해가 되고 있다는 거지요</p>
+<p>사는게 전쟁이고</p>
+<p>그것들을 택한 사람들은 부상자, 전사자입니다.</p>
+<p>삶의 무게를 참다못해 남에게 표출한것이 범죄자고 자신에게 표출한것이 자살이지요</p>
+<p>&nbsp;</p>
+<p>우리 주변의 나와&nbsp; 같이 살고 있는 사람들은 전우입니다.</p>
+<p>&nbsp;</p>
+<p>부상자, 전사자 전우들에게 깊은 유감을 표합니다.</p>
+<p>그런데 우리나라는 특히 자살자가 많습니다.</p>
+<p>자살과 관련있는 햇빛도 쨍쨍하게 내리쬐는 곳인데도</p>
+<p>무엇인가 엄청나게 잘못되었다는거지요</p>
+<p>&nbsp;</p>
+<p>불행의 끝, 자살</p>
+<p>우리는 불행한 나라에 살고 있지요</p>
+<p>세계에서 가장 치열한 전쟁터에서 살고 있습니다.</p>
+<p>전우들이 죽지않게 참호를 더 깊이파고 벙커를 보강하는 사회를 만들어야겠습니다.</p>
+<p>가장 치열한 전쟁터에서 같이 있는 우리는 같이만 있어도 눈물나는 전우들입니다.</p>
+<p>&nbsp;</p>
+<p>전우들아 매일 40명 이상씩 전사하는 자살공화국에서도 죽지말고 살자!!</p>')
+
+Blog.create!(id: 10, blog_category_id: 3, user_id: 1, title:'고등학교 한자수업이 없다네요!!??',tag_list: '한자,망국', description: '고등학교 한자수업이 없다네요!!??',
+content: '<p>교육이 어떻게 되려고 그러나요?</p>
+<p>한자(漢字) 한자(一字)도 모르는 아이들이 커서 중국,일본,대만,동남아 사람들과 무엇을 할 수 있을까요??</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>저때만 해도<br />
+<br /> 저도 한자를 못한다고 생각했는데<br />
+<br /> 저 고등학교때 아이들이 얼마나 한자를 모르던지 제가 일등 했었습니다.<br />
+<br />주변 사람들이 쉬운 한자도 모르는것을 볼때는 진짜 무식해보입니다.</p>
+<p>&nbsp;</p>
+<p>기본적으로 천자문은 알아야되는거 아닌가요?</p>
+<p>&nbsp;</p>
+<p>이게 아마 다 오륀지 찾던 美親 친미정부때 바뀐것 같습니다.</p>
+<p>&nbsp;</p>
+<p>ps.) 반대로 역사수업은 엄청 많아졌더라고요 역사수업 없앨때는 언제고<br />
+<br />
+문제 생기니깐 하는 꼴이라고는...... 한자수업도 문제 생겨야지나 다시 생기겠지요</p>')
+
+Blog.create!(id: 11, blog_category_id: 3, user_id: 1, title:'빨갱이 찾는 웃긴놈들의 특징',tag_list: '한자,망국', description: '가진것도 없는 놈들이 왜 빨갱이를 찾어? ',
+content: '<p>어짜피 빨갱이 세상으로 바뀌어도 달라질 것 없는 하층민들이라는거~~</p>
+<p>개뿔 가진것도 없는것들이 무슨 빨갱이를 그리 찾는지??</p>
+<p>&nbsp;</p>
+<p>이런 사람보면 면전에서 이 말 해줄꺼임=&gt;&quot;넌 어짜피 가진것도 없어서 걱정 안해도 돼&quot;</p>
+<p>&nbsp;</p>
+<p>가진거 하나 없는것들이 왜 이리 부자들 걱정을 해주는지 이해가 안감</p>
+<p>&nbsp;</p>
+<p>반면 가진것좀 있는 사람들은 저런 저질단어 안쓰지(하지만 이런 상황을 보며 미소짓고 있겠지)</p>')
+
+Blog.create!(id: 12, blog_category_id: 1, user_id: 1, title:'에너지(전기)문제 해결책은 원자력뿐',tag_list: '에너지,전기,원자력', description: '전기를 지금처럼 쓰려면 원자력 발전소외엔 대안 없음,  아님 전기 사용을 줄이는 방법이 있지만 고통이 따르기 때문에 사람들이 거부, 결국 원자력 밖에.....',
+content: '
+<p>이번에 정부에서 원전을 예정보다 많은 7기 추가한다고 하는군요.<br />
+이건 잘하는거라고 생각합니다. (사실 저는 더 많이(20기 추가) 필요하다고 생각합니다만)<br />
+사실 전기 쓰려면 현재로서는 원자력말고는 답이 없습니다.<br />
+수력이나 지열발전이 제일 좋긴하지만 우리나라는 그런 환경도 안되고<br />
+화력은 연료비와 대기오염이 문제지만<br />
+반면 원자력은 싼 연료비에 대기오염도 전혀 없지요<br />
+중국은 원전 100기 추가 예정이랍니다.<br />
+그리고 특히 세계최고의 선진국인 프랑스도 원전으로 거의 전기 충당하지요</p>
+<p>저번대선에서도 문재인이 제일 마음에 안든 거가 원자력반대관련이였고<br />
+박근혜가 마음에 든 정책 딱하나가 원자력 찬성이라는거였습니다.</p>
+<p>저도 전기와 뗄수 없는 직업을 가지고 있지요?&nbsp; 컴퓨터 전기없이 안돌아가지요<br />
+특히 서버쪽은 전기 잡아먹는 귀신입니다.<br />
+결국 우리가 계속 서버를 만들어 나갈수록 전기사용은 급등한다는 이야기지요<br />
+그냥 프로그래밍 하려고 컴퓨터 쓸떄도 물론이고요</p>
+<p>결국 우리의 선택은 두가지입니다.</p>
+<p>1. 원전 계속 지어서 전기를 잘쓰던지<br />
+2. 아님 전기 쓰는거를 줄이고 비싼 전기료를 감당하면서 원전을 짓지 않을지(고통이 따르겠지요) = 전기 다이어트?</p>
+<p>사실 저는 2번도 괜찮다고 생각합니다. 하지만 힘들겠지요.</p>
+<p>아 그런데 제가 제일 하고싶은 이야기는 환상을 가지고 있는 더 탐욕스러운 사람들이 있다는거를 말하려고요<br />
+결국 선택은 1번 아니면 2번인데<br />
+원전은 싫으면서 전기는 맘껏 쓰겠다는 말도 안되는 생각을 가진 사람들이 있어서 기가 막힙니다.<br />
+그 허상의 단어가(녹색성장, 친환경에너지) 같은거지요<br />
+물론 친환경에너지는 존재하지만 그렇게 많은 사람들이 쓸 친환경에너지는 결코 없습니다.</p>
+<p>그허상을 사람들이 좋아하는 이유는 바로 말했듯이 원전은 싫으면서 전기는 쓰고 싶은거지요<br />
+허상은 결국 없어지기 마련입니다.&nbsp; 혹시나 대체에너지 관련주식 가진사람들은 참고하시고요<br />
+저는 2번도 정말 좋다고 생각하지만 인간의 속성상 1번으로 가는수 밖에 없지요</p>')
+
+Blog.create!(id: 13, blog_category_id: 3, user_id: 1, title:'존대말 없는 세상 좋은 세상',tag_list: '존대말,시비', description: '존대말 없는 세상 좋은 세상~~   시비걸기 용도의 존대말, 안 그래도 사는거 피곤한데.... 이런거 까지',
+content: '<p>사람과 사람이 만나 서로 소통하는것은 너무나 중요하지요?</p>
+<p>하지만 사람과 사람 사이의 벽은 정말 넘을수 없는 경우도 많습니다.</p>
+<p>이런것을 없애서 서로 소통하는 세상이 아름다운 곳이지요</p>
+<p>그런데 우리나라 사람들 사이에만 있는 엄청난 벽이 있습니다.</p>
+<p>&nbsp;</p>
+<p>바로 존대말!!!</p>
+<p>안그래도 벽이 많은데 우리는 우선 벽부터 친 상태에서 만나게 되지요</p>
+<p><span><span>왜 겨우 나이 때문에 서로 친구가 되지 못하는 이런 문화가 있는지.......</span></span></p>
+<p><span><span>세계에서 존대말 있는 나라가 한국하고 일본 뿐이라나요?</span></span></p>
+<p><span><span>그나마 일본에서는 존대말 거의 안쓴다고 하네요 = 그냥 일본정도로 하던지</span></span></p>
+<p><span><span>영어 배울때 존대말 없어서 혼란스러웠던 기억이 새록새록합니다.</span></span></p>
+<p>&nbsp;</p>
+<p><br />
+<span><span>존대말의 용도?? 시비+살인</span></span></p>
+<p><span><span>검색에서 (뉴스)선택 검색어 = 반말 시비 살인 로 검색~~</span></span></p>
+<p><span><span>하루에 이런걸로 몇명씩 죽어나가는지.....</span></span></p>')
+
+Blog.create!(id: 14, blog_category_id: 3, user_id: 1, title:'임금체불로 노동부 갔다왔어요',tag_list: '임금체불', description: '임금체불도 열받는데 내 돈 받으려고 노동부에 4시간 왔다갔다. 진짜 혈압오르네',
+content: '<p>사장의 준다 준다하는 말장난에 놀아나 3개월이 지나고서야 노동부 진정을 넣고 처리를 기다렸다.</p>
+<p>그런데 이건 뭐 처리가 되는건지 마는건지 아무런 소식이 없다.</p>
+<p>쇠파이프 들고서 직접 회사로 찾아가야되나, 칼도 가져갈까 말까 이런 저런 생각이 많아졌다.</p>
+<p>그러다가 몇 주만에 우체통을 봤는데 출석 요구서가 와있었다.</p>
+<p>크윽..... 우체통 안본 나도 잘못이지만 이메일도 제대로 안보는 세상에 우편으로만 통보라니.......</p>
+<p>전화번호도 다 적어줬는데 문자라도 보낼수 있었을것을,&nbsp; 참 귀찮았나보다.</p>
+<p>해당 감독관에 전화를 해서 출석 못했다고 하니 다음 날짜를 잡아준다.</p>
+<p>별로 출석할 필요도 없을것 같은데 왜 돈받아야 될 사람 출석시켜서 왔다갔다 하게 만드는지 짜증났다.</p>
+<p>뭐 급여 내역이라고 해봤자 조작 가능하고 별로 증거 될꺼 같지도 않구만</p>
+<p>&nbsp;</p>
+<p>하여간 그래서 수원에서 구로까지 먼 길을 떠나갔다.</p>
+<p>가는데 2시간 오는데 2시간 총 4시간을 쓰고 피곤해졌다.</p>
+<p>뭐 처리해주는 것도 그리 시원치 않은 느낌이다.</p>
+<p>조금 더 기다려보고 잘 처리 되지않으면 직접 쇠파이프 들고 찾아가는게 더 빨리 처리될것같다.</p>
+<p>&nbsp;</p>
+<p>임금체불을 노동자를 죽이는 살인행위임에도</p>
+<p>처벌은 솜방망이이다.</p>
+<p>체불하는 사업주중에서 진짜로 사정이 어려워서 못주는 경우는 10%나 될까?</p>
+<p>처벌을 높여서 이런일이 없어야겠다.</p>')
+
+Blog.create!(id: 15, blog_category_id: 3, user_id: 1, title:'임금체불로 생각해본 자본가 때려잡기',tag_list: '임금체불,혁명,자본가', description: '노동자 우습게 아는 자본가들 혼좀 나야되는데 우리나라에서 그런일은 몇세기동안은 없을듯 하다',
+content: '<p>임금체불 당하다보니 여러 생각이 머리에 스친다.</p>
+<p>법자체가 자본가들 위주로 되어있는 물렁한 법이니 노동자들 우습게 알고 임금체불을 하는것이다.</p>
+<p>그럼 왜 우리나라는 사장(자본가)들이 노동자를 우습게 여길까?</p>
+<p>그 중 큰 이유가 아마 이 나라에서는 지배층을 때려잡는 혁명이 한번도 성공하지 못했기 때문일것이다.</p>
+<p>프랑스 혁명을 비롯하여 특히 러시아 공산혁명에 영향을 받은 많은 나라들이 지배층을 몰아내고 새로운 나라를 만들었다.</p>
+<p>특히 공산혁명의 전파는 자본가들을 벌벌 떨게 만든 최고의 무서움이였다.</p>
+<p>그래서 아직 혁명이 성공하지 못한곳의 자본가(이들이 지배층인 국가는)들은 이에 맞서 채찍과 당근을 사용했다.</p>
+<p>강성노동조합을 제거하고 노동자 처우를 개선(국가로서는 복지 향상)했다.</p>
+<p>우리가 눈 여겨봐야하는것은 당근(노동자 처우 개선,복지 향상)이다.</p>
+<p>만약 공산혁명이 있지 않았다면 다른 지역의 당근도 아마 영원히 없었을꺼다.</p>
+<p>러시아 혁명가가 미국,서유럽 노동자의 처우를 개선시킨 셈이다.</p>
+<p>그런데 우리나라는 그나마 당근(복지)도 거의 없었다.</p>
+<p>역사적 이유로는 6.25를 통하여 국내 공산세력을 사실상 완전제거 되었기 때문이였다.</p>
+<p>국시도 반공이였으니 공산주의가 발붙일곳이 없었다.</p>
+<p>노동조합 때려잡는것만으로도 충분하였다.</p>
+<p>6.25로 나라 사정이 말도 아니였으니 복지는 어불성설인게 맞긴했다.</p>
+<p>하지만 점점 나라 사정이 좋아져도 복지는 거의 이루어지지 않았다.</p>
+<p>전태일 열사가 만들어놓은 법만이라도 잘 지키라고 하며 분신했지만 이도 자본가들 귀엔 의미없는 메아리였다.</p>
+<p>그러던중 공산주의 국가들이 몰락하기 시작하니 이제 다시 자본가들은 살판이 났다.</p>
+<p>공산주의가 무서워서 울며 겨자먹기로 노동자들한테 베풀던 복지도 줄이고 싶어졌다.</p>
+<p>그래서 수정자본주의를 버리고 예전으로 돌아가기위해서 신자유주의를 들고 나왔다.</p>
+<p>대처리즘으로 대표되는 정책, 복지를 줄이고 노동조합의 힘을 약화시켰다.</p>
+<p>세상은 이렇게 돌아왔는데 우리나라 노동자들은 반공사상에 길들여져서 자신이 노동자라는 인식자체가 부족하고 자본가들이 공산주의 보듯하는 눈으로 공산주의, 노동조합을 보면서 알아서 기는? 신기한 노동자로 살고있다.</p>
+<p>자본가들이 만들어낸 &quot;귀족노조&quot;라는 말을 먼저 쓰고 자본가들이 노동자들을 분열시키기 위해 만든 정규직, 비정규직 분열정책에 놀아나고 있다.</p>
+<p>자본가들당에 투표하는 노동자들을 보면 답답하기도 하고 불쌍하기도 하고 우리나라에서 자본가로 사는게 참 행복하겠다는 생각이 든다.</p>
+<p>하루빨리 노동자들이 뭉쳐서 복지향상을 꾀해야되는데 자본가 당에 투표하는 노동자들을 보면 노동자로 사는 앞날이 캄캄하다.</p>
+<p>이나라에서 노동자로 복지를 찾느니 빨리 자본가가 되어서 우스운 노동자들 무시하며 행복하게 사는게 훨씬 가능성 있는 이야기이다.</p>')
+
+Blog.create!(id: 16, blog_category_id: 1, user_id: 1, title:'조경기능사 배우는중', description: '조경기능사 공부하는중이에요, 풀과 나무로 세상의 풍경을 만드는 기술,직업이 있다니~~  참 놀랍고 좋네요 ',
+content: '<p>임금체불로 회사 그만두고 쉬는동안 배우고 있는 조경기능사</p>
+<p>조경의 새로운 세계에 입문하고 있습니다.</p>
+<p>그 동안 보아왔던 나무나 바위 풀과 시설물의 배치가 왜 그렇게 되어있는지 알게되었어요</p>
+<p>길가나 아파트 작은 공간공간마다도 다 법칙대로 계획되어서 조성된거라는것을 모르고 살았네요</p>
+<p>크게 보면 지금 제가하는 웹프로그래머일과 같은점도 많네요</p>
+<p>결국 어떤 시스템을 만들기 위한 법칙을 익히고 그걸 기술적으로 만들어 내는것이지요</p>
+<p>다행이 필기는 쉽게 합격할듯 하네요</p>
+<p>실기도 열심히해서 합격하고 더욱 더 공부해봐야겠네요</p>')
+
+Blog.create!(id: 17, blog_category_id: 1, user_id: 1, title:'토렌트 좋네요', description: '말로만 듣던 토렌트, 사용해보니 왜 토렌트 토렌트 하는지 알겠네요',blog_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images", "blog", "qb_newbanner.jpg"))},
+content: '<p>요즘엔 뭘 다운받아도 그리 듣거나 볼 시간도 없고 해서</p>
+<p>당나귀 쓴이후로 P2P파일공유 프로그램은 처음 써봤습니다.</p>
+<p>처음에는 약간 개념이 잡히지 않아서 어려워 보였는데</p>
+<p>한번 해보니 어려울것이 없네요</p>
+<p>저는 이것을 씁니다.</p>
+<p><a href="http://www.qbittorrent.org" target="_blank">http://www.qbittorrent.org</a></p>
+<p>&nbsp;</p>
+<p>토렌트는 시드파일을 받어서 그를 이용해서 파일을 공유하는 방식이더라고요</p>
+<p>마그넷도 처음엔 안되어서 뭔가 했더니 이것도 쉽게 사용가능하더라고요</p>
+<p>이것들을 이용해서 파일을 다운 받으니 정말 순식간에 다운로드 되더라고요</p>
+<p>속도도 빠르고 자료도 많고 토렌트 짱입니다~~</p>
+<p>리눅스에서도 잘되니 더욱 좋네요</p>
+<p>&nbsp;</p>
+<p>설마 여러분들도 말로만 토렌트 듣고 사용하지 않고 있나요?</p>
+<p>그럼 바로 토렌트의 세계로 오시기 바랍니다.</p>
+<p>&nbsp;</p>
+<p>ps.</p>
+<p>웹하드나 P2P의 문제인 불법파일 공유문제는 조금 피하기 힘들더군요</p>
+<p>하지만 이 기술 자체가 문제인것은 아니고 불법공유하는 사용자들이 문제인것이지요</p>
+<p>토렌트 기술자체는 정품 소프트웨어를 배포하는데도 사용되고 있더군요</p>
+<p>영화나 음악도 불법이니 받기는 많이 꺼려집니다.</p>
+<p>저는 그래서 영화나 음악은 거의 안 받습니다.</p>
+<p>그럼 뭐 받냐고요??&nbsp; ......</p>')
+
+Blog.create!(id: 18, blog_category_id: 1, user_id: 1, title:'시험보고 오는중에 봄날풍경',tag_list: '임금체불,시험,봄날', description: '임금체불로 우울한 중에도 시험보고 오던길에 눈부신 봄날, 너무 날씨가 좋아 더 우울해지는 봄날이였습니다.',blog_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images", "blog", "road_side1.jpg"))},
+content: '<p>그 동안 공부했던 조경기능사 시험을 보러가려 했습니다.</p>
+<p>집에서 나와서 구운동입구에서부터 한일전산고까지 가야되는데</p>
+<p>11시 까지 입실을 남겨두고 지금은 10시 30분</p>
+<p>그런데 시간은 별로 없고 버스는 최소 20분이상 대기해야 오는 상황..... ㅜㅜ</p>
+<p>뛰면 20분 정도면 갈것같아서 뛰기 시작했습니다.</p>
+<p>감기걸려서 몸도 않좋은데 뛰려니 더 힘들더라고요.........</p>
+<p>헥헥대면서 뛰어가니 53분에 입실하였습니다.</p>
+<p>&nbsp;</p>
+<p>시험전에 책도 못보고 시험보고 나오니 봄의 절정인 날씨입니다.</p>
+<p>뛰어온길 반대쪽으로 그냥 걸어가기로 했습니다.</p>
+<p>날씨가 좋아 행복해야되는데 우울한게 심한가봅니다.</p>
+<p>예전같은 행복감이 없네요</p>
+<p>&nbsp;</p>
+<p>내가 가야할 길.......&nbsp; 온 길보다 더 많이 남았네요</p>
+<p><img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/32/content_road1.jpg" /></p>
+<p>&nbsp;</p>
+<p>옆에는 이런 풍경이 펼쳐 있지요</p>
+<p><img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/36/content_road_side4.jpg" /></p>
+<p>&nbsp;</p>
+<p>완전 옆으로 보면 멀리 보이는 수원시내와 팔달산</p>
+<p><img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/34/content_road_side1.jpg" /></p>
+<p>&nbsp;</p>
+<p>봄의 기운이 온몸으로 전해지네요</p>
+<p><img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/35/content_road_side2.jpg" /></p>
+<p>&nbsp;</p>
+<p>대략 저 쪽 끝이 내가 아침에 숨차며 뛰어갔던 곳의 끝</p>
+<p><img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/37/content_road_side3.jpg" /></p>
+<p>&nbsp;</p>
+<p>뒷풍경에도 봄의 기운이 넘치네요,&nbsp; 내년 봄이 오면 다시 이 풍경과 느낌을 다시 또 느낄 수 있을까?</p>
+<p><img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/33/content_road_back.jpg" /></p>
+<p>&nbsp;</p>
+<p>이렇게 봄날은 간다</p>')
+
+Blog.create!(id: 19, blog_category_id: 1, user_id: 1, title:'요로결석 예방,치료에 좋은것',tag_list: '요로결석', description: '최악의 고통을 예방, 치료하기위한 방법 모음',
+content: '<p>최악의 고통 요로결석</p>
+<p>미리미리 예방하는게 최고지요?</p>
+<p>&nbsp;</p>
+<p>단연 요로결석 예방에 가장 좋은것은 물입니다.</p>
+<p>특히 수분부족이 발생하기 쉬운 여름에는 더욱더 물을 섭취해 줘야합니다.</p>
+<p>너무나 쉬운것인데도 바쁘다보면 물 마시는것도 깜박하여 적게 섭취하는 경우가 많지요</p>
+<p>&nbsp;</p>
+<p>또 하나 좋은것이 구연산입니다.</p>
+<p>요로결석을 녹이는데 효과가 좋다고 합니다.</p>
+<p>레몬, 오렌지에 많이 들어 있습니다.</p>
+<p>오렌지주스가 특히 좋다고 하네요</p>
+<p>그러고 보니 저도 걸렸을때 전에는 한참 오렌지 주스를 안먹었었습니다.</p>
+<p>&nbsp;</p>
+<p>요로결석은 웬만해선 자연배출 되는데 작게 배출되면 사실상 느끼지도 못할 수도 있습니다.</p>
+<p>요로결석을 배출하는데 돕는것이 바로 진동입니다.</p>
+<p>요즘 병원에서 요로결석 치료하는 방법중 하나가 체외 충격파 요법이지요</p>
+<p>진동이 되면 관에 껴있는 결석이 흔들리거나 부셔져서 잘 나오게 되겠지요?</p>
+<p>진동을 주려면 어떻게 해야할까요? 바로 몸을 뛰어야겠지요?</p>
+<p>제일 좋은것은 줄넘기라고 하네요</p>
+<p>안마기가 있으면 직접 대고서 진동을 주는것도 좋다고 하네요</p>
+<p>저도 마지막 빠질때 물 많이먹기와 제자리 뛰기를 병행했습니다.</p>
+<p>&nbsp;</p>p>
+<p>예방하려면 우선 과식하지 않는것도 좋고요</p>
+<p>음식 먹은양, 즉 작은양만 방광에서 처리하면 되니깐 발생확률이 적어지겠지요?</p>
+<p>또한 요로결석을 발생시키는 안좋은 음식을 피해야겠지요?</p>
+<p>요로결석에 안 좋은 음식은 건과류, 시금치, 초콜릿, 커피, 홍차등이라고 하네요</p>
+<p>저도 호두 많이 먹고 걸렸지요........ ㅜ.ㅜ</p>
+<p>맥주는 기본적으로 요로결석을 발생시키는것으로 알려져있는데</p>
+<p>생긴후에는 오줌을 많이 나오게해서 배출에는 도움이 된다고 합니다.</p>
+<p>병주고 약주는 놈입니다.</p>
+<p>저의 경험에서도 맥주먹고 걸려서 맥주먹고 나왔습니다.</p>
+<p>맥주도 많이 줄이는게 좋겠습니다.</p>')
+
+Blog.create!(id: 20, blog_category_id: 3, user_id: 1, title:'정원있는집에 사는게 당연한건데',tag_list: '정원', description: '외국이나 드라마에 나오는 정원은 한국인에게는 꿈일 뿐인가?',
+content: '<p>조경을 배우기 전에도 왜 우리나라는 미국영화에 나오는 사람들처럼 정원을 가지고 살지 못할까?</p>
+<p>라는 생각을 많이 했었는데 조경을 배우다 보니 다시 그 생각이 떠오른다.</p>
+<p>우리나라에서도 정원이 나오긴 한다.</p>
+<p>그것도 드라마에서나 재벌집이 배경일때 정원이 잘 갖추어져 있고 그 밖의 경우에는 본 적이 없다.</p>
+<p>그러다 보니 집 정원의 이름도 자동으로 아는게 아니라 배워야 할 수 밖에</p>
+<p>&nbsp;</p>
+<p>입구에서 현관까지 이어진 동선에 있는 정원은 앞뜰</p>
+<p>보통 이 동선옆, 거실, 발코니 맞은편에 펼쳐저 있는 안뜰</p>
+<p>부엌 맞은편의 장독대, 채소밭이 있는 작업뜰</p>
+<p>그리고 집뒤에 주로 안방이나 다른 방들의 맞은편에서 차폐를 위한 뒤뜰</p>
+<p>&nbsp;</p>
+<p>보통 드라마에선 앞뜰과 안뜰이 많이 나온다.</p>
+<p>등장인물들이 현관에서 입구까지 갈때 나오는 앞뜰, 쉬거나 식사를 하는데로 나오는 안뜰</p>
+<p>저뜰들이 다 있는 아니 최소 안뜰과 앞뜰이 있는 집에서 살고 싶다</p>')
+
+Blog.create!(id: 21, blog_category_id: 3, user_id: 1, title:'5월 1일 노동절, 근로자의 날 X',tag_list: '노동자의 날,노동자', description: '노동자로 사는 우리에게 무슨 의미를 가지는 날일까요?(자본가들 꺼져)',
+content: '<p>노동자로 사는 우리에게 노동절은 어떤 의미일까요?</p>
+<p>노동절이라고 하면 먼가 공산주의적인 느낌을 받으면서 꺼려하는 사람들이 많은데</p>
+<p>노동절은 공산주의 국가들이 세워지기도 전인 1880년대에</p>
+<p>자본주의 선두주자의 나라인 미국에서 유래되었습니다.</p>
+<p>가장 노동자가 먼저,많이 있을 나라에서 자본가에 맞서서 노동자의 권리를 찾기위한 움직임이 일어났던것 입니다.</p>
+<p>장소 또한 산업이 발달했던 시카고입니다.</p>
+<p>노동자들의 구호는 &quot;하루 8시간 노동&quot;이였습니다.</p>
+<p>이게 1880년대에 나온 이야기인데 지금도 제대로 안되고 있는 현실이(특히 이놈의 나라에서) 슬픔니다.</p>
+<p>시카고에서 저 구호를 외치며 대규모의 파업이 일어났고 뭉쳐서 함께하면 변화를 이끌수 있다는것을 확인했지요</p>
+<p>하지만 자본가의 멍멍이인 경찰은 당연히 이를 폭력으로 진압하였지요(헤이마켓 사건)</p>
+<p>그 후에 파리에서 노동운동가들이 모여 이 때의 선구적인 투쟁을 기념하기로 하고 5월 1일(메이데이)가 노동절로 선포되었습니다.</p>
+<p>우리나라에서는 일제시대에서부터 행사를 가지면서 의미를 되새겼지만 그 후 반공의 기치아래서 천대받았다가</p>
+<p>이 정신을 기리려는 끊임없는 노력으로 다시 5월 1에 지정되었습니다.</p>
+<p>그러나 &quot;동무&quot;라는 순우리말도 없앤 우리 자본가들이 &quot;노동&quot;이라는 단어를 그대로 나둘리가 없어</p>
+<p>&quot;근로자의 날&quot;이라는 변태적인 이름으로 불리우고 있습니다.&nbsp;&nbsp;&nbsp; 근로자의 날 X, 노동절 O</p>
+<p>지금도 그렇지만 자본가들 살 맛났겠어?, 이 때도 16~20시간씩 부려먹었지요</p>
+<p>근로기준법이라는 것을 명목상 만들기는 했지만 안 지켜도 그만인 법이였지요</p>
+<p>하루 8시간 노동을 만들기 위해 투쟁하고 죽어간 이들로 말미암아 우리가 그들처럼 16~20시간씩 일하지 않는 환경이 만들어 질 수 있던거지요.</p>
+<p>노동자들이 뭉쳐서 대항하지 않는한 자본가들은 우리가 죽어가던 말던 다시 우리를 20시간씩 부려먹을겁니다.</p>
+<p>노동절을 맞아 16~20시간 일하던 그들의 고통과 총칼 앞에서도 이런 불의에 맞서 싸운 그들의 용기를 생각해봐야겠습니다.</p>')
+
+Blog.create!(id: 22, blog_category_id: 2, user_id: 1, title:'마운트곡스 파산으로본 차세대 통화(돈) 비트코인', description: '차세대 통화(돈) 비트코인의 내용과 미래',
+content: '<p>비트코인 최대 거래소인 마운트곡스가 파산했습니다.</p>
+<p>이는 급성장하던 비트코인의 최대악재로 평가되며 비트코인의 미래도 불투명하게 만들고 있습니다.</p>
+<p>그럼 비트코인은 어떤 것일까부터 알아보기로 하겠습니다.</p>
+<p>비트코인은 컴퓨터 암호화기술을 이용한 통화(돈)로 사이버상에서만 존재합니다.</p>
+<p>돈의 발전과정을 보면 최초의 실물 -> 금,은같은 귀금속, 이를 가공한 규격화한 (금,은,동) 동전 -></p>
+<p>금,은등의 귀금속을 담보로 거래되는 지폐 -> 그냥 국가에서 발행하는 지폐(현 지폐)</p>
+<p>순으로 발전해왔습니다.</p>
+<p>특히 주목해야하는것은 실물에서 가상으로 넘어오는 과정인데 처음에는 실물로만 거래를 해왔습니다.</p>
+<p>그러다가 실물의 무게도 무겁고 거래도 불편하여 발전한것이 금,은 등을 맡겨놓고</p>
+<p>이를 보증하는 문서(지폐)로 거래를 하기 시작하였습니다.</p>
+<p>이를 가져가면 물론 현물로 바꿔주었지요</p>
+<p>미국 달러화 또한 그렇게 교환해주었는데 경제가 커지다 보니 달러를 금으로 바꿔주는 제도는 폐지되었고 달러를 금보유량과 상관없이 찍어내기 시작했습니다.</p>
+<p>초기에는 사람들이 혼란에 빠졌지만 경제는 문제 없이 돌아갔고 경제는 더욱 발전할수 있었습니다.</p>
+<p>금으로 보장된 만큼만 돈이 돈다고 생각하면 현재같은 대규모의 경제 교류는 있을수 없었겠지요?</p>
+<p>금으로 바꿔주지 않는 그냥 종이라고 해도 사람들이 가치가 있다고 인정해주니 가치가 있던겁니다!!!</p>
+<p>이렇게 이제 지폐는 복사가 불가하다는것 뺴고는 그냥 종이가 되었습니다.</p>
+<p>그냥 종이와 다른점은 위에서 말했듯이 가치가 있다고 인정받고 복사가 불가하다는 것입니다.</p>
+<p>그렇다면??</p>
+<p>조작,복사가 불가능하고 이동가능한(매매) 컴퓨터 데이터가 있고 사람들이 이를 돈으로서 인정해준다면??</p>
+<p>이또한 지폐와 다를것이 없게됩니다!!</p>
+<p>이것이 바로 비트코인으로서 비트코인은 이미 지폐의 모든 기능을 이미 가지고 있습니다.</p>
+<p>또한 사람들이 인정해주는 부분만 남아있는데 이미 많은곳에서 사용가능하기 때문에 이부분은 급속히 늘어날것으로 보입니다.</p>
+<p>몇몇 사람들은 지폐가 아닌 보이지도 않는 컴퓨터 데이터가 어떻게 돈이 되냐는 어리석은 믿음이 있습니다.</p>
+<p>그렇게 따지면 현재 지폐도 그냥 종이입니다. 아마 이사람들또한 현재 지폐에 익숙해져서 비트코인의 등장이</p>
+<p>예전 금으로 바꿔주던 지폐 쓰던 사람들이 금으로 안바꿔 준다고 했을때의 충격과 비슷하기 때문일것 입니다.</p>
+<p>이런 사람들의 충격을 넘어서서 비트코인이 지폐를 대체할수 있을지 기대가 됩니다.</p>')
+
+Blog.create!(id: 23, blog_category_id: 1, user_id: 1, title:'주영이 목욕시키기', description: '우리 애기목욕시키는 모습입니다. 변신과정~',
+content: '<p>우리 예쁜 주영이를 목욕시켰어요</p>
+<p>&nbsp;</p>
+<p><img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/38/content_content_baby01.jpg" /></p>
+<p>기분 좋은듯 있다가</p>
+<p>&nbsp;</p>
+<p><img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/39/content_content_baby02.jpg" /></p>
+<p>얼굴이 조금씩 변하더니</p>
+<p>&nbsp;</p>
+<p><img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/40/content_content_baby03.jpg" /></p>
+<p>ㅎㅎㅎ 시작한다</p>
+<p>&nbsp;</p>
+<p><img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/41/content_content_baby04.jpg" /></p>
+<p>엉엉엉 목욕 싫어~~</p>
+<p>&nbsp;</p>
+<p><img alt="" class="img-responsive" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/42/content_content_baby05.jpg" /></p>
+<p>결국 불타는 고구마로 변신완료~~</p>
+<p>&nbsp;</p>
+<p>이렇게 오늘도 주영이는 목욕을 마쳤습니다.</p>')
+
+Blog.create!(id: 24, blog_category_id: 1, user_id: 1, title:'반려동물 잃어버리면 이 사이트 찾아보세요', description: '반려동물 잃어버리면 찾거나 입양할수 있는 사이트 소개 - http://www.animal.go.kr ',
+content: '<p>반려동물 없어지면 정말 슬프지요?</p>
+<p>저도 몇 번 집나간 우리 멍멍이들이 돌아오지 않았습니다.</p>
+<p>예전에도 그런적이 있어서 이번에 멍멍이들이 나갔을때는 잃어버렸나보다 그냥 포기하려고 했는데</p>
+<p>인터넷으로 검색하다 알게된 사이트입니다.</p>
+<p><a href="http://www.animal.go.kr" target="_blank">http://www.animal.go.kr</a></p>
+<p><img alt="" src="https://jedaeroweb.blob.core.windows.net/sleepinglion/ckeditor/pictures/43/content_content_animal.jpg" class="img-responsive" /></p>
+<p>&nbsp;</p>
+<p>여기서 유기동물 -&gt; 공고 메뉴로 가면 잃어버린 반려동물을 찾아볼수 있어요</p>
+<p>덕분에 우리 멍군이와 짬순이도 집나갔다가 찾아왔습니다.</p>
+<p>이런 좋은 제도가 있는지도 모르고 하마터면 포기 할 뻔 했습니다.</p>
+<p>포기하지 말고 이 사이트를 이용해서 가족을 찾아보세요</p>')
+
+Blog.create!(id: 25, blog_category_id: 2, user_id: 1, title:'국회의원 무보수 근무?? 다른것도 좀 생각하길...', description: '국회의원이야기만 나오면 말 나오는 국회의원 무보수 근무, 좀 다른것도 생각하세요',
+content: '<p>국회의원이 동네북이라도 되는지 심심하면 나오는</p>
+<p>국회의원 명예직, 무보수를 이야기하는 하나는 알고 둘을 모르는 사람들</p>
+<p>국회의원 돈 많이 주고 특권 많이 주는거는 비리 저지르지 말라고 그러는건데</p>
+<p>선거때 돈 깨지는 것도 장난 아닌데 자기돈 없어진거 채울라면 어찌 되겠는지좀 생각하길</p>
+<p>특히!! 돈 없는 사람들은 국회의원 못하게 된다는 사실!!!</p>
+<p>돈 많은 사람만 국회의원 하게 하고 싶으면 계속 명예직, 무보수 이야기 하세요</p>
+<p>돈많은 사람만 국회의원되는세상 참 좋겠네요?</p>
+<p>그런식이라면 선거때 그냥 돈 뿌리는것도 인정하는게 어떨지??</p>
+<p>= 실제 고대 로마에선 저런식으로 했지요(돈 뿌리고, 명예직으로 부자만 국회의원 하고요~)</p>')
+
+Blog.create!(id: 26, blog_category_id: 1, user_id: 1, title:'처음으로 로또 당첨되었어요', description: '로또 당첨되었어요, 비록 5만원 짜리지만 기분 좋네요',
+content: '<p>처음으로 로또 당첨되었어요</p>
+<p>그동안 많이 사지도 않았었지만 죽어라고 안되었는데 되니깐 기분 좋네요</p>
+<p>수동 3개, 자동 2개 했는데 수동은 다 피해가네요?.... 으으.....</p>
+<p>2개만 더 되었으면 인생역전인데 그런일은 언제나 있으려나?</p>')
+Blog.create!(id: 27, blog_category_id: 3, user_id: 1, title:'담배값 인상, 분노가 치민다.', description: '서민건강 위한다는 토악질 나오는 위선의 담배세(간접세) 인상',
+content: '
+<p>새해부터 담배값이 인상되었다.</p>
+<p>담배값이라고 하지만 담배가격은 거의다 세금이므로 담배값에 포함된 세금이 두배로 올랐다고 할수있다.</p>
+<p>사실 이런 정도 인상은 도저히 받아들일수 없는 인상폭이다.</p>
+<p>200% 증가된 세금이란것을 들어본적이 있는가?</p>
+<p>사실 해당자를 우습게 보지 않는 이상 이런 결정을 내리기 힘들것이다.</p>
+<p>그럼 우습게 보이는 사람들(흡연자)란 어떤 사람들일까?</p>
+<p>흡연자는 대체로 서민이다. 아니 그냥 간단하게 약간의 예외를 무시하면 흡연자는 서민이다.</p>
+<p>그럼 이 망할정부에선 서민들에게 이런 엄청난 세금인상을 했을까?</p>
+<p>&nbsp;</p>
+<p>우선 정부가 내세우는 명분은 담배값을 올려서 흡연자를 감소시키고 그 돈으로 금연유도에 쓴다고 하지만</p>
+<p>설마 이 말을 믿는 분은??......</p>
+<p>다 알듯이 부족한 세수를 보충하기 위해서 저런 X같은 명분을 내세워서</p>
+<p>흡연자들의 돈을 더 갈취하려고 하는것이다.</p>
+<p>그럼 세수가 왜 부족해졌을까?</p>
+<p>&nbsp;</p>
+<p>우선 세금에 대해 살펴보자</p>
+<p>세금에는 직접세와 간접세가 있는데</p>
+<p>직접세는 개개인에게 부과하는것으로 개인의 부에 따라서 차별적으로 부가하는것이 가능하다.</p>
+<p>100억 재산가에게는 5억, 100만원 거지에게는 1만원을 걷는 것이다.</p>
+<p>이런 누진적인 차별을 통해 세금을 통해 부의 재분배가 가능해지므로 바람직한 세금형태라고 할 수 있지만</p>
+<p>인상시 쉽게 느껴지기 때문에&nbsp; 조세저항이 크다.</p>
+<p>간접세는 물품에 부가되어 개인의 부와 상관 없이 평등하게(?) 부가된다.</p>
+<p>100억 재산가에게도 1만원, 100만원 거지에게도 1만원이다.</p>
+<p>예처럼 부와 상관없이 평등하게(?) 내므로 부의 재분배는 커녕 가난한 사람이 더 어려워 지는 세금형태라는 것을</p>
+<p>쉽게 알수 있다.&nbsp; 반면 물품값에 포함되어 쉽게 느껴지지 않기 때문에 인상시 조세저항이 작다.</p>
+<p>물론 고가품에만 부가되는 세금 부의 재분배가 되겠지만 술,담배, 기름이 그런것이 아님을~</p>
+<p>특히 우리나라는 간접세비중이 높기로는 세계 TOP에 든다고 한다.&nbsp;</p>
+<p>조세저항이 큰 직접세는 나두고 편하게 올리는 간접세만 인상해온 결과이다.</p>
+<p>&nbsp;</p>
+<p>물론 간단하게 나가는데는 많은데 들어오는데는 적어졌기 때문이다.</p>
+<p>나가는쪽도(사대강,자원외교,할아버지들 20만원주기 등) 할말이 많지만 이것도 길어지기 때문에 생략하고</p>
+<p>들어오는쪽을 살펴 보면</p>
+<p>바로 부자들이 내는 직접세(종합부동산세,법인세, 상속세)등이 크게 줄었기 때문이다.</p>
+<p>종합부동산세는 유명무실해진지 오래고</p>
+<p>바로 전 정부에서 경제를 살린다고 법인세 인하를 시행하고</p>
+<p>(결국 경제도 안 살아나고 낙수효과도 없잖어!!? , 도로 올려야지?)</p>
+<p>이번 정부에서 가업상속공제라는 것을 만들어 상속세를 유명무실하게 만들었다.</p>
+<p>(상속세는 부를 재분배하고 부의 고착화를 막는 핵심인 세금인데 이제 우리나라에서는 없는 세금이 되었어요~</p>
+<p>이제 부자는 3대를 못간다는 속담을 없애고 3대를 넘어서 대대손손 잘 살자~ 우리나라 좋은 나라</p>
+<p>이럴꺼면 그냥 솔직하게 귀족, 천민제도로 바꿔~)</p>
+<p>&nbsp;</p>
+<p>그럼 뭘로 세수를 메꾸나?</p>
+<p>바로 올리기 쉬운 간접세(담배세)를 또 손댄것이다!!&nbsp;</p>
+<p>담배값 인상이 쉬운 이유는 몇가지 더 있는데 비흡연자들의 찬성을 얻을수 있기 때문이다.</p>
+<p>&quot;나랑은 상관없는 일이잖어?&quot;</p>
+<p>&quot;담배값 오르면 피는 사람 줄고 내가 싫어하는 담배연기도 덜 맡겠네?&quot;</p>
+<p>생각 하는 비흡연자들은 제발 조금더 생각해보길 바란다.</p>
+<p>이를 남의집 불보듯 하다가는 그 불길이 곧 당신에게 향할 것이다.</p>
+<p>&nbsp;</p>
+<p>부자들한테 세금 걷을수 있는것을 줄이고 서민들에게서 세금을 올리고서는 &quot;국민건강&quot; 운운하는 위선이 역겨워 토악질이 나올뿐이다.</p>')
+
+Blog.create!(id: 28, blog_category_id: 1, user_id: 1, title:'무서운 중독성 게임 OpenTTD', description: '예전의 추억을 떠올리며 했던게임, 몇시간 동안 다른 세상으로 감',
+content: '<p>오랜만에 OpenTTD를 했습니다.</p>
+<p>잠깐 하려고 시작했지만........</p>
+<p>시작과 동시에 몇시간 동안은 가만히 앉아서 이것만 했네요.</p>
+<p>집이 추워서 가만히 있으니 몸이 차가워 지는데도 꼼작도 않고 계속 했더니</p>
+<p>나중에는 저체온증 걸릴뻔 했습니다.</p>
+<p>&nbsp;</p>
+<p>이렇게 무서운 중독성 OpenTTD</p>
+<p>함부로 키면 안되겠습니다.</p>')
+
+Blog.create!(id: 29, blog_category_id: 1, user_id: 1, title:'맛있는 건과류들', description: '세상에는 정말 맛있는 과일,건과류가 정말 많아요',
+content: '<p>세상에는 정말 맛있는 과일,건과류가 많다.</p>
+<p>그중에서도 건과류를 보면 어렸을때 부터 땅콩은 참 많이 먹었다.</p>
+<p>땅콩은 심심할때도 언제나 먹기도 좋고 맛도 좋다.</p>
+<p>땅콩을 가공한 땅콩버터 빵에 발라 먹으면 그 맛은 정말 천국이 따로 없다.</p>
+<p>땅콩버터가 발명되고 나서 땅콩 소비가 급속히 늘었고 이에 따라 생산량도 어마어마 하게 늘었다고 한다.</p>
+<p>그야말로 건과류의 기본~~ 땅콩</p>
+<p>&nbsp;</p>
+<p>호두는 처음에 맛있는지 그리 몰랐었다.</p>
+<p>나이먹을수록 맛있는줄 알게 되어서 계속 먹게 되었다.&nbsp;</p>
+<p>호두 한통을 맥주와 먹고 요로결석까지 걸렸었다.</p>
+<p>그래서 요즘은 약간 덜 먹긴 하고 있다.</p>
+<p>&nbsp;</p>
+<p>아몬드를 처음 먹은거는 아몬드 쵸코바에 들어있던 아몬드다.</p>
+<p>아몬드 먹고싶어서 쵸코렛만 따로 먹고 나중에 아몬드 모아서 먹었던 기억이 난다.</p>
+
+                                            <p>이렇게 맛있는 땅콩이 있나 생각했었다.</p>
+
+                                                              <p>과자공장에서 아르바이트 했을때 아몬드 갈아놓은것을 마음껏 먹었는데 먹어도 먹어도 참 맛있었다.</p>
+
+                                                                                                                <p>요즘은 가격이 싸져서 어디서든 먹을수 있는데 왠지 예전 귀했을때 만큼 맛있게 느껴지지는 않는다.</p>
+
+                                                                                                                                                                    <p>&nbsp;</p>
+
+<p>피스타치오를 처음 먹어본것도 아이스크림에 들어있는것이였다.</p>
+
+<p>역시 아몬드 처럼 맛있다고 느꼈고 따로 사먹어보니 역시 더 맛있게 느껴졌다.</p>
+
+                                        <p>껍질도 까먹기 쉽고 그 맛이 참 좋다.&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>캐슈넛은 언제 먹었는지 잘 기억이 안나지만</p>
+
+<p>역시 맛있었다. 여러 건과류 석여있으면 언제나 이것 부터 먹었다.</p>
+
+<p>&nbsp;</p>
+
+<p>마카다미아는 서른이 넘어서나 알게되었는데</p>
+
+<p>참 신기했다. 모양도 다른것과 특별히 다르고 맛도 참 오묘하다.</p>
+
+                                 <p>맛있어서 사먹긴 했지만 여전히 비싸서 그리 많이는 못먹었다.</p>
+
+                                                                <p>생산농장이 나오는 다큐를 보았는데 껍질까는걸 보니 비쌀만 했다.. ㅋ</p>
+
+<p>하와이에서 거의 모든 물량이 생산된다고 한다.&nbsp; 하와이 땅콩이다. ㅎㅎ</p>
+
+<p>최근에 땅콩회항에 나온것으로 많은 관심을 많아 판매량이 늘었다고 한다.</p>
+
+                                       <p>&nbsp;</p>
+
+<p>피칸 또한 서른이 넘어서나 먹어보았는데</p>
+
+<p>하긴 그전에 피칸파이를 먹었나? 모르겠다.&nbsp; 과자나 빵속에도 조금씩 들어있다고는 한다.</p>
+
+                                                     <p>하여간 알갱이로 제대로 먹어본건은 중국에서 파는 피칸이였다.</p>
+
+                                                                                   <p>호두와 거의 비슷하지만 그 향이 참 좋다.</p>
+
+                                                                                                          <p>그래서 과자나 빵에 많이 쓰나보다.&nbsp;&nbsp; 호두를 좋아한 이후로 이보다 더 빠져들었다.</p>
+
+                                                                                                                                                               <p>하지만 역시 비싸서 그리 많이 먹지는 못하였다.</p>
+
+                                                                                                                                                                                       <p>피칸이 중국에서 많이 먹길래 중국에서 생산많이 되나 했더니?</p>
+
+<p>거의 전부 미국에서 수입해온 것이라고 한다~</p>
+<p>중국에서 피칸을 많이 먹어서 미국의 피칸값이 폭등일로에 있다고 한다.&nbsp; ㅎㅎ</p>
+<p>&nbsp;</p>
+<p>맛있는 건과류~~</p>
+<p>다른 비싼 건과류들도 싸져서 마음껏 먹었으면 좋겠다.</p>')
+
+Blog.create!(id: 30, blog_category_id: 3, user_id: 1, title:'화낼 노(怒)의 뜻', description: '노예의 현재 심정',
+content: '<p>화낼 노(怒)자를 보면 노예 노(奴)와 마음 심(心)이 더해진 자이다.</p>
+             <p>즉 노예의 현재 마음상태를 나타는 글자로 바로 화남,울분을 뜻한다.</p>
+             <p>너무나 잘 이해되는 글자이다.</p>
+             <p>헬조선에서  노예(奴)로 살아가는 나의 마음(心)이다.</p>
+             <p>그나마 나는 노예(奴)임을 자각하고 살아가니 노예(奴)인지도 모르고 사는 놈들을 보며 위안을 삼아야지</p>
+<p>근데 그렇다고 달라지는것은 없다.  그저 마음속에 怒만 쌓여가고 있다</p>')
+
+Blog.create!(id: 31, blog_category_id: 3, user_id: 1, title:'카톡 빨리 망했으면 좋겠다', description: '개떡같은 카톡 쓰지마요~~',
+content: '<p>여러분이 메신저를 쓰는데 두가지 선택사항이 있다면 어느것을 택하겠습니까?</p>
+<p>1. 중간에서 도청될수 있으며 국가에서 기록을 요구할때 그동안의 기록(채팅기록)을 제공하는 메신저</p>
+<p>2. 중간에서 도청될수 없으며 국가에서 기록을 요구해도 제공하지 않는 메신저</p>
+<p>&nbsp;</p>
+<p>당연히 2번 아니겠습까??</p>
+<p>1은 카카오톡이고 2는 텔레그램입니다.</p>
+<p>카카오톡은 보안성이 제공되지 않으며 국가의 멍멍이 같은 회사가 운영하는 메신저입니다.</p>
+<p>또한 리눅스 클라이언트도 없습니다.</p>
+<p>텔레그램은 보안성이 제공되며 국가의 통제에 저항하는 자유를 상징하는 메신저입니다.</p>
+<p>텔레그램은 모든 OS와 플랫폼에서 작동합니다.</p>
+<p>&nbsp;</p>
+<p>텔레그램을 적극적으로 사용하고 홍보해주세요~~</p>')
+
+Blog.create!(id: 32, blog_category_id: 3, user_id: 1, title:'전세계에서 탄피갯수세서 줍는 유일한 군대', description: '서로 줘패대니 총알도 세어야되는 불신(不信)의 군대',
+content: '<p>생각이라는것을 별로 할 필요가 없는 군대이지만</p>
+<p>탄피갯수 세면서 맞춰대는것은 생각할수록 참 ㅂㅅ같아 보였었다.</p>
+<p>역시나 제대후에 보니 그런 짓거리 하는 군대는 우리나라 밖에 없없다. <= 이런 짓거리 하는 다른나라 군대 알면 알려주세요~</p>
+<p>&nbsp;</p>
+<p>Q: 왜 한국군만 탄피 확인하나요??</p>
+<p>A: 총알 빼돌려 총기난사, 자살 할까봐~</p>
+<p>Q: 엥? 군인은 원래 총, 총알과 같이 생활 해야되는거 아니야?</p>
+<p>A: 우리나라 군인들은 빈총으로 생활했었어요~,</p>
+<p>그나마 해병대 총기탈취사고가 난 이후로 경계근무시 실탄을 지급받았지만 그 이전에는 빈총으로 근무하는곳이 대부분이였지요</p>
+<p>Q: 왜 군인들에게 총알을 지급 안했었지?? 탄피 줏어서 갯수 확인하고??</p>
+<p>A: 서로 쏴 갈겨댈까봐 그랬지요</p>
+<p>Q: 왜? 서로 쏴 갈겨댈거라고 예상하는거지요?</p>
+<p>A: 한국군만의 문화인 구타, 가혹행위가 있기에 서로를 충분이 쏴 갈길꺼라고 예상하는거지요~</p>
+<p>&nbsp;</p>
+<p>아!! 그렇습니다!~</p>
+<p>서로를 패가면서 근무하는 한국군대는 서로를 믿지못하여 총알도 없이 근무하며 탄피를 줏어대며 갯수를 확인했던것입니다!!!</p>
+<p>다른나라 군대들은 사격훈련후 그냥 냅두다가 탄피쌓이면 빗자루로 쓸어서 쓰레받이담아넣을때</p>
+<p>우리 한국군은 일일히 탄피를 줏어서 갯수를 맞추어 세어넣고 있던것입니다!!!!</p>
+<p>&nbsp;</p>
+<p>PS : 참고로 우리나라 군대도 특전사 같이 서로 쏴 갈길 우려 없는 부대는 미군식으로 탄피를 처리한다고 들었습니다</p>')
+
+Blog.create!(id: 33, blog_category_id: 2, user_id: 1, title:'리눅스 인터넷뱅킹, 신한은행이 최고',tag_list: '신한은행',description: '역시 리눅스 인터넷 뱅킹도 신한은행이 최고네요',
+content: '<p>국민은행의 10배 효율이라는 신한은행</p>
+<p>역시 리눅스 인터넷 뱅킹도 제일 앞서가네요</p>
+<p>무늬만 오픈뱅킹인 다른 은행들과는 차원이 다르네요</p>
+<p>다른 은행들 오픈뱅킹 이용해볼려다가 혈압올라 죽을뻔 했습니다.</p>
+<p>리눅스로 인터넷 뱅킹 하려면 신한은행이 최고에요~</p>')
+
+Blog.create!(id: 34, blog_category_id: 3, user_id: 1, title:'탈조선의 필수, 외국어 능력',tag_list: '외국어,헬조선,탈출', description: '외국어 공부가 이렇게 중요했다니',
+content: '<p>아무 생각없이 살다보니 어느새 30중반</p>
+<p>살기좋은곳이라고 믿었던 이곳은 하루 40명씩 자살하는 지옥같은곳</p>
+<p>깨닫고서 탈출하려고 해보니 언어능력이 안되네..........</p>
+<p>그래도 20대때까지는 영어도 상위권(독해, 글영어)이였는데..... ㅠ.ㅠ</p>
+<p>10년넘께 쓸일이 없었으니......</p>
+<p>일본어라도 열심히 할껄, 되도않는 애국심과 근거없는 반일감정으로 일본어 수업때도 공부할 마음을 갖지 않았다.</p>
+<p>지금보니 지옥(한국) 과 천국(일본)의 갈림길일 수도 있는 중요한 시간이였는데</p>
+<p>웹프로그래머로 일하는 나에게는 지옥(한국)에서보다 2배의 급여를 받는 천국(일본)으로 가는 티켓과 같은 시간이였었다.</p>
+<p>&nbsp;</p>
+<p>나 헬조선 탈출할래!!~~~</p>')
+
+Blog.create!(id: 35, blog_category_id: 2, user_id: 1, title:'퇴사할때도 따지지 않으면 호구됩니다.',tag_list: '퇴사,호구', description: '퇴사때 이것저것 잘 따져야 자기 것 챙겨먹습니다.',
+content: '<p>X같은 회사 퇴사통보하고 즐겁게 지내던중</p>
+<p>연차수당 계산해보려고 연차 몇일 남았나 알아보려고 경리년한테 전화하니</p>
+<p>2년이 안되어서 계산을 한참해봐야 된다는 황당한 답변!!</p>
+<p>1년 지나면 15일이 생성되는건데 2년을 채워야 15일인줄 알고있는 ㅂㅅ</p>
+<p>어이없어서 내가 저런것을 설명해주니 그제서야 별말이 없음</p>
+<p>진짜 모르는건지, 아님 우선 저렇게 해서 속여먹어보려고 한건지는 모르겠음</p>
+<p>&nbsp;</p>
+<p>그 후에 불안한 마음에 퇴직금 이야기하니 알겠다고 함</p>
+<p>그러면서 연차수당 이야기하니 뜬금없이 "연차수당 안 주는 회사도 많잖아요, 우리는 준다고요!" 하면서 신경질 냄</p>
+<p>또 어이 없어짐, 비정상의 헬조선에서는 정상적으로 연차수당 주는게 "엄청난 은혜"였는지를 깨닫게됨</p>
+<p>&nbsp;</p>
+<p>다음날 연락오더니 퇴직금은 다음달 월급날(30일후)에 준다는것임</p>
+<p>내가 15일 이내로 줘야되는거 아니냐고 따지니 우리회사는 원래 다 그렇게 해왔다는것임</p>
+<p>그랬던지 말던지 나는 용납못한다고 하니 사장하고 이야기 하라네? 알았다고 하니</p>
+<p>예상못한 반응인지(아마 지 예상으로는 내가 저기서 꼬리내릴 줄 예상했던 느낌이였음) 이리저리 횡설수설하더니</p>
+<p>"그럼 법대로하세요!!" 소리 지르더니 전화 끊네요</p>
+<p>&nbsp;</p>
+<p>법대로 해야되나 하고 생각하고 있는데 10분도 안지나서 문자가 오네요</p>
+<p>"15일내에 퇴직금 입금하겠습니다"</p>
+<p>소리치더니 10분만에 뭐하자는건지...</p>
+<p>따지면 15일 이내 입금이고 안따지면 30일인거임?? 모든 직원한테 이런식으로 하나봄</p>')
+
+Blog.create!(id: 36, blog_category_id: 3, user_id: 1, title:'헴프씨드(hemp seed) 맛있네요', description: '맛좋고 건강에 좋은 헴프씨드(hemp seed)',
+content: '<p>요즈음 헴프씨드(hemp seed)가 인기입니다.</p>
+<p>&quot;기적의 다이어트&quot; 열풍으로 널리 알려졌는데 코코넛 오일과 함께 최고의 다이어트 식품이라고 합니다.</p>
+<p>영양가도 풍부하여 각종 영양소가 다른것에 몇배에 이른다고 합니다.</p>
+<p>먹어보니 맛도 참 좋습니다. 건과류 좋아하는 저에게는 딱 맞는 맛입니다.</p>
+ <p>그래서 이게 뭔 씨앗인가 봤더니 대마씨였습니다.</p>
+<p>대마씨에서 환각성분이 있는 부분을 제거한것이라고 합니다.</p>
+ <p>대마는 줄기도 옷만드는데쓰고 씨앗도 이리 맛좋고 영양이 많다니 참 좋은 식물입니다.</p>
+<p>대마를 널리 심어 맛있는 헴프씨드(hemp seed)를 맘껏 먹으면 좋겠습니다.</p>')
+
+Blog.create!(id: 37, blog_category_id: 3, user_id: 1, title:'헴프씨드(hemp seed) 맛있네요', description: '맛좋고 건강에 좋은 헴프씨드(hemp seed)',
+content: '<p>저는 처음 메신저 접했던게 AOL메신저였습니다.</p>
+<p>바로 메세지가 보내지는 메신저 프로그램은 그야말로 신세계였습니다.</p>
+<p>AOL쓰다가 MSN, 네이트온으로  옮겨가며 사용했던 기억이납니다.</p>
+<p>네이트온 이후로는 카톡을 쓰지만!!!</p>
+<p> </p>
+<p>카톡은 리눅스 클라이언트가 없는 개떡같은 X프로그램일뿐아니라(네이트온은 리눅스 클라이언트가 있습니다)</p>
+<p>국가에서 요구하면 바로 채팅기록을 넘겨주는 국가의 멍멍이 같은 프로그램이라 쓰기가 싫었습니다.</p>
+<p> </p>
+<p>그래서 찾은것이 텔레그램입니다.</p>
+<p>텔레그램은 모든 OS,모든 기기용을 제공하며  공개되어 있어 얼마든지 클라이언트 제작이 가능하며</p>
+<p>암호화되어서 도감청 위험이 없으며,  국가에서 요구한다고 채팅기록을 넘기는 짓거리 안하는</p>
+<p>그야말로 완벽한 메신저입니다.</p>
+<p>리눅스에서 텔레그램을 쓰려면 바로 텔로그램 홈페이지에서 다운받아 설치하면 되지만</p>
+<p>한글지원이 아직은 미흡합니다. </p>
+<p>그러던중 한글까지 완벽히 잘되는 클라이언트 프로그램을 찾아서 사용하게되었는데 아주 잘되고 그래픽도 깔끔합니다.</p>
+<p>바로 cutegram입니다.</p>
+<p> </p>
+<p>검색에서 cutegram 찾어서 설치하면 바로 사용가능합니다.</p>
+<p>리눅스에서 마음껏 메신저 쓸수 있는 cutegram사용해보세요~~</p>')
+
+Blog.create!(id: 38, blog_category_id: 3, user_id: 1, title:'이 세상은 메트릭스, 메트릭스 조종자는 SM매니아',tag_list: '메트릭스', description: '이 세상은 메트릭스였습니다.  메트릭스 조종자는 SM매니아입니다.',
+content: '시간이 똑같이 흐르지 않는다는 것을 어렴풋이 짐작하고 있었다.
+그러던중 군대를 가게되고 짐작은 확신으로 바뀌게 되었다.
+그렇다!!  누군가 시간을 조정하여 즐거울때는 빠르게 괴로울때는 느리게 가게 조종하고 있던 것이다!!
+괴로울때 느리게 하는것을 보면 아마 SM성향인듯 하다.
+이 SM성향의 존재는 주말마다 2~6배속으로 빠르게 가기 리모콘을 누르고 평일에 일할때는 2~6배속 느리게 가기를 누른다.
+나는 빨간약을 먹지 않고도 이 세상이 메트릭스임을 깨우쳤다.')
+
+Blog.create!(id: 39, blog_category_id: 3, user_id: 1, title:'우리나라는 식민지, 북한은 자주국가',tag_list: '식민지,미군', description: '미군주둔하는 식민지 헬조선',
+content: '북한에는 주북조선중국군 주둔 안하는데
+우리나라는 왜 주한미군 주둔하나요??
+그것도 공짜로?? 오히려 우리가 비용 대가면서???
+북한은 자주 독립국인데
+우리나라는 식민지네요
+그래서 정전협정에서도 우리나라는 당사자 아니라고 하네요=식민지니깐
+')
+
+Blog.create!(id: 40, blog_category_id: 3, user_id: 1, title:'우리 헬조선은 이렇습니다',tag_list: '헬조선,자살,식민지,카스트,미군', description: '우리 헬조선은 이런 자랑스러운 나라입니다',
+content: '미군 돈대주면서 주둔시키는
+우리나라는 햇빛 잘드는 나라로는 세계최고 자살률
+아프리카 우간다 보다 못한 금융시스템을 가지고 있으며
+GDP훨씬 낮은 같은 징병제의 태국보다 병사월급 적고
+카스트제도의 인도보다 계층상승 안되는 나라라고 합니다
+헬조선 만쉐~~')
+
+Blog.create!(id: 41, blog_category_id: 2, user_id: 1, title:'김은숙 작가 참 생각없고 문제 많네...  기본 법도 모르는 건가???',tag_list: '사적제제,법치,불법', description: '너무나 보기 불편한 김은숙의 불법적 사고',
+content: '김은숙 작가  사상, 작품이 좀 문제가 많네.......
+작품들 보면 악을 법이 아닌 사적제재로 처벌하는것을 좋아하는것 같음
+사형(私刑= 사적제제)은 중죄 입니다.
+미스터 션샤인에서도 재판없이 매국노라고 대신을 바로 죽이는 장면 말도 안되고 불편한 장면이였는데(= 실제 조선은 법치국가로 재판을 중시했습니다.  법치주의 조선에서 역적이라고 그렇게 바로 죽이는 만행은 없지요)
+더 글로리에서는 주여정 의사의 이런 악랄한 사적제제??    에휴.....
+한숨만 나오네  포퓰리즘을 등에 업고 사람들에게 잘못된 인식(불법)을 이렇게 심어주는게 방송 계속 되도 되는거임???')
+
+Blog.create!(id: 42, blog_category_id: 2, user_id: 1, title:'바라밀다',tag_list: '바라밀다,바라밀,파라메터,parameter,인수', description: '바라밀다가 parameter 였다니~~!!',
+content: '요즘 불교관련 책을 좀 보고 있는데
+불교용어가 다 산스크리트어 이고 영어까지 이어진다는것은 알고 있었는데
+바라밀다? 바라밀다? parameter?  혹시나 해서 검색해보니 역시나
+바라밀다가 영어로는 parameter 였네요
+우리 프로그래머들이 맨날 함수에 넘겨주는~ ㅎㅎ
+쓰레기가 Trash인것과 노다지가 No Touch인것 이후로 새롭게 또 안 사실이네요
+그럼 저는 이만 바라밀다')

@@ -18,7 +18,7 @@
 <meta name="author" content="Sleeping-Lion">
 <link rel="canonical" href="<%=t(:site_full_url) %>">
 <link rel="alternate" type="application/rss+xml" title="Sleeping-Lion RSS Feed" href="<%= t(:site_full_url) %>/feed?format=rss">
-<%= stylesheet_link_tag "front/application", :media => "all", "data-turbolinks-track" => true %>
+	<%= stylesheet_link_tag "front/application", :media => "all", "data-turbolinks-track" => true %>
 <%= favicon_link_tag 'favicon.ico' %>
 <%= csrf_meta_tags %>
 <%= csp_meta_tag -%>
@@ -48,6 +48,6 @@
 </div>
 <%= render :partial => 'layouts/footer' %>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog"></div>
-<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
 </body>
 </html>
