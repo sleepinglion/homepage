@@ -90,5 +90,15 @@ group :test do
   gem "selenium-webdriver"
 end
 
+group :production do
+  gem 'asset_sync'
+  gem 'fog-azure-rm', git: 'https://github.com/sleepinglion/fog-azure-rm'
+  gem 'mysql2'
+  gem 'redis'
+  gem 'dotenv-rails'
+  gem 'recaptcha', :require => 'recaptcha/rails'
+  gem 'rails-letsencrypt'
+end
+
 
 
