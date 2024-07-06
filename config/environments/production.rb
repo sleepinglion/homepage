@@ -64,22 +64,6 @@ Rails.application.configure do
   # want to log everything, set the level to "debug".
   config.log_level = ENV.fetch("RAILS_LOG_LEVEL", "info")
 
-  # Prepend all log lines with the following tags.
-  config.log_tags = [ :request_id ]
-
-  # Use a different cache store in production.
-  config.cache_store = :redis_store, {
-    host: "localhost",
-    port: 6379,
-    db: 0,
-    namespace: "cache",
-  }
-
-  config.action_dispatch.rack_cache = {
-    metastore: "redis://localhost:6379/1/metastore",
-    entitystore: "redis://localhost:6379/1/entitystore"
-  }
-
   config.active_record.cache_versioning = false
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
