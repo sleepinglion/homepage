@@ -1,6 +1,5 @@
 class QuestionsController < AnonBoardController
   include SecretBoard
-  impressionist :actions=>[:show]
   before_action :check_secret, :only => [:show]
   before_action :set_question, only: [:show, :edit, :update, :destroy]
 
@@ -26,8 +25,6 @@ class QuestionsController < AnonBoardController
   # GET /questions/1
   # GET /questions/1.json
   def show
-    @script="board/show"
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render :json => @question }
@@ -38,7 +35,6 @@ class QuestionsController < AnonBoardController
   # GET /questions/new.json
   def new
     @question = Question.new
-    @script="board/new"
 
     respond_to do |format|
       format.html # new.html.erb

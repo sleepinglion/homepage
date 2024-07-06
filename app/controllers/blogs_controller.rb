@@ -1,5 +1,4 @@
-class BlogsController < ApplicationController
-  before_action :authenticate_user!, :except => [:index,:show]
+class BlogsController < BoardController
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
 
   def initialize(*params)
@@ -44,7 +43,7 @@ class BlogsController < ApplicationController
   # GET /blogs/new
   def new
     @blog = Blog.new
-    @blog.build_blog_content
+
     if(params[:blog_category_id])
       @blog_category_id=params[:blog_category_id]
     end
@@ -104,6 +103,6 @@ class BlogsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def blog_params
-    params.require(:blog).permit(:blog_category_id, :title, :description, :tag_list, :photo, :photo_cache, blog_content_attributes: [:content]).merge(user_id: current_user.id)
+    params.require(:blog).permit(:blog_category_id, :title, :description, :tag_list, :content, blog_picture_attributes: [:picture]).merge(user_id: current_user.id)
   end
 end
