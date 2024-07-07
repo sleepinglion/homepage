@@ -480,7 +480,7 @@ DEPENDENCIES
   dotenv-rails
   fog-azure-rm!
   gretel
-  impressionist
+  impressionist (~> 1.6.1)
   jbuilder
   jsbundling-rails
   kaminari
