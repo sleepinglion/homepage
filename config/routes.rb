@@ -48,21 +48,16 @@ Rails.application.routes.draw do
       resources :question_comments
     end
 
-    resources :blogs do
-      resources :blog_comments
-    end
+    resources :blogs
 
     resources :questions do
       get 'password', :on => :collection
       post 'password', :on => :collection
-      resources :question_comments
     end
 
     resources :guest_books do
-      resources :guest_book_comments do
         get 'password', :on => :collection
         post 'password', :on => :collection
-      end
     end
   end
 end
