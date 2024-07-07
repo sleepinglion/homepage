@@ -19,39 +19,26 @@ Rails.application.routes.draw do
 
   resources :intro, :gallery_categories, :galleries, :notices, :user_photos
 
-  resources :blogs do
-    resources :blog_comments
-  end
+  resources :blogs
 
   resources :questions do
     get 'password', :on => :collection
     post 'password', :on => :collection
-    resources :question_comments
   end
 
   resources :guest_books do
     get 'password', :on => :collection
     post 'password', :on => :collection
-    resources :guest_book_comments do
-      get 'password', :on => :collection
-      post 'password', :on => :collection
-    end
   end
 
   get 'home/popup' => 'home#popup'
   get 'feed', :to => 'home#feed'
 
+
   get 'tags/:tag', to: 'tags#index', as: :tag
-
-  get 'blogs/:blog_id/blog_comments/:id/password', :to => 'blog_comments#password'
-  post 'blogs/:blog_id/blog_comments/:id/password', :to => 'blog_comments#password'
-
-
   get 'guest_books/:guest_book_id/:id/password', :to => 'guest_books#password'
   post 'guest_books/:guest_book_id/:id/password', :to => 'guest_books#password'
 
-  get 'guest_books/:guest_book_id/guest_book_comments/:id/password', :to => 'guest_book_comments#password'
-  post 'guest_books/:guest_book_id/guest_book_comments/:id/password', :to => 'guest_book_comments#password'
 
   scope 'admin', module: 'admin', as: 'admin' do
     get '/' => 'admin_home#index'
