@@ -115,6 +115,6 @@ class GuestBooksController < AnonBoardController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def guest_book_params
-    params.require(:guest_book).permit(:user_id, :name, :password, :title, guest_book_content_attributes: [:content], guest_book_comment_attributes: [:content]).merge(:user_id=>current_user)
+    params.require(:guest_book).permit(:user_id, :name, :password, :title, :content).merge(:user_id=>current_user)
   end
 end
