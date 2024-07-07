@@ -27,6 +27,15 @@ module Sleepinglion
 
     config.i18n.enforce_available_locales = true
 
+
+
+    config.session_store :redis_store,
+                                     servers: ["redis://localhost:6379/0/session"],
+                                     expire_after: 90.minutes,
+                                     key: "_sleepinglion",
+                                     threadsafe: true,
+                                     secure: true
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
