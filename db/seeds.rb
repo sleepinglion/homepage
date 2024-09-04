@@ -155,6 +155,8 @@ Gallery.create!(id: 71, gallery_category_id: 4, title:'구봉도에서 본 낙�
 BlogCategory.create!(id: 1, title: '일상')
 BlogCategory.create!(id: 2, title: '잡생각')
 BlogCategory.create!(id: 3, title: '헬조선')
+BlogCategory.create!(id: 4, title: '환경')
+
 
 Blog.create!(id: 1, blog_category_id: 1, user_id: 1, title:'공포의 요로결석, 해방되다', description: '생성될때부터 나를 괴롭히던 요로결석, 속시원하게 밖에 나오다',tag_list: '요로결석',blog_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images", "blog", "stone_3.jpg"))},
              content: '
@@ -1258,8 +1260,7 @@ content: '댓글부대 영화 처음 나왔을때는 재미없을것 같아서 �
 처음 전파방해로 테스트 떨어지는 부분 나오는것 보면선 "삼성"인것은 알겠더라고요
 결말은 약간 허무하지만 또 진실이 무엇인지 모른다는 내용이 있는 결말인듯 합니다.
 이제 세상에 진짜 같은 가짜가 너무도 많아서 그런것에 속거나 휩쓸리지 말고 정신 바짝 차리고 살아야겠습니다.
-사실 세상도 진짜인지 가짜 인지, 진짜가 무엇인지도 모르겠기는 하지요
-')
+사실 세상도 진짜인지 가짜 인지, 진짜가 무엇인지도 모르겠기는 하지요')
 
 
 Blog.create!(id: 44, blog_category_id: 2, user_id: 1, title:'나라가 뭔데 성인사이트 차단하는거냐??',tag_list: '헬조선, 차단, 검열', description: '애들도 아니고 어른이 성인사이트 보는걸 왜 차단하는거야??, 그러면서 지들만 보고 있을듯',
@@ -1272,5 +1273,48 @@ OECD 38개국중 포르노 금지 국가는 우리나라 뿐이라고 하네요
 우리나라가 정상이고 37개국이 비정상일까요?
 답은 나와있지요?
 
-자신이 정상인지,비정상인지, 자신이 사는 나라가 정상인지,비정상인지 알고 살아가야겠습니다.
+자신이 정상인지,비정상인지, 자신이 사는 나라가 정상인지,비정상인지 알고 살아가야겠습니다.')
+
+
+Blog.create!(id: 45, blog_category_id: 2, user_id: 1, title:'약속 안 지키는 인간들은 여전히 곳곳에 있군요',tag_list: '신용, 불신', description: '지긋지긋한 약속 안 지키는 인간들',
+             content: '살면서 보면 약속 안지키는 사람들이 지키는 사람들 보다 훨씬 많았지요
+특히 저는 잘못 살아왔는지 주변 친구들이 보면 약속 지키는 친구들은 별로 없었습니다.
+이제 나이 들고 그런 친구들도 멀리하고 볼일 없어서 예전 기억을 잊고 살아가고 있었는데....
+
+최근 중고물품 거래앱을 통해 안쓰는 물건을 팔고 있었습니다.
+이제 저 한테 필요없는 컴퓨터나, 컴퓨터 관련 부품들을 싸게 팔어서 사는 사람이 조금이나마 도움되게 하면 좋겠다고 생각하여 그렇게 하였지요
+그래서 거래 하겠다고 연락 와서 약속을 잡지만 막상 시간되면 연락 두절입니다.
+
+
+')
+
+Blog.create!(id: 46, blog_category_id: 2, user_id: 1, title:'알콜중독자는 못 말려',tag_list: '알콜, 중독, 마약, 알콜중독, 알콜의존', description: '마약이랑 다를바 없는 알콜, 차라리 대마초 허용하고 알콜을 금지하는 나을듯',
+content: '
+')
+
+Blog.create!(id: 47, blog_category_id: 2, user_id: 1, title:'계집애만 못한 40대 남자라니....',tag_list: '', description: '나이 40넘게 먹고 삐지고 연락 끊는 초딩여자애만 못한 놈',
+content: '친구라고 오래 지낸놈이 있는데
+지금이라도 손절해서 손해를 더 이상 나지 않게 해야겠습니다.
+')
+
+
+Blog.create!(id: 48, blog_category_id: 4, user_id: 1, title:'환경의 역습, 최고의 위기 폭염',tag_list: '폭염, 열대야', description: '이제 지구가 바이러스인 인간들을 폭염으로 제거하기 시작했다',
+content: '
+
+')
+
+
+Blog.create!(id: 49, blog_category_id: 4, user_id: 1, title:'화산은 피해보다 오히려 이익이 훨씬 큽니다.',tag_list: '화산, 피해, 이익', description: '화산이 죽인 사람보다 살리는 사람이 몇천배, 몇만배 많다',
+content: '
+
+')
+
+Blog.create!(id: 50, blog_category_id: 4, user_id: 1, title:'뭐?? 빙하수가 위험해?? 무식하다 무식해',tag_list: '빙하, 수자원', description: '인류에게 끊임없이 깨끗한 물을 공급해주는 빙하',
+content: '
+
+')
+
+Blog.create!(id: 51, blog_category_id: 4, user_id: 1, title:'인간의 미친짓, 일회용품',tag_list: '플라스틱, 환경오염, 일회용품', description: '미쳤다, 미쳤어',
+content: '
+
 ')
