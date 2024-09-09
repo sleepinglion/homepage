@@ -13830,7 +13830,6 @@ a.left:active {
     width: 100%;
   }
   footer {
-    background: #fff;
     border-radius: 5px;
     margin: 1% 0;
   }
@@ -14029,6 +14028,9 @@ a.left:active {
 }
 [data-bs-theme=dark] header, [data-bs-theme=dark] .jumbotron, [data-bs-theme=dark] .media, [data-bs-theme=dark] .card-body, [data-bs-theme=dark] aside article, [data-bs-theme=dark] #faqList dt a.title, [data-bs-theme=dark] .modal-body, [data-bs-theme=dark] .modal-footer, [data-bs-theme=dark] .sl_content_header, [data-bs-theme=dark] .thead-default th, [data-bs-theme=dark] .breadcrumb, [data-bs-theme=dark] .box_content, [data-bs-theme=dark] header nav {
   background-color: var(--bs-secondary-bg);
+}
+[data-bs-theme=dark] .carousel .carousel-control-prev-icon, [data-bs-theme=dark] .carousel .carousel-control-next-icon, [data-bs-theme=dark] .carousel .carousel-control-prev-icon, [data-bs-theme=dark] .carousel .carousel-control-next-icon {
+  filter: none;
 }
 [data-bs-theme=dark] .box_header {
   background: #666;
