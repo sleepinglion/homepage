@@ -78,7 +78,7 @@ mark, rp, rt, ruby, summary, time {display:inline;}
 footer {clear:both;margin:0;padding:0;text-align: center}
 footer div {margin:0.3em 0 0}
 #mom {clear:both;float:left;width:100%;padding:0}
-.page-header {float:left;width:100%;margin:30px 0 10px;padding-bottom:7px;border-bottom:1px solid #ccc}
+.page-header {float:left;width:100%;margin:30px 0 2%;padding-bottom:7px;border-bottom:1px solid #ccc}
 .page-header h2 {float:left;margin-top:10px;margin-bottom:0;font-weight:bold;color:#666}
 .page-header .breadcrumb  {float:right;margin:0;padding:0.5rem 1rem;background-color: $secondary-bg;border-radius:0.5rem }
 .alert-success {clear:both}
@@ -359,7 +359,7 @@ a.left:active {background-position: -60px 0}
     #mom {clear:both;float:left;width:100%;padding:0}
     #mom {margin:-7em 0 -3em;min-height:100%}
     #main {padding-top:7em;padding-bottom:3em}
-    .sub-main {padding-top:1em;padding-bottom:2em}
+    .sub-main {padding-bottom:2em}
     #top-menu nav ul li.nav-item {display:block;width:20%;margin:0;padding:0}
     #top-menu { height: 92px;}
 }
@@ -393,7 +393,7 @@ a.left:active {background-position: -60px 0}
         width:100%;
         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14);
     }
-  .sub-main {padding-top:1.5em;padding-bottom:2.5em}
+  .sub-main {padding-bottom:2.5em}
     .top-menu { height: 46px;}
     .container {width:1150px;}
   }
@@ -411,7 +411,7 @@ a.left:active {background-position: -60px 0}
     .adsbygoogle {height: 140px}
     .container {width:1450px}
     header nav a.nav-link {font-size:20px}
-    .sub-main {padding-top:2em;padding-bottom:3em}
+    .sub-main {padding-bottom:3em}
   }
 
 .form-group {
