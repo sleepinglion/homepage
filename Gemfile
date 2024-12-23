@@ -3,13 +3,13 @@ source "https://rubygems.org"
 ruby "3.3.4"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.1.5"
+gem "rails", "~> 7.1.5", ">= 7.1.5.1"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+gem "sqlite3", ">= 1.4"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
@@ -26,6 +26,9 @@ gem "turbo-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
+# Use Redis adapter to run Action Cable in production
+# gem "redis", ">= 4.0.1"
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -41,6 +44,9 @@ gem 'devise'
 gem 'cancancan'
 gem 'kaminari'
 gem 'carrierwave', '~> 2.0'
+#gem 'aws-sdk-s3'
+#gem 'fog-aws'
+#gem 'fog-oracle'
 gem 'mini_magick'
 gem 'sitemap_generator'
 gem 'meta-tags'
@@ -50,6 +56,9 @@ gem 'impressionist'
 gem 'acts-as-taggable-on'
 gem 'acts_as_commentable_with_threading'
 gem 'acts_as_votable'
+
+gem 'sassc-rails'
+gem 'bootstrap', '~> 5.3'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
@@ -68,11 +77,10 @@ group :development do
 
   # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
   # gem "spring"
-  #
+
   # Capistrano
   gem 'capistrano'
   gem 'capistrano-rbenv'
-  gem 'capistrano-yarn'
   gem 'capistrano-bundler'
   gem 'capistrano-passenger'
   gem 'capistrano-rails'
