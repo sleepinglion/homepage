@@ -542,7 +542,7 @@ DEPENDENCIES
   kaminari
   meta-tags
   mysql2
-  nokogiri (>= 1.14.2)
+  nokogiri (>= 1.14.3)
   puma (>= 5.0)
   rails (~> 7.1.5, >= 7.1.5.1)
   rails-letsencrypt
