@@ -1,31 +1,38 @@
 <footer class="border-top">
 	<div class="container">
 		<div class="row">
-			<address class="col-12 col-lg-9">CopyLeft. 2012, SL. All wrongs reserved.&nbsp;&nbsp; <br class="visible-xs" />주소 : 아프리카 사자굴 &nbsp;&nbsp;
-				<a href="https://www.youtube.com/@toughjjh" target="_blank"><%=image_tag('icon/youtube',  height: '25', width: '32') %></a>
+			<address class="col-12 col-lg-9">CopyLeft. 2012, SL. All wrongs reserved.&nbsp;&nbsp; <br class="visible-xs" />주소 : 아프리카 사자굴
 				<a href="https://www.instagram.com/sleepinglion.pe.kr/" target="_blank"><%=image_tag('icon/instagram',  height: '22', width: '30') %></a>
 			</address>
 	<div class="col-12 col-lg-3 dropdown text-end">
-		<%= link_to '#', { class: 'dropdown-toggle',role:"button",'data-bs-toggle': "dropdown",'aria-expanded':"false"} do %>
-			테마설정
-		<% end %>
-		<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme-text">
-			<li>
-				<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-					밝은
-				</button>
-			</li>
-			<li>
-				<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-					어두운
-				</button>
-			</li>
-			<li>
-				<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-					자동
-				</button>
-			</li>
-		</ul>
+
+			<%= link_to '#', { class: 'dropdown-toggle d-flex align-items-center gap-2',
+												 role: "button",
+												 'data-bs-toggle': "dropdown",
+												 'aria-expanded': "false" } do %>
+				<span><%=t(:theme) %></span>
+				<span class="current-theme-icon"></span>
+			<% end %>
+			<ul class="dropdown-menu">
+				<li>
+					<button class="dropdown-item d-flex align-items-center gap-2" data-bs-theme-value="light">
+						<i class="bi bi-sun-fill"></i>
+						<%=t(:light) %>
+					</button>
+				</li>
+				<li>
+					<button class="dropdown-item d-flex align-items-center gap-2" data-bs-theme-value="dark">
+						<i class="bi bi-moon-stars-fill"></i>
+						<%=t(:dark) %>
+					</button>
+				</li>
+				<li>
+					<button class="dropdown-item d-flex align-items-center gap-2" data-bs-theme-value="auto">
+						<i class="bi bi-circle-half"></i>
+						<%=t(:auto) %>
+					</button>
+				</li>
+			</ul>
 	</div>
 		</div>
 	</div>
