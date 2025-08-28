@@ -15,15 +15,15 @@ xml.rss :version => "2.0" do
           xml.title ''
         end
         xml.author 'SleepingLion'
-        xml.pubDate article.created_at.to_s(:rfc822)
+        xml.pubDate article.created_at.strftime("%a, %d %b %Y %H:%M:%S %z")
         xml.link t(:site_full_url)+ '/blog/' + article.id.to_s
         xml.guid article.id
 
-        text = article.blog_content.content
+        text = article.content.to_plain_text
 		# if you like, do something with your content text here e.g. insert image tags.
 		# Optional. I'm doing this on my website.
-        if article.photo?
-            image_url = article.photo.large_thumb.to_s
+        unless article.blog_pictures_count.to_i == 0
+            image_url = article.blog_picture.picture.large_thumb.to_s
             image_caption = article.title
             image_align = ""
             image_tag = "
