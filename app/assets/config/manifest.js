@@ -4,4 +4,5 @@
 //= link_tree ../../../vendor/javascript .js
 //= link front/application.css
 //= link admin/application.css
+//= link actiontext.css
 //= link rails-ujs.js

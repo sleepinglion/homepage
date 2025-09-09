@@ -18,6 +18,9 @@ class CreateDeviseToUsers < ActiveRecord::Migration[4.2]
       t.string   :reset_password_token, :limit=>150
       t.datetime :reset_password_sent_at
 
+      ## Rememberable
+      t.datetime :remember_created_at
+
       ## Trackable
       t.integer  :sign_in_count, :default => 0
       t.datetime :current_sign_in_at
@@ -38,6 +41,7 @@ class CreateDeviseToUsers < ActiveRecord::Migration[4.2]
 
       ## Token authenticatable
       # t.string :authentication_token
+      t.integer :user_pictures_count, null: false, default: 0
       t.boolean :admin, :null=>false, :default => false
       t.boolean :enable, :null=>false, :default=>true
       t.timestamps :null=>false

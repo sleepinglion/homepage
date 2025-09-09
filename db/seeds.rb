@@ -1,6 +1,4 @@
-User.create!(email: 'admin@jedaeroweb.co.kr',nickname: '잠자는-사자', password: 'a12345', password_confirmation: 'a12345', admin: true)
-
-
+User.create!(email: 'admin@jedaeroweb.co.kr',nickname: '잠자는-사자', password: 'a12345', password_confirmation: 'a12345', user_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images","intro","sl.jpg")) },:admin=>true)
 
 GalleryCategory.create!(id: 1, title: '일상')
 GalleryCategory.create!(id: 2, title: '동물')

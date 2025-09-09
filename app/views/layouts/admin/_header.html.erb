@@ -1,17 +1,21 @@
 <header class="row">
   <div class="col-12">
+    <% if ['admin/contacts','admin/users'].include?(params[:controller]) %>
+      <%= render 'admin/contacts/nav' %>
+    <% end %>
+    <% if ['admin/notices','admin/blogs','admin/histories','admin/galleries'].include?(params[:controller]) %>
+      <%= render 'admin/notices/nav' %>
+    <% end %>
     <ul id="top-menu">
       <% if admin_signed_in? %>
         <li id="admin-info">
-          <%= link_to edit_admin_registration_path do %>
-            <% if current_admin.admin_picture.present? %>
-              <%= image_tag(current_admin.admin_picture.picture.small_thumb.url, { :height => 50, :width => 50 }) %>
+            <% if current_admin.user_picture.present? %>
+              <%= image_tag(current_admin.user_picture.picture.small_thumb.url, { :height => 50, :width => 50 }) %>
             <% end %>
-            <%= current_admin.name %>
-          <% end %>
+            <span class="text-dark"><%= current_admin.nickname %></span>
         </li>
         <li>
-          <%= link_to destroy_admin_session_path, :id => "p_logout" do %>
+          <%= link_to destroy_admin_session_path, :id => "p_logout", :method => :delete do %>
             <i class="material-icons" style="font-size:35px;vertical-align:middle">highlight_off</i><span><%= t(:logout) %></span>
           <% end %>
         </li>

@@ -258,6 +258,15 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_07_134915) do
     t.index ["name"], name: "index_tags_on_name", unique: true
   end
 
+  create_table "user_pictures", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "picture", null: false
+    t.boolean "enable", default: true, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_pictures_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", limit: 100, null: false
     t.string "nickname", limit: 60, null: false
@@ -272,11 +281,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_07_134915) do
     t.string "url", limit: 150
     t.string "reset_password_token", limit: 150
     t.datetime "reset_password_sent_at", precision: nil
+    t.datetime "remember_created_at", precision: nil
     t.integer "sign_in_count", default: 0
     t.datetime "current_sign_in_at", precision: nil
     t.datetime "last_sign_in_at", precision: nil
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
+    t.integer "user_pictures_count", default: 0, null: false
     t.boolean "admin", default: false, null: false
     t.boolean "enable", default: true, null: false
     t.datetime "created_at", precision: nil, null: false
