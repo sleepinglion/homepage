@@ -1,13 +1,22 @@
 import { Controller } from "@hotwired/stimulus"
+import { Fancybox } from "@fancyapps/ui"
 
 export default class extends Controller {
     static targets = ["modal", "galleryImage", "blogImage"]  // 타겟 정의 추가
 
     connect() {
+        Fancybox.bind('[data-fancybox="gallery"]', {})
 
         // 각 이미지 그룹 독립적으로 처리
         this.loadGalleryImages()
         this.loadBlogImages()
+    }
+
+
+    disconnect() {
+        // 컨트롤러가 해제될 때 Fancybox 인스턴스도 정리
+        Fancybox.close()
+        Fancybox.destroy()
     }
 
     // 갤러리 이미지 처리
@@ -36,16 +45,6 @@ export default class extends Controller {
                 }
             })
         }
-    }
-
-    showModal() {
-        fetch('/home/demo')
-            .then(response => response.text())
-            .then(html => {
-                this.modalTarget.innerHTML = html
-                const myModal = new Modal(this.modalTarget)
-                myModal.show()
-            })
     }
 }
 
