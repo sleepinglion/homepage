@@ -48,10 +48,10 @@
 		</colgroup>
 		<thead class="thead-default">
 		<tr>
-			<th class="text-center"><%= t(:enable,scope:[:activerecord,:attributes,:blog]) %></th>
-			<th><%= t(:title,scope:[:activerecord,:attributes,:blog]) %></th>
-			<th><%= t(:blog_category_id, scope: [:activerecord, :attributes, :blog]) %></th>
-			<th class="text-right"><%= t(:picture,scope:[:activerecord,:attributes,:gallery_picture]) %></th>
+			<th class="text-center"><%= t(:enable,scope:[:activerecord,:attributes,:gallery]) %></th>
+			<th><%= t(:title,scope:[:activerecord,:attributes,:gallery]) %></th>
+			<th><%= t(:gallery_category, scope: [:activerecord, :attributes, :gallery]) %></th>
+			<th class="text-right"><%= t(:photo,scope:[:activerecord,:attributes,:gallery]) %></th>
 			<th class="text-right"><%= t(:label_count) %></th>
 			<th class="text-right"><%= t(:created_at,scope:[:activerecord,:attributes,:gallery]) %></th>
 			<% if can?(:update, Gallery) || can?(:delete, Gallery) %>

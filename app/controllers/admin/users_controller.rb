@@ -1,21 +1,14 @@
 class Admin::UsersController < Admin::AdminController
-  before_action :set_admin_question, only: [:show, :edit, :update, :destroy]
-
-    def initialize(*params)
-      super(*params)
-
-      @category = t(:menu_user,scope:[:admin_menu])
-      @controller_name = t('activerecord.models.user')
-    end
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /admin_users
   # GET /admin_users.json
   def index
-    @admin_users = User.order('id desc').page(params[:page]).per(10)
+    @user = User.order('id desc').page(params[:page]).per(10)
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @admin_users }
+      format.json { render json: @user }
     end
   end
 
@@ -24,18 +17,18 @@ class Admin::UsersController < Admin::AdminController
   def show
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @admin_user }
+      format.json { render json: @user }
     end
   end
 
   # GET /admin_users/new
   # GET /admin_users/new.json
   def new
-    @admin_user = User.new
+    @user = User.new
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @admin_user }
+      format.json { render json: @user }
     end
   end
 
@@ -46,15 +39,15 @@ class Admin::UsersController < Admin::AdminController
   # POST /admin_users
   # POST /admin_users.json
   def create
-    @admin_user = User.new(admin_user_params)
+    @user = User.new(user_params)
 
     respond_to do |format|
-      if @admin_user.save
-        format.html { redirect_to @admin_user, notice: @controller_name +t(:message_success_create) }
-        format.json { render json: @admin_user, status: :created, location: @admin_user }
+      if @user.save
+        format.html { redirect_to @user, notice: @controller_name +t(:message_success_create) }
+        format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render action: "new" }
-        format.json { render json: @admin_user.errors, status: :unprocessable_entity }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -63,12 +56,12 @@ class Admin::UsersController < Admin::AdminController
   # PUT /admin_users/1.json
   def update
     respond_to do |format|
-      if @admin_user.update_attributes(admin_user_params)
-        format.html { redirect_to @admin_user, notice: @controller_name +t(:message_success_update) }
+      if @user.update(user_params)
+        format.html { redirect_to @user, notice: @controller_name +t(:message_success_update) }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
-        format.json { render json: @admin_user.errors, status: :unprocessable_entity }
+        format.json { render json: @user.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -76,7 +69,7 @@ class Admin::UsersController < Admin::AdminController
   # DELETE /admin_users/1
   # DELETE /admin_users/1.json
   def destroy
-    @admin_user.destroy
+    @user.destroy
 
     respond_to do |format|
       format.html { redirect_to admin_users_url }
@@ -86,12 +79,12 @@ class Admin::UsersController < Admin::AdminController
 
   private
   # Use callbacks to share common setup or constraints between actions.
-  def set_admin_user
-    @admin_user = User.find(params[:id])
+  def set_user
+    @user = User.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
-  def admin_user_params
-    params.require(:admin_user).permit(:id, :url, :title, :description, :photo)
+  def user_params
+    params.require(:user).permit(:id, :url, :title, :description, :photo)
   end
 end

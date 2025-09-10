@@ -96,6 +96,7 @@ ko:
   manage : '관리'
   edit : '수정'
   delete : '삭제'
+  not_insert : '미입력'
 
 
   there_are_n_blog_categories: "블로그분류가 <strong class=\"mark\">%{count}개</strong> 있습니다"
@@ -392,65 +393,61 @@ ko:
         title : '제목'
         blogs_count : '블로그수'
         enable : '사용여부'
+        created_at : '작성일'
+        updated_at : '수정일'
       blog :
         blog_category_id : '분류'
         title : '제목'
-        photo : '사진'
+        picture : '사진'
         description : '설명'
         content : '내용'
         count : '조회수'
         blog_comments_count : '댓글수'
         enable : '사용여부'
-      blog_content :
-        content : '내용'
-      blog_comment :
-        name : '이름'
-        password : '비밀번호'
-        content : '내용'
+        created_at : '작성일'
+        updated_at : '수정일'
+      blog_picture :
+        picture : '사진'
       gallery_category :
         title : '제목'
         galleries_count : '사진첩수'
         enable : '사용여부'
+        created_at: '작성일'
+        updated_at: '수정일'
       gallery :
-        gallery_category_id : '분류'
+        gallery_category : '분류'
         title : '제목'
         photo : '사진'
         location : '장소'
         content : '내용'
         enable : '사용여부'
+        created_at: '작성일'
+        updated_at: '수정일'
       guest_book :
         name : '이름'
         password : '비밀번호'
         title : '제목'
+        content : '내용'
         count : '시작 조회수'
         enable : '사용여부'
-      guest_book_content :
-        content : '내용'
-      guest_book_comment :
-        name : '이름'
-        password : '비밀번호'
-        content : '내용'
-        enable : '사용여부'
+        created_at: '작성일'
+        updated_at: '수정일'
       question :
         name : '이름'
         user_id : '사용자'
         password : '비밀번호'
         title : '제목'
+        content : '내용'
         secret : '비밀글'
         count : '시작 조회수'
         enable : '사용여부'
-      question_content :
-        content : '내용'
-      question_comment :
-        name : '이름'
-        password : '비밀번호'
-        content : '내용'
+        created_at: '작성일'
+        updated_at: '수정일'
       notice :
         title : '제목'
+        content : '내용'
         count : '시작 조회수'
         enable : '사용여부'
-      notice_content :
-        content : '내용'
       user :
         name : '이름'
         sign_in_count : '로그인 횟수'
@@ -465,3 +462,5 @@ ko:
         url : '홈페이지'
         job_title : '직업'
         enable : '사용여부'
+        created_at: '작성일'
+        updated_at: '수정일'

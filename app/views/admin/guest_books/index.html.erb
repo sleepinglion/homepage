@@ -43,7 +43,7 @@
 							<label class="custom-control-label" for="notice_display<%=index %>"><% if guest_book.enable %> <%=t(:display) %><% else %><%=t(:hidden) %><% end %> </label>
 						</div>
 					</td>
-					<td><%= link_to guest_book.title,admin_guest_books_path(guest_book) %></td>
+					<td><%= link_to guest_book.title,admin_guest_book_path(guest_book) %></td>
 					<td></td>
 					<td class="text-right">
 
