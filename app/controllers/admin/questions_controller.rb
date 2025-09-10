@@ -1,23 +1,17 @@
 class Admin::QuestionsController < Admin::AdminController
   before_action :set_admin_question, only: [:show, :edit, :update, :destroy]
 
-  def initialize(*params)
-    super(*params)
-
-    @category = t(:menu_board,scope:[:admin_menu])
-    @controller_name = t('activerecord.models.question')
-  end
-
-  # GET /admin/questions
-  # GET /admin/questions.json
+  # GET /questions
+  # GET /questions.json
   def index
     params[:per_page] = 10 unless params[:per_page].present?
 
-    @admin_questions = Question.order('id desc').page(params[:page]).per(params[:per_page])
+    @question_count = Question.count
+    @questions = Question.page(params[:page]).per(params[:per_page]).order('id desc')
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render :json => @admin_questions }
+      format.json { render json: @questions }
     end
   end
 

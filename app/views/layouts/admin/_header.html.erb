@@ -1,10 +1,10 @@
 <header class="row">
   <div class="col-12">
-    <% if ['admin/contacts','admin/users'].include?(params[:controller]) %>
-      <%= render 'admin/contacts/nav' %>
+    <% if ['admin/blogs','admin/blog_categories'].include?(params[:controller]) %>
+      <%= render 'admin/blogs/nav' %>
     <% end %>
-    <% if ['admin/notices','admin/blogs','admin/histories','admin/galleries'].include?(params[:controller]) %>
-      <%= render 'admin/notices/nav' %>
+    <% if ['admin/galleries','admin/gallery_categories'].include?(params[:controller]) %>
+      <%= render 'admin/galleries/nav' %>
     <% end %>
     <ul id="top-menu">
       <% if admin_signed_in? %>

@@ -1,23 +1,17 @@
 class Admin::GuestBooksController < Admin::AdminController
   before_action :set_admin_guest_book, only: [:show, :edit, :update, :destroy]
 
-  def initialize(*params)
-    super(*params)
-
-    @category = t(:menu_board,scope:[:admin_menu])
-    @controller_name = t('activerecord.models.guest_book')
-  end
-
   # GET /guest_books
   # GET /guest_books.json
   def index
     params[:per_page] = 10 unless params[:per_page].present?
 
-    @admin_guest_books = GuestBook.order('id desc').page(params[:page]).per(params[:per_page])
+    @guest_book_count = GuestBook.count
+    @guest_books = GuestBook.page(params[:page]).per(params[:per_page]).order('id desc')
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render :json => @admin_guest_books }
+      format.json { render json: @guest_books }
     end
   end
 

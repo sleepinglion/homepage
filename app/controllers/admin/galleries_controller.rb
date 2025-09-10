@@ -1,27 +1,31 @@
 class Admin::GalleriesController < Admin::AdminController
   before_action :set_admin_gallery, only: [:show, :edit, :update, :destroy]
 
-  def initialize(*params)
-    super(*params)
-
-    @category = t(:menu_gallery,scope:[:admin_menu])
-    @controller_name = t('activerecord.models.gallery')
-  end
-
   # GET /galleries
   # GET /galleries.json
   def index
-    if params[:gallery_category_id]
-      @admin_galleries = Gallery.where(:gallery_category_id=> params[:gallery_category_id]).order('id desc').page(params[:page]).per(15)
-    else
-      @admin_galleries = Gallery.order('id desc').page(params[:page]).per(15)
+    params[:per_page] = 10 unless params[:per_page].present?
+
+    category_condition = {enable: true}
+
+    @gallery_categories = GalleryCategory.where(category_condition)
+
+    if params[:category].present?
+      @gallery_category = GalleryCategory.find(params[:category])
     end
 
-    @script='galleries'
+    condition = { }
+
+    if @gallery_category.present?
+      condition[:blog_category_id] = @gallery_category.id
+    end
+
+    @gallery_count = Gallery.where(condition).count
+    @galleries = Gallery.where(condition).page(params[:page]).per(params[:per_page]).order('id desc')
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render :json => @admin_galleries }
+      format.json { render json: @galleries }
     end
   end
 
@@ -30,7 +34,7 @@ class Admin::GalleriesController < Admin::AdminController
   def show
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render :json => @admin_gallery }
+      format.json { render :json => @gallery }
     end
   end
 

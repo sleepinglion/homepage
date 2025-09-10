@@ -1,23 +1,17 @@
 class Admin::GalleryCategoriesController < Admin::AdminController
   before_action :set_admin_gallery_category, only: [:show, :edit, :update, :destroy]
 
-  def initialize(*params)
-    super(*params)
-
-    @category = t(:menu_gallery,scope:[:admin_menu])
-    @controller_name = t('activerecord.models.gallery_category')
-  end
-
   # GET /admin/gallery_categories
   # GET /admin/gallery_categories.json
   def index
     params[:per_page] = 10 unless params[:per_page].present?
 
-    @admin_gallery_categories = GalleryCategory.order('id desc').page(params[:page]).per(params[:per_page])
+    @gallery_category_count = GalleryCategory.count
+    @gallery_categories = GalleryCategory.order('id desc').page(params[:page]).per(params[:per_page])
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render :json => @admin_gallery_categories }
+      format.json { render :json => @gallery_categories }
     end
   end
 

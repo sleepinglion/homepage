@@ -26,27 +26,16 @@
 <%= csrf_meta_tags %>
 <%= csp_meta_tag -%>
 </head>
-<body itemscope itemtype="<%=@page_itemtype %>">
+<body>
 <%= render :partial => 'layouts/header' %>
 <div id="mom">
 	<div id="main" class="container">
-		<% if current_page?(root_path) %>
-			<div class="jumbotron hero-unit text-center p-5 rounded-4">
-				<h2><%=raw t(:home_main_title) %></h2>
-				<p class="lead"><%=raw t(:home_main_description) %></p>
-				<p>이곳은 잠자는 사자의 개인홈페이지로 웹제작 문의는 <a href="https://www.jedaeroweb.co.kr" target="_blank">이곳</a>으로 해주세요</p>
-			</div>
-			<hr class="none">
-			<% else %>
 			<%= render 'layouts/page_header' %>
-		<% end  %>
 		<div class="row">
-			<main <% if current_page?(root_path) %>id="main-main"<% end %> class="sub-main<% if session[:no_aside] %> col-12<% else %> col-12 col-xl-9<% end %>">
-				<%= render 'layouts/ad' %>
+			<main class="sub-main col-12">
 				<%= render :partial => 'layouts/notice', :locals => { :notice => notice, :alert => alert } %>
 				<%=yield %>
 			</main>
-			<%= render 'layouts/aside' %>
 		</div>
 	</div>
 </div>

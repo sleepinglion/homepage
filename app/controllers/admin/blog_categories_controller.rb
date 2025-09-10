@@ -1,23 +1,17 @@
 class Admin::BlogCategoriesController < Admin::AdminController
   before_action :set_admin_blog_category, only: [:show, :edit, :update, :destroy]
 
-  def initialize(*params)
-    super(*params)
-
-    @category = t(:menu_blog,scope:[:admin_menu])
-    @controller_name = t('activerecord.models.blog_category')
-  end
-
-  # GET /admin/blog_categories
-  # GET /admin/blog_categories.json
+  # GET /admin/gallery_categories
+  # GET /admin/gallery_categories.json
   def index
     params[:per_page] = 10 unless params[:per_page].present?
 
-    @admin_blog_categories = BlogCategory.order('id desc').page(params[:page]).per(params[:per_page])
+    @blog_category_count = GalleryCategory.count
+    @blog_categories = GalleryCategory.order('id desc').page(params[:page]).per(params[:per_page])
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render :json => @admin_blog_categories }
+      format.json { render :json => @blog_categories }
     end
   end
 
