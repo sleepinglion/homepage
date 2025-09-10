@@ -3,23 +3,10 @@ Rails.application.routes.draw do
   get 'home/popup' => 'home#popup'
   get 'feed', :to => 'home#feed'
 
-
-  resources :intro, :blogs, :gallery_categories, :galleries, :notices, :user_photos
-
-  resources :questions do
-    get 'password', :on => :collection
-    post 'password', :on => :collection
-  end
-
-  resources :guest_books do
-    get 'password', :on => :collection
-    post 'password', :on => :collection
-  end
+  resources :intro, :blogs, :gallery_categories, :galleries, :notices, :questions, :guest_books
 
   get 'tags/:tag', to: 'tags#index', as: :tag
-  get 'guest_books/:guest_book_id/:id/password', :to => 'guest_books#password'
-  post 'guest_books/:guest_book_id/:id/password', :to => 'guest_books#password'
-
+  resources :comments, only: [:create, :destroy]
 
   # Admin 인증 라우트
   devise_for :admins,

@@ -2,7 +2,7 @@
 	<h3><%=t('activerecord.models.blog') %></h3>
 	<div class="row">
 		<% @blogs.each_with_index do |blog,index| %>
-			<%= link_to image_tag(sl_get_thumb(blog.blog_picture.picture.to_s,'medium'),width: "100%", alt: blog.title) , blog_path(blog), class: "col-6 col-md-4 col-xl-3 col-xxl-2 mb-3" %>
+			<%= link_to image_tag(sl_get_thumb(blog.blog_picture.picture.to_s,'medium'),width: "100%",loading: 'lazy', alt: blog.title) , blog_path(blog), class: "col-6 col-md-4 col-xl-3 col-xxl-2 mb-3" %>
 		<% end %>
 	</div>
 	<%=link_to t(:link_more),blogs_path,:class=>'more' %>
