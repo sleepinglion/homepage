@@ -1,16 +1,12 @@
 <% breadcrumb :blog, @blog %>
-<% if notice %>
-<%= render :partial => 'layouts/notice',:locals=>{:notice=>notice} %>
-<% end %>
-<div id="sl_blog_show" itemscope itemprop="blogPost" itemtype="http://schema.org/Blog">
+<div id="sl_blog_show">
 	<div class="slboard_content">
 		<div class="sl_content_header box_header">
 			<h2 itemprop="name"><%= @blog.title %></h2>
-			<span class="none" itemprop="genre"><%=@blog.blog_category_id %></span>
-			<p>작성자 :  <%= render :partial => 'users/data', :locals => { :user => @blog.user, :itemprop => 'author' } %> &nbsp;&nbsp;&nbsp; <%=t(:label_created_at)%> : <span itemprop="dateCreated"><%= @blog.created_at %></span><span class="none" itemprop="dateModified"><%= @blog.updated_at %></span></p>
+			<p>작성자 :  <%= render :partial => 'users/data', :locals => { :user => @blog.user } %> &nbsp;&nbsp;&nbsp; <%=t(:label_created_at)%> : <span><%= @blog.created_at %></span></p>
 		</div>
 		<div class="sl_content_main">
-			<div class="sl_content_text" itemprop="text">
+			<div class="sl_content_text">
 				<%=simple_format @blog.content.to_s %>
 			</div>
 		</div>
@@ -30,3 +26,8 @@
 		</div>
 	</div>
 </div>
+<% content_for :json_ld do %>
+	<script type="application/ld+json">
+		<%= raw(JSON.pretty_generate(json_ld_for_blog(@blog))) %>
+	</script>
+<% end %>
