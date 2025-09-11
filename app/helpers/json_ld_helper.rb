@@ -52,7 +52,7 @@ module JsonLdHelper
       "mainEntity": {
         "@type": "Person",
         "name": t(:name),
-        "url": 'https://www.sleepinglion.pe.kr',
+        "url": t(:site_full_url),
         "image": asset_url('intro/large_thumb_sl.jpg'),
         "jobTitle": t(:web_programer),
         "birthDate": "1981-06-02",
