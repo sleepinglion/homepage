@@ -1,4 +1,5 @@
-User.create!(email: 'admin@jedaeroweb.co.kr',nickname: '잠자는-사자', password: 'a12345', password_confirmation: 'a12345', user_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images","intro","sl.jpg")) },:admin=>true)
+
+ User.create!(email: 'admin@jedaeroweb.co.kr',nickname: '잠자는-사자', password: 'a12345', password_confirmation: 'a12345', user_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images","intro","sl.jpg")) },:admin=>true)
 
 GalleryCategory.create!(id: 1, title: '일상')
 GalleryCategory.create!(id: 2, title: '동물')
@@ -7,29 +8,29 @@ GalleryCategory.create!(id: 4, title: '풍경')
 GalleryCategory.create!(id: 5, title: '기타')
 
 
-GuestBook.create!(id: 1, title: '응답하라 1997', name: '잠사', count: 56, content: '홈페이지가 모뎀시절을 회상하게 하는군요
+GuestBook.create!(id: 1, user_id: 1, title: '응답하라 1997', count: 56, content: '홈페이지가 모뎀시절을 회상하게 하는군요
  응답하라 1997 홈페이지로 이름을 바꾸세요')
-GuestBook.create!(id: 2, title: '홈페이지 좋네요', name: '방문자', count: 43, content: '<p>검색하다가 들어왔는데<br />
+GuestBook.create!(id: 2, user_id: 1, title: '홈페이지 좋네요', count: 43, content: '<p>검색하다가 들어왔는데<br />
  홈페이지 좋네요<br />
  저도 웹프로그래머 일하고 있습니다.<br />
  저도 이런 홈페이지 만들고 싶네요</p>
  ')
-GuestBook.create!(id: 3, title: '좋네요', name: '방문자', count: 47, content: '<p>좋은내용 많이 보고 갑니다.<br />
+GuestBook.create!(id: 3, user_id: 1, title: '좋네요', count: 47, content: '<p>좋은내용 많이 보고 갑니다.<br />
  저와 많은 부분에서 생각이 같네요<br />
  앞으로도 많이 방문할께요~</p>
  ')
-GuestBook.create!(id: 4, title: '잘보고 갑니다.', name: '뚜리', count: 35, content: '재미있고 유익한 내용이 많네요
+GuestBook.create!(id: 4, user_id: 1, title: '잘보고 갑니다.', content: '재미있고 유익한 내용이 많네요
  자주 방문할께요~')
-GuestBook.create!(id: 5, title: '좋은홈페이지네요', name: '몰라요', count: 35, content: '앞으로도 놀러올께요
+GuestBook.create!(id: 5, user_id: 1, title: '좋은홈페이지네요', content: '앞으로도 놀러올께요
  계속 업그레이드 해주세요')
-GuestBook.create!(id: 6, title: '재미있는 글, 씁쓸한 현실 ㅎㅎㅎ', name: '미도리', count: 8, content: '쭉 내용을 읽다가 헬조선 ? 이라는 분류의 글들을 보게되었네요.
+GuestBook.create!(id: 6, user_id: 1, title: '재미있는 글, 씁쓸한 현실 ㅎㅎㅎ', count: 8, content: '쭉 내용을 읽다가 헬조선 ? 이라는 분류의 글들을 보게되었네요.
  방명록 쓰고싶어져서 씁니다.
  공감하고 가요~
 
  프로그램 관련 의뢰를 프리로 받아서 하시나요?
  웹디자이너라서 몇가지 의뢰드릴 일이 생길지도 몰라서 혹시나 싶어 글 써봅니다. ')
-GuestBook.create!(id: 7, title: 'slboard 게시판을 쓰시네요', name: '한오', count: 7, content: '우리나라에 slboard 쓰는데가 싸커라인 뿐인줄 알았는데 의외네요')
-GuestBook.create!(id: 8, title: '2351235', name: 'a', count: 0, content: '2135235')
+GuestBook.create!(id: 7, user_id: 1, title: 'slboard 게시판을 쓰시네요', count: 7, content: '우리나라에 slboard 쓰는데가 싸커라인 뿐인줄 알았는데 의외네요')
+GuestBook.create!(id: 8, user_id: 1, title: '2351235', count: 0, content: '2135235')
 
 
 Notice.create!(id: 1, user_id: 1, title: '잠자는-사자의 집이 다시 개장했습니다.', content: '그동안 수많은 방문자에 비해서 준비되지 못하였는데 이제 보다 업그레이드된 모습으로 다시 찾아뵙게되었습니다.
@@ -44,20 +45,20 @@ Notice.create!(id: 4, user_id: 1, title: '잠자는-사자의 집 다시 업그�
  <p>이제 다시는 그런일이 없도록 계속적인 서비스를 제공하겠습니다</p>
  ')
 
-Question.create!(id: 1, title: '사장님 사이트제작 문의드립니다', name: '녹스', content: '사이트제작문제로문의드립니다 가격은 상의해서맞추기로하구요
+Question.create!(id: 1, user_id: 1, title: '사장님 사이트제작 문의드립니다', content: '사이트제작문제로문의드립니다 가격은 상의해서맞추기로하구요
  연동을할건데 예를들어 1사이트 2사이트가있다면 2사이트에 회원이 입력한코드를 1사이트에서 자동으로 작성되게 연동하는겁니다 테스트 도메인잇으니 연락주세요!,
  카톡 pmk6436')
-Question.create!(id: 2, title: '쇼핑몰 옵션 부분...', name: '김유선', content: '카페24에서 쇼핑몰은 만들었느데요,
+Question.create!(id: 2, user_id: 1, title: '쇼핑몰 옵션 부분...', content: '카페24에서 쇼핑몰은 만들었느데요,
  상품 옵션 선택부분에서
  "가로X세로=추가금액"의 형식의 옵션을 쓰고 싶어서요...
  프로그램 변경이 필요한것 같아 문의 드립니다.^^')
-Question.create!(id: 3, title: '웹프로그래머가 되려고 하는데요', name: '학생', content: '웹프로그래머가 되려고 하는데
+Question.create!(id: 3, user_id: 1, title: '웹프로그래머가 되려고 하는데요', content: '웹프로그래머가 되려고 하는데
  뭐 부터 공부하면 좋을까요?
  앞으로 진로를 어떻게 해야할지도 문의드립니다')
-Question.create!(id: 4, title: '홈페이지 분석의뢰', name: '까까', content: '홈페이지 분석을 하고 싶습니다
+Question.create!(id: 4, user_id: 1, title: '홈페이지 분석의뢰', content: '홈페이지 분석을 하고 싶습니다
  홈피는 인터파크 홈페이지이고 한페이지 입니다
  분석에 필요한 시간과 금액을 알고싶습니다')
-Question.create!(id: 5, title: '임민야옹', name: '으으으', content: '잘살아라')
+Question.create!(id: 5, user_id: 1, title: '임민야옹', content: '잘살아라')
 
 
 

@@ -2,19 +2,19 @@
 <section id="sl_intro_index" class="col-12" data-controller="gallery">
 	<article class="row">
 		<div id="sl_intro_left" class="col-12 col-lg-6">
-			<%=link_to image_tag('intro/large_thumb_sl.jpg',loading: 'lazy',:alt=>'잠자는사자'), asset_path('intro/sl.jpg'), :title=>'잠자는사자', :itemprop=>"image","data-src": asset_path('intro/sl.jpg'),"data-fancybox": "gallery" %>
+			<%=link_to image_tag('intro/large_thumb_sl.jpg',loading: 'lazy',:alt=>'잠자는사자'), asset_path('intro/sl.jpg'), :title=>'잠자는사자',"data-src": asset_path('intro/sl.jpg'),"data-fancybox": "gallery" %>
 		</div>
 		<div id="sl_intro_right" class="col-12 col-lg-6">
 			<h3><%=t(:sl_intro_title) %></h3>
 			<dl>
-				<dt itemprop="name"><%=t(:name) %></dt>
-				<dd itemprop="alternateName"><%=raw t(:name_call) %></dd>
+				<dt><%=t(:name) %></dt>
+				<dd><%=raw t(:name_call) %></dd>
 				<dt><%=t(:sex) %></dt>
-				<dd itemprop="gender"><%=t(:male) %></dd>
+				<dd><%=t(:male) %></dd>
 				<dt><%=t(:birthday) %></dt>
-				<dd itemprop="birthDate" datetime="1981-06-02"><%=t(:sl_birthday) %></dd>
+				<dd><%=t(:sl_birthday) %></dd>
 				<dt><%=t(:job) %></dt>
-				<dd itemprop="jobTitle"><%=t(:web_programer) %></dd>
+				<dd><%=t(:web_programer) %></dd>
 				<dt><%=t(:height) %></dt>
 				<dd>180cm</dd>
 				<dt><%=t(:weight) %></dt>
