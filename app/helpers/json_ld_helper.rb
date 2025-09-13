@@ -122,7 +122,7 @@ module JsonLdHelper
   end
 
 
-  def json_ld_article(record)
+  def json_ld_for_article(record)
     {
       "@context": "https://schema.org",
       "@type": "Article",
