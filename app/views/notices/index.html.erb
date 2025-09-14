@@ -36,7 +36,7 @@
 	</article>
 	<div id="sl_bottom_menu">
 		<% if can? :create, Notice %>
-		<%= link_to t(:link_new), new_notice_path,:rel=>"nofollow" %>
+		<%= link_to t(:link_new), new_notice_path,rel: 'nofollow' %>
 		<% end %>
 		<%= paginate @notices %>
 	</div>

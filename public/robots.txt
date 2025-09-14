@@ -3,5 +3,3 @@ User-agent: *
 Allow:/
 Disallow: /admin
 Sitemap: https://www.sleepinglion.pe.kr/sitemap.xml.gz
-
-#DaumWebMasterTool:aad74b104dd70d1d8327c78aa8762c01fa00161c46edec8331c16e790c63b90b:hAanBjeKjPXisHraBtijDw==

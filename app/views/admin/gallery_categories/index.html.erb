@@ -8,9 +8,9 @@
 	</div>
 </div>
 <article class="col-12">
-  <table class="table table-bordered table-striped">
+	<table class="table table-striped table-hover">
 		<colgroup>
-			<col style="width:80px;" />
+			<col style="width:120px;" />
 			<col />
 			<col style="width:100px;" />
 			<col style="width:100px" />
@@ -19,9 +19,9 @@
 			<col <%= raw manage_width(GalleryCategory) %> />
 			<% end %>
 		</colgroup>
-		<thead>
+		<thead class="thead-default">
 			<tr>
-				<th><%= t(:label_number) %></th>
+				<th class="text-center"><%= t(:enable,scope:[:activerecord,:attributes,:blog]) %></th>
 				<th><%=t(:title,scope:[:activerecord,:attributes,:gallery_category]) %></th>
 				<th><%=t(:galleries_count,scope:[:activerecord,:attributes,:gallery_category]) %></th>
 				<th><%=t(:enable,scope:[:activerecord,:attributes,:gallery_category]) %></th>
@@ -32,10 +32,23 @@
 			</tr>
 		</thead>
 		<tbody>
-			<% unless @gallery_categories.empty? %>
-			<% @gallery_categories.each do |gallery_category| %>
+			<% unless @gallery_category_count.zero? %>
+			<% @gallery_categories.each do |gallery_category,index| %>
 			<tr>
-				<td><%= link_to gallery_category.id,admin_gallery_category_path(gallery_category) %></td>
+				<td>
+					<div class="form-check form-switch">
+						<input
+							class="form-check-input"
+							type="checkbox"
+							id="notice_display<%= index %>"
+							value="<%= gallery_category.id %>"
+							<% if gallery_category.enable %> checked <% end %>
+						>
+						<label class="form-check-label" for="notice_display<%= index %>">
+							<% if gallery_category.enable %> <%= t(:display) %> <% else %> <%= t(:hidden) %> <% end %>
+						</label>
+					</div>
+				</td>
 				<td><%= link_to gallery_category.title,admin_gallery_category_path(gallery_category) %></td>
 				<td><%= link_to gallery_category.galleries_count,admin_gallery_category_path(gallery_category) %></td>
 				<td><%= raw flagToString(gallery_category.enable) %></td>

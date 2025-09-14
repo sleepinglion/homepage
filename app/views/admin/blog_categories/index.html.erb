@@ -8,9 +8,9 @@
 	</div>
 </div>
 <article class="col-12">
-	<table class="table table-bordered table-striped">
+	<table class="table table-striped table-hover">
 		<colgroup>
-			<col style="width:80px;" />
+			<col style="width:120px;" />
 			<col />
 			<col style="width:100px;" />
 			<col style="width:100px" />
@@ -19,9 +19,9 @@
 				<col <%= raw manage_width(BlogCategory) %> />
 			<% end %>
 		</colgroup>
-		<thead>
+		<thead class="thead-default">
 		<tr>
-			<th><%= t(:label_number) %></th>
+			<th class="text-center"><%= t(:enable,scope:[:activerecord,:attributes,:blog]) %></th>
 			<th><%=t(:title,scope:[:activerecord,:attributes,:blog_category]) %></th>
 			<th><%=t(:blogs_count,scope:[:activerecord,:attributes,:blog_category]) %></th>
 			<th><%=t(:enable,scope:[:activerecord,:attributes,:blog_category]) %></th>
@@ -32,10 +32,23 @@
 		</tr>
 		</thead>
 		<tbody>
-		<% unless @blog_categories.empty? %>
-			<% @blog_categories.each do |blog_category| %>
+		<% unless @blog_category_count.zero? %>
+			<% @blog_categories.each do |blog_category,index| %>
 				<tr>
-					<td><%= link_to blog_category.id,admin_blog_category_path(blog_category) %></td>
+					<td>
+						<div class="form-check form-switch">
+							<input
+								class="form-check-input"
+								type="checkbox"
+								id="notice_display<%= index %>"
+								value="<%= blog_category.id %>"
+								<% if blog_category.enable %> checked <% end %>
+							>
+							<label class="form-check-label" for="notice_display<%= index %>">
+								<% if blog_category.enable %> <%= t(:display) %> <% else %> <%= t(:hidden) %> <% end %>
+							</label>
+						</div>
+					</td>
 					<td><%= link_to blog_category.title,admin_blog_category_path(blog_category) %></td>
 					<td><%= link_to blog_category.blogs_count,admin_blog_category_path(blog_category) %></td>
 					<td><%= raw flagToString(blog_category.enable) %></td>

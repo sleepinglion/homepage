@@ -37,8 +37,8 @@
 			</tbody>
 		</table>
 	</article>
-	<div id="sl_index_bottom_menu">
-		<%= link_to t(:link_new), new_guest_book_path,:rel=>"nofollow",:class=>"btn btn-primary" %>
+	<div id="sl_bottom_menu">
+		<%= link_to t(:link_new), new_guest_book_path, rel: 'nofollow', class: 'btn btn-primary' %>
 		<%= paginate @guest_books %>
 	</div>
 </section>
