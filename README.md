@@ -10,7 +10,7 @@ This Application is composed of [Rails](http://rubyonrails.org/) + UI [Boostrap]
 
 ```bash
 git clone https://github.com/sleepinglion/homepage.git
-cd cafe
+cd homepage
 bundle install
 rails db:create db:migrate db:seed
 rails server
