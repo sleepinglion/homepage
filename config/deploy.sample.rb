@@ -1,7 +1,7 @@
-set :application, "sleepinglion"
+set :application, "your_name"
 set :repo_url, "git@github.com:sleepinglion/homepage.git"
 set :branch, 'master'
-set :deploy_to, '/home/deploy/sleepinglion'
+set :deploy_to, 'your_path'
 
 # set :format, :pretty
 # set :log_level, :debug
