@@ -46,7 +46,6 @@ module JsonLdHelper
                  "name":  options[:org_name] || 'Jedaeroweb',
                  "logo": {
                    "@type": "ImageObject",
-                   "url": options[:logo_url] || image_url("favicon.ico")
                  }
                }
              }
@@ -109,7 +108,7 @@ module JsonLdHelper
         "@type": "Person",
         "name": t(:name),
         "url": t(:site_full_url),
-        "image": asset_url('intro/large_thumb_sl.jpg'),
+        "image": '/images/intro/large_thumb_sl.jpg',
         "jobTitle": t(:web_programer),
         "birthDate": "1981-06-02",
         "worksFor": {
