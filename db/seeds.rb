@@ -1189,7 +1189,7 @@ content: '<p>요즈음 헴프씨드(hemp seed)가 인기입니다.</p>
  <p>대마는 줄기도 옷만드는데쓰고 씨앗도 이리 맛좋고 영양이 많다니 참 좋은 식물입니다.</p>
 <p>대마를 널리 심어 맛있는 헴프씨드(hemp seed)를 맘껏 먹으면 좋겠습니다.</p>')
 
-Blog.create!(id: 37, blog_category_id: 3, user_id: 1, title:'헴프씨드(hemp seed) 맛있네요', description: '맛좋고 건강에 좋은 헴프씨드(hemp seed)',
+Blog.create!(id: 37, blog_category_id: 3, user_id: 1, title:'메신저는 텔레그램이 최고네요', description: '이상한 메신저들 말고 그냥 텔레그램 쓰자',
 content: '<p>저는 처음 메신저 접했던게 AOL메신저였습니다.</p>
 <p>바로 메세지가 보내지는 메신저 프로그램은 그야말로 신세계였습니다.</p>
 <p>AOL쓰다가 MSN, 네이트온으로  옮겨가며 사용했던 기억이납니다.</p>
