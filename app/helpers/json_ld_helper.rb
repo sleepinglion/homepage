@@ -74,7 +74,6 @@ module JsonLdHelper
         "name": "My Blog",
         "logo": {
           "@type": "ImageObject",
-          "url": asset_url("favicon.ico")
         }
       },
       "genre": post.blog_category.title || "블로그",
@@ -158,7 +157,6 @@ module JsonLdHelper
         "name": "MySite",
         "logo": {
           "@type": "ImageObject",
-          "url": asset_url("favicon.ico")
         }
       },
       "url": notice_url(notice),
