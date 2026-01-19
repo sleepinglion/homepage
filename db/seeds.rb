@@ -1458,7 +1458,7 @@ content: '게임이론은 대충들 알지요?
 영화속에서만 존재 합니다~
 ')
 
-Blog.create!(id: 57, blog_category_id: 2, user_id: 1, title:'이젠 역사 국뽕 정신병 까지 있으니...',tag_list: '음모론, 환빠, 정신병, 중국', description: '',
+Blog.create!(id: 57, blog_category_id: 2, user_id: 1, title:'이젠 역사 국뽕 정신병 까지 있으니...',tag_list: '음모론, 환빠, 정신병, 중국', description: '끝나지 않는 정신병자들의 음모론',
 content: '온통 음모론이 판치고 있다.
 
 지구가 평평하고 달을 안 갔고, 선거가 조작 되고 있다.
