@@ -1,4 +1,4 @@
-User.create!(email: 'admin@jedaeroweb.co.kr',nickname: '잠자는-사자', password: 'a12345', password_confirmation: 'a12345', user_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images","intro","sl.jpg")) },:admin=>true)
+User.create!(email: 'admin@jedaeroweb.co.kr',nickname: '잠자는-사자', password: 'a12345', password_confirmation: 'a12345', user_picture_attributes: { picture: File.open(Rails.root.join("public", "images","intro","sl.jpg")) },:admin=>true)
 
 GalleryCategory.create!(id: 1, title: '일상')
 GalleryCategory.create!(id: 2, title: '동물')
@@ -62,91 +62,91 @@ Question.create!(id: 5, user_id: 1, title: '임민야옹', content: '잘살아�
 
 
 
-Gallery.create!(id: 1, gallery_category_id: 2, title:'벌서는 짬순이',photo: File.open(Rails.root.join("app", "assets", "images","gallery","dog.jpg")), content: '아무데나 오줌싸서 혼나는 짬순이
+Gallery.create!(id: 1, gallery_category_id: 2, title:'벌서는 짬순이',photo: File.open(Rails.root.join("public", "images","gallery","dog.jpg")), content: '아무데나 오줌싸서 혼나는 짬순이
  이놈! 아무데나 오줌싸~!!')
-Gallery.create!(id: 2, gallery_category_id: 4, title:'소양호(양구)',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "soyangho.jpg")), content: '양구에서 찍은 평화로운 소양호 모습')
-Gallery.create!(id: 3, gallery_category_id: 4, title:'소양호(양구)',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "soyangho2.jpg")), content: '양구에서 본 평화로운 소양호수')
-Gallery.create!(id: 4, gallery_category_id: 4, title:'소양댐',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "soyangho3.jpg")), content: '소양댐에서 펼쳐진 산들')
-Gallery.create!(id: 5, gallery_category_id: 4, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "taebaek_mountains.jpg")), content: '파란하늘의 가을날')
-Gallery.create!(id: 6, gallery_category_id: 4, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "taebaek_mountains2.jpg")), content: '태백산 중턱에서 보이는 풍경')
-Gallery.create!(id: 7, gallery_category_id: 4, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "taebaek_mountains3.jpg")), content: '태백산에서 보이는 풍경')
-Gallery.create!(id: 8, gallery_category_id: 4, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "taebaek_mountains4.jpg")), content: '태백산에서 보이는 풍경, 푸른하늘')
-Gallery.create!(id: 9, gallery_category_id: 4, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "taebaek_mountains5.jpg")), content: '태백산에서 보이는 풍경')
-Gallery.create!(id: 10, gallery_category_id: 2, title:'칠보산 청설모',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "red_squirrel.jpg")), content: '칠보산 정상에서 만나 청설모
+Gallery.create!(id: 2, gallery_category_id: 4, title:'소양호(양구)',photo: File.open(Rails.root.join("public", "images","gallery", "soyangho.jpg")), content: '양구에서 찍은 평화로운 소양호 모습')
+Gallery.create!(id: 3, gallery_category_id: 4, title:'소양호(양구)',photo: File.open(Rails.root.join("public", "images","gallery", "soyangho2.jpg")), content: '양구에서 본 평화로운 소양호수')
+Gallery.create!(id: 4, gallery_category_id: 4, title:'소양댐',photo: File.open(Rails.root.join("public", "images","gallery", "soyangho3.jpg")), content: '소양댐에서 펼쳐진 산들')
+Gallery.create!(id: 5, gallery_category_id: 4, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("public", "images","gallery", "taebaek_mountains.jpg")), content: '파란하늘의 가을날')
+Gallery.create!(id: 6, gallery_category_id: 4, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("public", "images","gallery", "taebaek_mountains2.jpg")), content: '태백산 중턱에서 보이는 풍경')
+Gallery.create!(id: 7, gallery_category_id: 4, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("public", "images","gallery", "taebaek_mountains3.jpg")), content: '태백산에서 보이는 풍경')
+Gallery.create!(id: 8, gallery_category_id: 4, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("public", "images","gallery", "taebaek_mountains4.jpg")), content: '태백산에서 보이는 풍경, 푸른하늘')
+Gallery.create!(id: 9, gallery_category_id: 4, title:'2011년 가을, 태백산',photo: File.open(Rails.root.join("public", "images","gallery", "taebaek_mountains5.jpg")), content: '태백산에서 보이는 풍경')
+Gallery.create!(id: 10, gallery_category_id: 2, title:'칠보산 청설모',photo: File.open(Rails.root.join("public", "images","gallery", "red_squirrel.jpg")), content: '칠보산 정상에서 만나 청설모
  사람 무서워하지도 않네')
-Gallery.create!(id: 11, gallery_category_id: 2, title:'칠보산에서 만난 청설모',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "red_squirrel2.jpg")), content: '먹을거 안주니 가버리는 청설모')
-Gallery.create!(id: 12, gallery_category_id: 2, title:'짬순이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "dog_in_house.jpg")), content: '집에 들어가서 대가리만 내민 짬순이')
-Gallery.create!(id: 13, gallery_category_id: 2, title:'짬순이 새끼들',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "puppy.jpg")), content: '짬순이 새끼들인 땡글, 식혜 , 장군, 멍군')
-Gallery.create!(id: 14, gallery_category_id: 2, title:'개집 탈출을 시도하는 개새끼',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "puppy2.jpg")), content: '탈출하는 짬순이 새끼, 누구일까? ')
-Gallery.create!(id: 15, gallery_category_id: 2, title:'멍군이와 동네산책',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "dog_go.jpg")), content: '귀여운 멍군이와 동네 산책 풍경')
-Gallery.create!(id: 16, gallery_category_id: 4, title:'상하이 와이탄 야경',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "waitan.jpg")), content: '상하이 와이탄 야경')
-Gallery.create!(id: 17, gallery_category_id: 4, title:'상하이 와이탄 야경',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "waitan2.jpg")), content: '상하이 와이탄 야경')
-Gallery.create!(id: 18, gallery_category_id: 4, title:'상하이 와이탄 야경',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "shanghai.jpg")), content: '상하이 와이탄 야경')
-Gallery.create!(id: 19, gallery_category_id: 3, title:'우는 모습도 너무나 귀여운 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "crying_baby.jpg")), content: '우는 모습도 너무나 귀여운 내 아들 주영이입니다.')
-Gallery.create!(id: 20, gallery_category_id: 4, title:'상하이 길거리 모습',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "shanghai_street_1.jpg")), content: '숙소에서 본 상하이 길거리 모습')
-Gallery.create!(id: 21, gallery_category_id: 4, title:'상하이 길거리 모습',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "shanghai_street_2.jpg")), content: '숙소에서 바라본 상하이 길거리 풍경')
-Gallery.create!(id: 22, gallery_category_id: 4, title:'끝없이 이어져있는 상하이 빌딩',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "shanghai_building.jpg")), content: '끝없이 이어져있는 상하이 빌딩들의 모습')
-Gallery.create!(id: 23, gallery_category_id: 4, title:'태백산 계곡',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "taebaeksan.jpg")), content: '맑은 물의 푸르른 태백산 계곡')
-Gallery.create!(id: 24, gallery_category_id: 4, title:'칠보산 정상에서',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "chilbosan.jpg")), content: '칠보산 정상에서 내려다본 모습, 금방이라도 비올꺼 같네')
-Gallery.create!(id: 25, gallery_category_id: 4, title:'눈덮인 호매실동',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "homaesil.jpg")), content: '눈덮인 호매실 논밭과 저멀리 광교산 모습')
-Gallery.create!(id: 26, gallery_category_id: 4, title:'눈덮인 호매실동',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "homaesil_2.jpg")), content: '눈덮인 호매실 논밭과 저멀리 광교산 모습')
-Gallery.create!(id: 27, gallery_category_id: 3, title:'낮잠자는 나와 아들',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "i_and_baby.jpg")), content: '주말에 꿈나라를 헤메이고 있는 나와 아들')
-Gallery.create!(id: 28, gallery_category_id: 3, title:'천사의 자는 모습인 내 아들 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "sleeping_baby.jpg")), content: '내아들 주영이, 잘때는 천사  울때는..... ㅜ.ㅜ')
-Gallery.create!(id: 29, gallery_category_id: 3, title:'목욕하기 싫은 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "crying_baby2.jpg")), content: '나 목욕하기 싫어......  으아아아앙~~~')
-Gallery.create!(id: 30, gallery_category_id: 3, title:'보행기에 앉아있는 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "baby.jpg")), content: '보행기에 앉아있는 주영이')
-Gallery.create!(id: 31, gallery_category_id: 3, title:'주먹올리고 잠자는 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "sleeping_baby.jpg")), content: '주먹쥐고 손올리고 자는 우리 주영이
+Gallery.create!(id: 11, gallery_category_id: 2, title:'칠보산에서 만난 청설모',photo: File.open(Rails.root.join("public", "images","gallery", "red_squirrel2.jpg")), content: '먹을거 안주니 가버리는 청설모')
+Gallery.create!(id: 12, gallery_category_id: 2, title:'짬순이',photo: File.open(Rails.root.join("public", "images","gallery", "dog_in_house.jpg")), content: '집에 들어가서 대가리만 내민 짬순이')
+Gallery.create!(id: 13, gallery_category_id: 2, title:'짬순이 새끼들',photo: File.open(Rails.root.join("public", "images","gallery", "puppy.jpg")), content: '짬순이 새끼들인 땡글, 식혜 , 장군, 멍군')
+Gallery.create!(id: 14, gallery_category_id: 2, title:'개집 탈출을 시도하는 개새끼',photo: File.open(Rails.root.join("public", "images","gallery", "puppy2.jpg")), content: '탈출하는 짬순이 새끼, 누구일까? ')
+Gallery.create!(id: 15, gallery_category_id: 2, title:'멍군이와 동네산책',photo: File.open(Rails.root.join("public", "images","gallery", "dog_go.jpg")), content: '귀여운 멍군이와 동네 산책 풍경')
+Gallery.create!(id: 16, gallery_category_id: 4, title:'상하이 와이탄 야경',photo: File.open(Rails.root.join("public", "images","gallery", "waitan.jpg")), content: '상하이 와이탄 야경')
+Gallery.create!(id: 17, gallery_category_id: 4, title:'상하이 와이탄 야경',photo: File.open(Rails.root.join("public", "images","gallery", "waitan2.jpg")), content: '상하이 와이탄 야경')
+Gallery.create!(id: 18, gallery_category_id: 4, title:'상하이 와이탄 야경',photo: File.open(Rails.root.join("public", "images","gallery", "shanghai.jpg")), content: '상하이 와이탄 야경')
+Gallery.create!(id: 19, gallery_category_id: 3, title:'우는 모습도 너무나 귀여운 주영이',photo: File.open(Rails.root.join("public", "images","gallery", "crying_baby.jpg")), content: '우는 모습도 너무나 귀여운 내 아들 주영이입니다.')
+Gallery.create!(id: 20, gallery_category_id: 4, title:'상하이 길거리 모습',photo: File.open(Rails.root.join("public", "images","gallery", "shanghai_street_1.jpg")), content: '숙소에서 본 상하이 길거리 모습')
+Gallery.create!(id: 21, gallery_category_id: 4, title:'상하이 길거리 모습',photo: File.open(Rails.root.join("public", "images","gallery", "shanghai_street_2.jpg")), content: '숙소에서 바라본 상하이 길거리 풍경')
+Gallery.create!(id: 22, gallery_category_id: 4, title:'끝없이 이어져있는 상하이 빌딩',photo: File.open(Rails.root.join("public", "images","gallery", "shanghai_building.jpg")), content: '끝없이 이어져있는 상하이 빌딩들의 모습')
+Gallery.create!(id: 23, gallery_category_id: 4, title:'태백산 계곡',photo: File.open(Rails.root.join("public", "images","gallery", "taebaeksan.jpg")), content: '맑은 물의 푸르른 태백산 계곡')
+Gallery.create!(id: 24, gallery_category_id: 4, title:'칠보산 정상에서',photo: File.open(Rails.root.join("public", "images","gallery", "chilbosan.jpg")), content: '칠보산 정상에서 내려다본 모습, 금방이라도 비올꺼 같네')
+Gallery.create!(id: 25, gallery_category_id: 4, title:'눈덮인 호매실동',photo: File.open(Rails.root.join("public", "images","gallery", "homaesil.jpg")), content: '눈덮인 호매실 논밭과 저멀리 광교산 모습')
+Gallery.create!(id: 26, gallery_category_id: 4, title:'눈덮인 호매실동',photo: File.open(Rails.root.join("public", "images","gallery", "homaesil_2.jpg")), content: '눈덮인 호매실 논밭과 저멀리 광교산 모습')
+Gallery.create!(id: 27, gallery_category_id: 3, title:'낮잠자는 나와 아들',photo: File.open(Rails.root.join("public", "images","gallery", "i_and_baby.jpg")), content: '주말에 꿈나라를 헤메이고 있는 나와 아들')
+Gallery.create!(id: 28, gallery_category_id: 3, title:'천사의 자는 모습인 내 아들 주영이',photo: File.open(Rails.root.join("public", "images","gallery", "sleeping_baby.jpg")), content: '내아들 주영이, 잘때는 천사  울때는..... ㅜ.ㅜ')
+Gallery.create!(id: 29, gallery_category_id: 3, title:'목욕하기 싫은 주영이',photo: File.open(Rails.root.join("public", "images","gallery", "crying_baby2.jpg")), content: '나 목욕하기 싫어......  으아아아앙~~~')
+Gallery.create!(id: 30, gallery_category_id: 3, title:'보행기에 앉아있는 주영이',photo: File.open(Rails.root.join("public", "images","gallery", "baby.jpg")), content: '보행기에 앉아있는 주영이')
+Gallery.create!(id: 31, gallery_category_id: 3, title:'주먹올리고 잠자는 주영이',photo: File.open(Rails.root.join("public", "images","gallery", "sleeping_baby.jpg")), content: '주먹쥐고 손올리고 자는 우리 주영이
  팔 안아프니?')
-Gallery.create!(id: 32, gallery_category_id: 3, title:'엉덩이도 너무 예뻐',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "baby_hip.jpg")), content: '엉덩이까지 너무 예쁜 우리 주영이')
-Gallery.create!(id: 33, gallery_category_id: 3, title:'너무 섹시한 우리 주영이 엉덩이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "baby_hip2.jpg")), content: '거부할수 없는 매력의 무한 섹시 엉덩이')
-Gallery.create!(id: 34, gallery_category_id: 3, title:'천사같은 주영이 100일 사진',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "baby_smile1.jpg")), content: '너무 예쁘고 귀여운 우리 주영이 100일 사진
+Gallery.create!(id: 32, gallery_category_id: 3, title:'엉덩이도 너무 예뻐',photo: File.open(Rails.root.join("public", "images","gallery", "baby_hip.jpg")), content: '엉덩이까지 너무 예쁜 우리 주영이')
+Gallery.create!(id: 33, gallery_category_id: 3, title:'너무 섹시한 우리 주영이 엉덩이',photo: File.open(Rails.root.join("public", "images","gallery", "baby_hip2.jpg")), content: '거부할수 없는 매력의 무한 섹시 엉덩이')
+Gallery.create!(id: 34, gallery_category_id: 3, title:'천사같은 주영이 100일 사진',photo: File.open(Rails.root.join("public", "images","gallery", "baby_smile1.jpg")), content: '너무 예쁘고 귀여운 우리 주영이 100일 사진
  천사사진이 따로 없네?')
-Gallery.create!(id: 35, gallery_category_id: 3, title:'귀여운 주영이 100일 사진',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "baby_smile2.jpg")), content: '예쁘고 귀여운 우리 주영이 100일 사진 두번째')
-Gallery.create!(id: 36, gallery_category_id: 3, title:'상반신 노출!!  주영이 100일 사진',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "baby_smile3.jpg")), content: '너무나 매력적인 노출
+Gallery.create!(id: 35, gallery_category_id: 3, title:'귀여운 주영이 100일 사진',photo: File.open(Rails.root.join("public", "images","gallery", "baby_smile2.jpg")), content: '예쁘고 귀여운 우리 주영이 100일 사진 두번째')
+Gallery.create!(id: 36, gallery_category_id: 3, title:'상반신 노출!!  주영이 100일 사진',photo: File.open(Rails.root.join("public", "images","gallery", "baby_smile3.jpg")), content: '너무나 매력적인 노출
  예쁘고 귀여운 우리 주영이 100일 사진 세번째')
-Gallery.create!(id: 37, gallery_category_id: 3, title:'흰옷의 천사, 주영이 100일 사진',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "baby_smile4.jpg")), content: '흰옷의 천사
+Gallery.create!(id: 37, gallery_category_id: 3, title:'흰옷의 천사, 주영이 100일 사진',photo: File.open(Rails.root.join("public", "images","gallery", "baby_smile4.jpg")), content: '흰옷의 천사
  예쁘고 귀여운 우리 주영이 100일 사진 네번째')
-Gallery.create!(id: 38, gallery_category_id: 3, title:'눈물 가득 엉엉 우는 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "crying_baby.jpg")), content: '빨개진 얼굴 눈물 가득 엉엉 우는 주영이
+Gallery.create!(id: 38, gallery_category_id: 3, title:'눈물 가득 엉엉 우는 주영이',photo: File.open(Rails.root.join("public", "images","gallery", "crying_baby.jpg")), content: '빨개진 얼굴 눈물 가득 엉엉 우는 주영이
  뭐가 그리 서럽니?')
-Gallery.create!(id: 39, gallery_category_id: 3, title:'보행기에서 노는 귀여운 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "baby1.jpg")), content: '보행이에서 숟가락 물고 노는 귀여운 주영이입니다.')
-Gallery.create!(id: 40, gallery_category_id: 2, title:'잠자는 멍군 형제들',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_4dogs.jpg")), content: '떙글, 식혜, 장군, 멍군
+Gallery.create!(id: 39, gallery_category_id: 3, title:'보행기에서 노는 귀여운 주영이',photo: File.open(Rails.root.join("public", "images","gallery", "baby1.jpg")), content: '보행이에서 숟가락 물고 노는 귀여운 주영이입니다.')
+Gallery.create!(id: 40, gallery_category_id: 2, title:'잠자는 멍군 형제들',photo: File.open(Rails.root.join("public", "images","gallery", "cute_4dogs.jpg")), content: '떙글, 식혜, 장군, 멍군
  다시 다 같이 모였으면 좋겠네')
-Gallery.create!(id: 41, gallery_category_id: 2, title:'모여서 누어있는 멍군형제들',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_4dogs2.jpg")), content: '귀여운 땡글, 식혜, 장군, 멍군')
-Gallery.create!(id: 42, gallery_category_id: 2, title:'끼어자는 새끼',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "sleeping_dog.jpg")), content: '그렇게 끼어자니 편하니?? ㅎㅎ
+Gallery.create!(id: 41, gallery_category_id: 2, title:'모여서 누어있는 멍군형제들',photo: File.open(Rails.root.join("public", "images","gallery", "cute_4dogs2.jpg")), content: '귀여운 땡글, 식혜, 장군, 멍군')
+Gallery.create!(id: 42, gallery_category_id: 2, title:'끼어자는 새끼',photo: File.open(Rails.root.join("public", "images","gallery", "sleeping_dog.jpg")), content: '그렇게 끼어자니 편하니?? ㅎㅎ
  끼어서 정신없이 자는 귀여운 새끼')
-Gallery.create!(id: 43, gallery_category_id: 2, title:'엎드려 있는 장군이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "puppy.jpg")), content: '보고싶은 장군이')
-Gallery.create!(id: 44, gallery_category_id: 2, title:'멍자',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_dog.jpg")), content: '멍군이 자식 멍자')
-Gallery.create!(id: 45, gallery_category_id: 2, title:'귀여운 멍군이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_dog1.jpg")), content: '멍군이 진짜 귀엽네 ㅎㅎ')
-Gallery.create!(id: 46, gallery_category_id: 2, title:'귀여운 짬순이 새끼',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_puppy.jpg")), content: '나온지 얼마 안된 귀여운 짬순이 새끼')
-Gallery.create!(id: 47, gallery_category_id: 2, title:'멍군이와 짬순이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "dogs.jpg")), content: '귀여운 멍군이와 짬순이')
-Gallery.create!(id: 48, gallery_category_id: 4, title:'아름다운 가을날 단풍',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "red_and_yellow.jpg")), content: '햇빛좋고 날좋은 가을날 아름다운 단풍')
-Gallery.create!(id: 49, gallery_category_id: 4, title:'장안문',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "jangan_gate.jpg")), content: '수원 화성의 정문 장안문입니다.')
-Gallery.create!(id: 50, gallery_category_id: 2, title:'엄마 염소와 새끼염소',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "goat.jpg")), content: '염소')
-Gallery.create!(id: 51, gallery_category_id: 3, title:'귀여운 주영이 잔디밭에서',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "juyoung.jpg")), content: '날 좋은날 잔디밭의 즐거운 주영이')
+Gallery.create!(id: 43, gallery_category_id: 2, title:'엎드려 있는 장군이',photo: File.open(Rails.root.join("public", "images","gallery", "puppy.jpg")), content: '보고싶은 장군이')
+Gallery.create!(id: 44, gallery_category_id: 2, title:'멍자',photo: File.open(Rails.root.join("public", "images","gallery", "cute_dog.jpg")), content: '멍군이 자식 멍자')
+Gallery.create!(id: 45, gallery_category_id: 2, title:'귀여운 멍군이',photo: File.open(Rails.root.join("public", "images","gallery", "cute_dog1.jpg")), content: '멍군이 진짜 귀엽네 ㅎㅎ')
+Gallery.create!(id: 46, gallery_category_id: 2, title:'귀여운 짬순이 새끼',photo: File.open(Rails.root.join("public", "images","gallery", "cute_puppy.jpg")), content: '나온지 얼마 안된 귀여운 짬순이 새끼')
+Gallery.create!(id: 47, gallery_category_id: 2, title:'멍군이와 짬순이',photo: File.open(Rails.root.join("public", "images","gallery", "dogs.jpg")), content: '귀여운 멍군이와 짬순이')
+Gallery.create!(id: 48, gallery_category_id: 4, title:'아름다운 가을날 단풍',photo: File.open(Rails.root.join("public", "images","gallery", "red_and_yellow.jpg")), content: '햇빛좋고 날좋은 가을날 아름다운 단풍')
+Gallery.create!(id: 49, gallery_category_id: 4, title:'장안문',photo: File.open(Rails.root.join("public", "images","gallery", "jangan_gate.jpg")), content: '수원 화성의 정문 장안문입니다.')
+Gallery.create!(id: 50, gallery_category_id: 2, title:'엄마 염소와 새끼염소',photo: File.open(Rails.root.join("public", "images","gallery", "goat.jpg")), content: '염소')
+Gallery.create!(id: 51, gallery_category_id: 3, title:'귀여운 주영이 잔디밭에서',photo: File.open(Rails.root.join("public", "images","gallery", "juyoung.jpg")), content: '날 좋은날 잔디밭의 즐거운 주영이')
 
 
-Gallery.create!(id: 52, gallery_category_id: 4, title:'수원화성 야경',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "hwasung.jpg")), content: '수원화성의 아름다운 야경모습')
-Gallery.create!(id: 53, gallery_category_id: 4, title:'수원 시내 풍경1',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "suwon.jpg")), content: '팔달산에서 본 수원풍경')
-Gallery.create!(id: 54, gallery_category_id: 4, title:'수원 시내 풍경2',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "suwon2.jpg")), content: '팔달산에서 본 수원풍경')
-Gallery.create!(id: 55, gallery_category_id: 4, title:'화성 방화수류정',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "hwasung2.jpg")), content: '화성 방화수류정의 모습')
-Gallery.create!(id: 56, gallery_category_id: 4, title:'수원화성',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "hwasung3.jpg")), content: '용연에서 본 수원화성')
-Gallery.create!(id: 57, gallery_category_id: 3, title:'귀여운 주영이 도청에서',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "juyoung3.jpg")), content: '2015년 햇빛좋은 가을, 도청에서 귀여운 주영이 모습')
-Gallery.create!(id: 58, gallery_category_id: 3, title:'환하게 웃는 귀여운 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "juyoung_smile.jpg")), content: '환하게 웃는 귀여운 주영이, 천사가 따로 없네')
-Gallery.create!(id: 59, gallery_category_id: 4, title:'눈내린 장안공원',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "snow.jpg")), content: '눈내린 아침의 장안공원의 모습니다')
-Gallery.create!(id: 60, gallery_category_id: 3, title:'주영이 풀밭에서',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_juyoung.jpg")), content: '풀밭에서 천사같은 주영이')
+Gallery.create!(id: 52, gallery_category_id: 4, title:'수원화성 야경',photo: File.open(Rails.root.join("public", "images","gallery", "hwasung.jpg")), content: '수원화성의 아름다운 야경모습')
+Gallery.create!(id: 53, gallery_category_id: 4, title:'수원 시내 풍경1',photo: File.open(Rails.root.join("public", "images","gallery", "suwon.jpg")), content: '팔달산에서 본 수원풍경')
+Gallery.create!(id: 54, gallery_category_id: 4, title:'수원 시내 풍경2',photo: File.open(Rails.root.join("public", "images","gallery", "suwon2.jpg")), content: '팔달산에서 본 수원풍경')
+Gallery.create!(id: 55, gallery_category_id: 4, title:'화성 방화수류정',photo: File.open(Rails.root.join("public", "images","gallery", "hwasung2.jpg")), content: '화성 방화수류정의 모습')
+Gallery.create!(id: 56, gallery_category_id: 4, title:'수원화성',photo: File.open(Rails.root.join("public", "images","gallery", "hwasung3.jpg")), content: '용연에서 본 수원화성')
+Gallery.create!(id: 57, gallery_category_id: 3, title:'귀여운 주영이 도청에서',photo: File.open(Rails.root.join("public", "images","gallery", "juyoung3.jpg")), content: '2015년 햇빛좋은 가을, 도청에서 귀여운 주영이 모습')
+Gallery.create!(id: 58, gallery_category_id: 3, title:'환하게 웃는 귀여운 주영이',photo: File.open(Rails.root.join("public", "images","gallery", "juyoung_smile.jpg")), content: '환하게 웃는 귀여운 주영이, 천사가 따로 없네')
+Gallery.create!(id: 59, gallery_category_id: 4, title:'눈내린 장안공원',photo: File.open(Rails.root.join("public", "images","gallery", "snow.jpg")), content: '눈내린 아침의 장안공원의 모습니다')
+Gallery.create!(id: 60, gallery_category_id: 3, title:'주영이 풀밭에서',photo: File.open(Rails.root.join("public", "images","gallery", "cute_juyoung.jpg")), content: '풀밭에서 천사같은 주영이')
 
 
-Gallery.create!(id: 61, gallery_category_id: 3, title:'잠자는 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "sleeping_juyoung2.jpg")), content: '평화로운 낮잠을 즐기는 주영이')
-Gallery.create!(id: 62, gallery_category_id: 3, title:'미끄럼틀 타고 내려온 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "slide_juyoung.jpg")), content: '미끄럼틀 타고 내려온 주영이')
-Gallery.create!(id: 63, gallery_category_id: 3, title:'주영이 풀밭에서',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_juyoung2.jpg")), content: '주영이 풀밭에서')
-Gallery.create!(id: 64, gallery_category_id: 3, title:'주영이 풀밭에서',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_juyoung3.jpg")), content: '주영이 풀밭에서')
-Gallery.create!(id: 65, gallery_category_id: 3, title:'주영이 풀밭에서',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_juyoung4.jpg")), content: '귀주영이 풀밭에서')
-Gallery.create!(id: 66, gallery_category_id: 3, title:'귀여운 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cute_juyoung5.jpg")), content: '귀여운 주영이')
-Gallery.create!(id: 67, gallery_category_id: 3, title:'멋있고 귀여운 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cool_juyoung.jpg")), content: '그냥 찍어도 모델같은 멋있고 귀여운 주영이')
-Gallery.create!(id: 68, gallery_category_id: 1, title:'놀이터에서 고양이랑',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "with_cat.jpg")), content: '동네놀이터에서 고양이랑
+Gallery.create!(id: 61, gallery_category_id: 3, title:'잠자는 주영이',photo: File.open(Rails.root.join("public", "images","gallery", "sleeping_juyoung2.jpg")), content: '평화로운 낮잠을 즐기는 주영이')
+Gallery.create!(id: 62, gallery_category_id: 3, title:'미끄럼틀 타고 내려온 주영이',photo: File.open(Rails.root.join("public", "images","gallery", "slide_juyoung.jpg")), content: '미끄럼틀 타고 내려온 주영이')
+Gallery.create!(id: 63, gallery_category_id: 3, title:'주영이 풀밭에서',photo: File.open(Rails.root.join("public", "images","gallery", "cute_juyoung2.jpg")), content: '주영이 풀밭에서')
+Gallery.create!(id: 64, gallery_category_id: 3, title:'주영이 풀밭에서',photo: File.open(Rails.root.join("public", "images","gallery", "cute_juyoung3.jpg")), content: '주영이 풀밭에서')
+Gallery.create!(id: 65, gallery_category_id: 3, title:'주영이 풀밭에서',photo: File.open(Rails.root.join("public", "images","gallery", "cute_juyoung4.jpg")), content: '귀주영이 풀밭에서')
+Gallery.create!(id: 66, gallery_category_id: 3, title:'귀여운 주영이',photo: File.open(Rails.root.join("public", "images","gallery", "cute_juyoung5.jpg")), content: '귀여운 주영이')
+Gallery.create!(id: 67, gallery_category_id: 3, title:'멋있고 귀여운 주영이',photo: File.open(Rails.root.join("public", "images","gallery", "cool_juyoung.jpg")), content: '그냥 찍어도 모델같은 멋있고 귀여운 주영이')
+Gallery.create!(id: 68, gallery_category_id: 1, title:'놀이터에서 고양이랑',photo: File.open(Rails.root.join("public", "images","gallery", "with_cat.jpg")), content: '동네놀이터에서 고양이랑
  고양이도 종호를 너무 좋아해요')
-Gallery.create!(id: 69, gallery_category_id: 3, title:'백운호수에서 멋있는 주영이',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "cool_juyoung2.jpg")), content: '백운호수에서 멋있는 주영이')
-Gallery.create!(id: 70, gallery_category_id: 1, title:'선자령에서 멋진 종호',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "snow_mountain.jpg")), content: '선자령에서 멋진 종호')
-Gallery.create!(id: 71, gallery_category_id: 4, title:'구봉도에서 본 낙조지는 영흥도',photo: File.open(Rails.root.join("app", "assets", "images","gallery", "gubongdo.jpg")), content: '구봉도에서 본 낙조지는 영흥도')
+Gallery.create!(id: 69, gallery_category_id: 3, title:'백운호수에서 멋있는 주영이',photo: File.open(Rails.root.join("public", "images","gallery", "cool_juyoung2.jpg")), content: '백운호수에서 멋있는 주영이')
+Gallery.create!(id: 70, gallery_category_id: 1, title:'선자령에서 멋진 종호',photo: File.open(Rails.root.join("public", "images","gallery", "snow_mountain.jpg")), content: '선자령에서 멋진 종호')
+Gallery.create!(id: 71, gallery_category_id: 4, title:'구봉도에서 본 낙조지는 영흥도',photo: File.open(Rails.root.join("public", "images","gallery", "gubongdo.jpg")), content: '구봉도에서 본 낙조지는 영흥도')
 
 
 
@@ -156,7 +156,7 @@ BlogCategory.create!(id: 3, title: '헬조선')
 BlogCategory.create!(id: 4, title: '환경')
 
 
-Blog.create!(id: 1, blog_category_id: 1, user_id: 1, title:'공포의 요로결석, 해방되다', description: '생성될때부터 나를 괴롭히던 요로결석, 속시원하게 밖에 나오다',tag_list: '요로결석',blog_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images", "blog", "stone_3.jpg"))},
+Blog.create!(id: 1, blog_category_id: 1, user_id: 1, title:'공포의 요로결석, 해방되다', description: '생성될때부터 나를 괴롭히던 요로결석, 속시원하게 밖에 나오다',tag_list: '요로결석',blog_picture_attributes: { picture: File.open(Rails.root.join("public", "images", "blog", "stone_3.jpg"))},
              content: '
 <p>2013년 봄날이였습니다.</p>
 
@@ -289,7 +289,7 @@ Blog.create!(id: 1, blog_category_id: 1, user_id: 1, title:'공포의 요로결�
  <p>&quot;물은 생명이다&quot;</p>')
 
 
-Blog.create!(id: 2, blog_category_id: 1, user_id: 1, title:'맛있는 중국라면', description: '상하이에 있을때 먹던 맛있는 중국라면(마라라면)',tag_list: '라면,마라,중국,중국라면,마라라면,중화요리',blog_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images", "blog", "ramen.jpg"))},
+Blog.create!(id: 2, blog_category_id: 1, user_id: 1, title:'맛있는 중국라면', description: '상하이에 있을때 먹던 맛있는 중국라면(마라라면)',tag_list: '라면,마라,중국,중국라면,마라라면,중화요리',blog_picture_attributes: { picture: File.open(Rails.root.join("public", "images", "blog", "ramen.jpg"))},
 content: '<p>중국의 먹을것은 그야말로 무궁무진하지만 오늘은 한국인들도 좋아하는 라면입니다.</p>
 
 <p>면요리는 중국이 원조이면서 그 방대함 또한 따를수 있는 나라가 없지요</p>
@@ -346,7 +346,7 @@ content: '<p>중국의 먹을것은 그야말로 무궁무진하지만 오늘은
 ')
 
 
-Blog.create!(id: 3, blog_category_id: 1, user_id: 1, title:'중국 두부요리', description: '중국의 대표적인 두부요리인 마파두부와 취두부',tag_list: '두부,마파두부,취두부,중화요리',blog_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images", "blog", "chui.jpg"))},
+Blog.create!(id: 3, blog_category_id: 1, user_id: 1, title:'중국 두부요리', description: '중국의 대표적인 두부요리인 마파두부와 취두부',tag_list: '두부,마파두부,취두부,중화요리',blog_picture_attributes: { picture: File.open(Rails.root.join("public", "images", "blog", "chui.jpg"))},
 content: '<p>먹어도 먹어도 맛있는 두부</p>
 
 <p>콩으로 어떻게 이렇게 맛있는것을 만들었는지 지금 생각해도 대단하다고 밖에 생각이 안됩니다.</p>
@@ -453,7 +453,7 @@ content: '<p>먹어도 먹어도 맛있는 두부</p>
 <p>마파두부와 취두부였습니다.</p>
 ')
 
-Blog.create!(id: 4, blog_category_id: 1, user_id: 1, title:'과일의 황제 두리안', description: '환상적인 과일, 두리안을 소개합니다.',tag_list: '두리안,과일',blog_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images", "blog", "durian.jpg"))},
+Blog.create!(id: 4, blog_category_id: 1, user_id: 1, title:'과일의 황제 두리안', description: '환상적인 과일, 두리안을 소개합니다.',tag_list: '두리안,과일',blog_picture_attributes: { picture: File.open(Rails.root.join("public", "images", "blog", "durian.jpg"))},
 content: '<p>여러 과일을 좋아하는 나이지만</p>
 
 <p>두리안이라는 과일은 얼핏 듣기는 했지만 신경쓰지 않고 살아왔었지요</p>
@@ -504,7 +504,7 @@ content: '<p>여러 과일을 좋아하는 나이지만</p>
 
 <p>지구상에는 이보다 맛있는 과일은 없을 듯 합니다.</p>')
 
-Blog.create!(id: 5, blog_category_id: 1, user_id: 1, title:'중국 유자', description: '크기와 달콤함이 일품인 중국 유자',tag_list: '유자,과일',blog_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images", "blog", "yuzi.jpg"))},
+Blog.create!(id: 5, blog_category_id: 1, user_id: 1, title:'중국 유자', description: '크기와 달콤함이 일품인 중국 유자',tag_list: '유자,과일',blog_picture_attributes: { picture: File.open(Rails.root.join("public", "images", "blog", "yuzi.jpg"))},
 content: '<p>우리말과 똑같은 유자(귤)라고 하지만</p>
 <p>우리나라에는 없는 유자입니다</p>
 <p>&nbsp;</p>
@@ -750,7 +750,7 @@ content: '<p>임금체불로 회사 그만두고 쉬는동안 배우고 있는 �
 <p>다행이 필기는 쉽게 합격할듯 하네요</p>
 <p>실기도 열심히해서 합격하고 더욱 더 공부해봐야겠네요</p>')
 
-Blog.create!(id: 17, blog_category_id: 1, user_id: 1, title:'토렌트 좋네요', description: '말로만 듣던 토렌트, 사용해보니 왜 토렌트 토렌트 하는지 알겠네요',blog_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images", "blog", "qb_newbanner.jpg"))},
+Blog.create!(id: 17, blog_category_id: 1, user_id: 1, title:'토렌트 좋네요', description: '말로만 듣던 토렌트, 사용해보니 왜 토렌트 토렌트 하는지 알겠네요',blog_picture_attributes: { picture: File.open(Rails.root.join("public", "images", "blog", "qb_newbanner.jpg"))},
 content: '<p>요즘엔 뭘 다운받아도 그리 듣거나 볼 시간도 없고 해서</p>
 <p>당나귀 쓴이후로 P2P파일공유 프로그램은 처음 써봤습니다.</p>
 <p>처음에는 약간 개념이 잡히지 않아서 어려워 보였는데</p>
@@ -775,7 +775,7 @@ content: '<p>요즘엔 뭘 다운받아도 그리 듣거나 볼 시간도 없고
 <p>저는 그래서 영화나 음악은 거의 안 받습니다.</p>
 <p>그럼 뭐 받냐고요??&nbsp; ......</p>')
 
-Blog.create!(id: 18, blog_category_id: 1, user_id: 1, title:'시험보고 오는중에 봄날풍경',tag_list: '임금체불,시험,봄날', description: '임금체불로 우울한 중에도 시험보고 오던길에 눈부신 봄날, 너무 날씨가 좋아 더 우울해지는 봄날이였습니다.',blog_picture_attributes: { picture: File.open(Rails.root.join("app", "assets", "images", "blog", "road_side1.jpg"))},
+Blog.create!(id: 18, blog_category_id: 1, user_id: 1, title:'시험보고 오는중에 봄날풍경',tag_list: '임금체불,시험,봄날', description: '임금체불로 우울한 중에도 시험보고 오던길에 눈부신 봄날, 너무 날씨가 좋아 더 우울해지는 봄날이였습니다.',blog_picture_attributes: { picture: File.open(Rails.root.join("public", "images", "blog", "road_side1.jpg"))},
 content: '<p>그 동안 공부했던 조경기능사 시험을 보러가려 했습니다.</p>
 <p>집에서 나와서 구운동입구에서부터 한일전산고까지 가야되는데</p>
 <p>11시 까지 입실을 남겨두고 지금은 10시 30분</p>
@@ -1441,6 +1441,21 @@ Blog.create!(id: 55, blog_category_id: 2, user_id: 1, title:'몽골제국이 오
 
 지금도 러시아, 몽골은  알콜 문제가 심각하며 그로 인한  폭력사태로 인한 사망, 건강악화로 평균수명도 짧지요
 지금보다도 몽골제국때 알콜 문제가 훨씬 심각했다고 생각하면 이해될것입니다.
+')
+
+Blog.create!(id: 56, blog_category_id: 2, user_id: 1, title:'실제로는 존재하지 않는 살인청부업자',tag_list: '게임이론, 살인청부업자, 장기밀매조직, 영화', description: '영화에서만 존재 할 수 있는 살인청부업자, 장기밀매조직',
+             content: '게임이론은 대충들 알지요?
+
+게임이론으로 봐보면
+청부살인업자나 장기매매업자는 현실에서는
+존재할수 없습니다.
+서비스(?)를 제공하는 쪽이나 의뢰하는 쪽
+누구든 배신하는게 이득이기 때문입니다.
+조금만 생각해봐도 알 수 있습니다.
+
+결국 어느쪽이건 배신해서 들통나고 끝난다는거
+그런것은 히어로영화나 액션영화에서의 액션 같이
+영화속에서만 존재 합니다~
 ')
 
 =begin
