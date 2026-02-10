@@ -58,5 +58,4 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :admin_signed_in?, :current_admin
-
 end
