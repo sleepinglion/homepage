@@ -23,6 +23,7 @@ class ApplicationController < ActionController::Base
     @script='application'
   end
 
+
   def current_ability
     @current_ability ||= UserAbility.new(current_user)
   end
@@ -57,4 +58,5 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :admin_signed_in?, :current_admin
+
 end
