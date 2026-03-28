@@ -10,7 +10,6 @@ class ApplicationController < ActionController::Base
 
   def before_init
     @meta_description = t(:meta_description)
-    @meta_keywords    = t(:meta_keywords)
     @meta_image       = t(:meta_image)
     @meta_url         = t(:meta_url)
 
@@ -32,7 +31,7 @@ class ApplicationController < ActionController::Base
       canonical: canonical,
       noindex: seo_noindex?,
       follow: true,
-      viewport: 'width=device-width, initial-scale=1, shrink-to-fit=no',
+      viewport: 'width=device-width, initial-scale=1',
       og: {
         title: @og_title.presence || meta_title,
         description: @meta_description,
