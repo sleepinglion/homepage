@@ -1,14 +1,12 @@
 ko:
   application_name : '웹프로그래머 잠자는사자의 집'
   service_name : '웹프로그래머 잠자는사자의 집'
-  meta_description : '깨끗한웹을 꿈꾸는 웹프로그래머 잠자는사자의 집입니다.'
+  meta_description: "잠자는사자의 집 공식 블로그. 웹프로그래머의 일상, 잡생각, 환경, 한국 사회 의견 등을 사진과 함께 정리하며 웹 제작 사례와 이야기로 공유합니다."
   meta_description_intro : '웹프로그래머 잠자는사자를 여러분께 소개합니다.'
-  meta_description_about : '웹프로그래머 잠자는 사자의 집소개'
-  meta_description_blog : '웹프로그래머 잠자는사자의 블로그'
-  meta_description_gallery : '웹프로그래머 잠자는사자의 사진첩'
-  meta_description_question : '웹프로그래머 잠자는사자에게 질문 , 요청'
-  meta_description_portfolio : '웹프로그래머 잠자는사자의 포트폴리오'
-  meta_description_guest_book : '웹프로그래머 잠자는사자의 방명록'
+  meta_description_blog: "잠자는사자의 블로그. 웹프로그래밍 일상, 잡생각, 한국 사회 비판, 환경 관련 글을 사진과 함께 다양한 주제로 풀어냅니다."
+  meta_description_gallery: "사진첩: 여행·풍경·일상 속 장면을 담은 잠자는사자의 이미지 모음. 다양한 사진 스토리와 느낌을 감상할 수 있습니다."
+  meta_description_question: "질문/답변: 웹 제작, 코딩, 일상 궁금증을 잠자는사자에게 물어보고 답변을 공유하는 공간입니다."
+  meta_description_guest_book: "방명록: 방문자들이 남긴 메시지를 통해 잠자는사자와 소통하는 공간. 방문 기록과 응원의 말을 남길 수 있습니다."
   meta_keywords : '정종호,웹프로그래머,퍼블리셔,웹개발,웹표준,리눅스,html,html5,javascript,php,ruby,rails,레일즈,퍼블리싱,publishing,잠자는사자,SL,SleepingLion,Sleeping-Lion'
   meta_image : 'https://assets.sleepinglion.pe.kr/sl.jpg'
   meta_url : 'https://www.sleepinglion.pe.kr'
