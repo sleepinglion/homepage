@@ -98,6 +98,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_07_134915) do
     t.string "description", limit: 255, null: false
     t.integer "count", default: 0, null: false
     t.integer "blog_pictures_count", default: 0, null: false
+    t.boolean "is_html", default: false, null: false
     t.boolean "enable", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
