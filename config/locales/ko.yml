@@ -2,12 +2,12 @@ ko:
   application_name: '잠자는사자의 집'
   service_name: '잠자는사자의 집'
 
-  meta_description: "잠자는사자의 집 공식 블로그. 사회, 역사, 문화, 일상, 웹 개발까지 다양한 주제를 깊이 있게 다루는 개인 블로그입니다."
-  meta_description_intro: '잠자는사자와 그의 생각을 소개하는 공간입니다.'
-  meta_description_blog: "잠자는사자의 블로그. 사회 비판, 역사 이야기, 문화 비교, 일상 잡생각, 웹 개발 경험까지 다양한 주제를 솔직하게 풀어냅니다."
-  meta_description_gallery: "사진첩: 여행, 풍경, 일상 속 장면을 담은 잠자는사자의 사진 모음. 기록과 분위기가 담긴 이미지 공간입니다."
-  meta_description_question: "질문/답변: 웹 개발, 코딩, 일상, 다양한 궁금증을 묻고 답하는 공간입니다."
-  meta_description_guest_book: "방명록: 방문자들이 메시지를 남기고 잠자는사자와 소통하는 공간입니다."
+  meta_description: "잠자는사자의 집은 사회, 역사, 문화, 일상, 웹 개발을 주제로 다양한 생각과 경험을 기록하는 개인 블로그입니다. 솔직한 시선의 글과 사진, 이야기, 웹 개발 관련 콘텐츠를 함께 만나볼 수 있습니다."
+  meta_description_intro: "잠자는사자의 집 소개 페이지입니다. 사회, 역사, 문화, 일상, 웹 개발 등 다양한 주제를 다루는 개인 홈페이지이자 블로그로, 생각과 기록, 관심사를 한곳에 모아 정리한 공간입니다."
+  meta_description_blog: "잠자는사자의 블로그 페이지입니다. 사회 비판, 역사 해석, 문화 비교, 일상 잡생각, 웹 개발 경험과 코딩 이야기를 솔직하고 직설적인 시선으로 풀어내는 개인 블로그 콘텐츠를 제공합니다."
+  meta_description_gallery: "잠자는사자의 사진첩 페이지입니다. 여행, 풍경, 일상 속 장면을 담은 사진과 이미지 기록을 모아두었으며, 순간의 분위기와 기억, 감상을 함께 담아낸 다양한 사진 콘텐츠를 감상할 수 있습니다."
+  meta_description_question: "잠자는사자의 질문/답변 페이지입니다. 웹 개발, 코딩, 일상, 생활 정보 등 다양한 궁금증에 대해 묻고 답하며, 경험과 지식을 바탕으로 실용적인 정보와 의견을 공유하는 공간입니다."
+  meta_description_guest_book: "잠자는사자의 방명록 페이지입니다. 방문자들이 인사, 응원, 의견, 방문 기록을 자유롭게 남기며 잠자는사자와 편하게 소통할 수 있는 개인 홈페이지형 커뮤니티 공간입니다."
 
   meta_image: 'https://assets.sleepinglion.pe.kr/sl.jpg'
   meta_url: 'https://www.sleepinglion.pe.kr'
@@ -67,7 +67,7 @@ ko:
   logout : "로그아웃"
   delete_user: '회원탈퇴'
 
-  home_main_title : '회, 역사, 문화, 일상, 웹 개발을 기록하는 개인 블로그'
+  home_main_title : '사회, 역사, 문화, 일상을 기록하는 개인 블로그'
   home_main_description : '잠자는사자의 사자굴에 오신것을 환영합니다.'
 
   success_title : '축하합니다!!'
