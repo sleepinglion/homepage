@@ -247,7 +247,7 @@ footer form {position:absolute;top:10px;right:10px}
 .sl_content_header h3 {float:left;margin:0.3em 0 0 2em;padding:0;line-height:1em}
 .sl_content_header p {float:right;margin:0 20px 0 0;padding:0;color:#999;}
 .sl_content_main {clear:both}
-.sl_content_text {padding:40px 0;margin:0;line-height:190%;}
+.sl_content_text {padding:2rem 3rem;margin:0;line-height:190%;}
 .sl_content_text h2,.sl_content_text h3 {margin-top:2rem;margin-bottom:1rem;line-height:150%}
 #sl_content {clear:both;width:730px;height:300px}
 
@@ -457,10 +457,11 @@ a.left:active {background-position: -60px 0}
   .box_header h2 {text-shadow: none;color:#ccc}
 }
 
+
 @include color-mode(light) {
   footer {color:#666;border-top-color:#ddd}
   .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link,.nav-tabs {border-color:#ccc}
   .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {border-bottom-color:#f1f1f1}
-  .media, aside .box_content {background-color:#fff}
+  .media, aside .box_content, .bg-light-only {background-color:#fff}
   a.btn-primary,a.btn-primary:visited {color:#fff}
 }
