@@ -1,11 +1,6 @@
 class TagsController < ApplicationController
   before_action :set_tag, only: [:show, :edit, :update, :destroy]
 
-  def initialize(*params)
-    super(*params)
-    @controller_name=t('activerecord.models.blog')
-  end
-
   # GET /tags
   # GET /tags.json
   def index
