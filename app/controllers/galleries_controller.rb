@@ -1,16 +1,13 @@
 class GalleriesController < ApplicationController
   before_action :set_gallery, only: [:show, :edit, :update, :destroy]
 
-  def initialize(*params)
-    super(*params)
-    @controller_name = t('activerecord.models.gallery')
-    @title = t('activerecord.models.gallery')
-    @meta_description = t(:meta_description_gallery)
-  end
 
   # GET /galleries
   # GET /galleries.json
   def index
+    @title = t('activerecord.models.gallery')
+    @meta_description = t(:meta_description_gallery)
+
     @gallery_categories = GalleryCategory.all
 
     if (params[:gallery_category_id])

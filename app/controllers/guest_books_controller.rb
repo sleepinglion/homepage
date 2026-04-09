@@ -2,16 +2,10 @@ class GuestBooksController < ApplicationController
   before_action :authenticate_user!, :except => [:index,:show]
   before_action :set_guest_book, only: [:show, :edit, :update, :destroy]
 
-  def initialize(*params)
-    super(*params)
-    @controller_name = t('activerecord.models.guest_book')
-    @title = t('activerecord.models.guest_book')
-    @meta_description = t(:meta_description_guest_book)
-  end
-
   # GET /guest_books
   # GET /guest_books.json
   def index
+    @title=t('activerecord.models.guest_book')
     @guest_books = GuestBook.order(id: 'desc').page(params[:page]).per(15)
 
     respond_to do |format|

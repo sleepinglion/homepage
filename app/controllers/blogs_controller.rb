@@ -1,38 +1,23 @@
 class BlogsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_blog_defaults
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
-  before_action :set_blog_meta, only: [:show]
 
-  def set_blog_defaults
-    @controller_name = t('activerecord.models.blog')
-    @title = t('activerecord.models.blog')
-    @meta_description = t(:meta_description_blog)
-  end
-
-  def set_blog_meta
-    return unless @blog
-
-    @title = @blog.title
-    @meta_description = @blog.description.presence || t(:meta_description_blog)
-    @meta_keywords = [@blog.tag_list, t(:meta_keywords)].reject(&:blank?).join(',')
-    @og_title = @blog.title
-    @meta_url = blog_url(@blog)
-    @meta_type = 'article'
-  end
-  # GET /blogs
   # GET /blogs.json
   def index
-    @blog_categories=BlogCategory.where(:leaf=>true).where(:enable=>true)
-        if(params[:blog_category_id])
-          @blog_category_id=params[:blog_category_id].to_i
-          @blogs = Blog.where(:blog_category_id=>@blog_category_id).order(:id=>'desc').page(params[:page]).per(15)
-        else
-          @blogs = Blog.order(:id=>'desc').page(params[:page]).per(15)
-        end
+    @blog_categories = BlogCategory.where(leaf: true, enable: true)
 
+    if params[:blog_category_id]
+      @blog_category = BlogCategory.find(params[:blog_category_id])
+      @title = t('activerecord.models.blog')+" > #{@blog_category.title}"
+      @meta_description = "#{@blog_category.title} 카테고리 글 목록입니다. #{t(:meta_description_blog)}"
+      @blogs = Blog.where(blog_category_id: @blog_category.id).order(id: :desc).page(params[:page]).per(15)
+    else
+      @title = t('activerecord.models.blog')
+      @meta_description = t(:meta_description_blog)
+      @blogs = Blog.order(id: :desc).page(params[:page]).per(15)
+    end
 
-    @template='/blogs/index_default'
+    @template = '/blogs/index_default'
 
     respond_to do |format|
       format.html { render @template }
@@ -43,6 +28,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    @meta_description = @blog.description.presence || t(:meta_description_blog)
     @meta_keywords = @blog.tag_list + ',' + t(:meta_keywords)
     @title = @blog.title
 
