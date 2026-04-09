@@ -1,14 +1,25 @@
 class BlogsController < ApplicationController
-  before_action :authenticate_user!, :except => [:index,:show]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_blog_defaults
   before_action :set_blog, only: [:show, :edit, :update, :destroy]
+  before_action :set_blog_meta, only: [:show]
 
-  def initialize(*params)
-    super(*params)
-    @controller_name=t('activerecord.models.blog')
-    @title=t('activerecord.models.blog')
-    @meta_description=t(:meta_description_blog)
+  def set_blog_defaults
+    @controller_name = t('activerecord.models.blog')
+    @title = t('activerecord.models.blog')
+    @meta_description = t(:meta_description_blog)
   end
 
+  def set_blog_meta
+    return unless @blog
+
+    @title = @blog.title
+    @meta_description = @blog.description.presence || t(:meta_description_blog)
+    @meta_keywords = [@blog.tag_list, t(:meta_keywords)].reject(&:blank?).join(',')
+    @og_title = @blog.title
+    @meta_url = blog_url(@blog)
+    @meta_type = 'article'
+  end
   # GET /blogs
   # GET /blogs.json
   def index
@@ -32,16 +43,23 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-   @meta_keywords=@blog.tag_list+','+t(:meta_keywords)
-   @title=@blog.title
-
-   set_meta_tags canonical: blog_url(@blog)
-
-
+    @meta_keywords = @blog.tag_list + ',' + t(:meta_keywords)
+    @title = @blog.title
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render :json => @blog }
+      format.html
+      format.json { render json: @blog }
+    end
+  end
+
+  def canonical_url_for_current_page
+    if controller_name == 'blogs' && action_name == 'show' && defined?(@blog) && @blog.present?
+      blog_url(@blog)
+    else
+      url_for(
+        only_path: false,
+        params: request.query_parameters.except(:page)
+      )
     end
   end
 

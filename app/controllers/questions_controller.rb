@@ -24,6 +24,8 @@ class QuestionsController < ApplicationController
   # GET /questions/1
   # GET /questions/1.json
   def show
+    @title = @question.title
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render :json => @question }
