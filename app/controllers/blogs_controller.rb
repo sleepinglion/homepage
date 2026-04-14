@@ -29,8 +29,13 @@ class BlogsController < ApplicationController
   # GET /blogs/1.json
   def show
     @meta_description = @blog.description.presence || t(:meta_description_blog)
-    @meta_keywords = @blog.tag_list + ',' + t(:meta_keywords)
     @title = @blog.title
+
+    @related_blogs = Blog.joins(:tags)
+                         .where(tags: { id: @blog.tags.ids })
+                         .where.not(id: @blog.id)
+                         .distinct
+                         .limit(5)
 
     respond_to do |format|
       format.html
@@ -107,7 +112,7 @@ class BlogsController < ApplicationController
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_blog
-    @blog = Blog.find(params[:id])
+    @blog = Blog.find_by(slug: params[:id]) || Blog.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

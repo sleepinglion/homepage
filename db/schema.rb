@@ -96,6 +96,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_07_134915) do
     t.integer "blog_category_id", null: false
     t.string "title", limit: 60, null: false
     t.string "description", limit: 255, null: false
+    t.string "slug"
     t.integer "count", default: 0, null: false
     t.integer "blog_pictures_count", default: 0, null: false
     t.boolean "is_html", default: false, null: false
@@ -103,6 +104,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_07_134915) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["blog_category_id"], name: "index_blogs_on_blog_category_id"
+    t.index ["slug"], name: "index_blogs_on_slug", unique: true
     t.index ["user_id"], name: "index_blogs_on_user_id"
   end
 

@@ -7,7 +7,6 @@ class TagsController < ApplicationController
     if params[:tag].present?
       @blogs = Blog.tagged_with(params[:tag]).page(params[:page]).per(15)
       @blog_categories=BlogCategory.where(:leaf=>true).where(:enable=>true)
-      @meta_keywords=params[:tag]+','+t(:meta_keywords)
     end
   end
 

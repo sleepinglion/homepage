@@ -12,4 +12,6 @@ class Blog < ApplicationRecord
   belongs_to :blog_category, :autosave => true, :counter_cache => true
   has_one :blog_picture, dependent: :destroy
   accepts_nested_attributes_for :blog_picture, :allow_destroy => true
+
+
 end
