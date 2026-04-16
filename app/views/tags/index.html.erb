@@ -1,12 +1,12 @@
 <% breadcrumb :blogs %>
 <section id="sl_blog_index">
-  <section id="sl_blog" <% unless @blogs.empty? %>itemscope itemprop="blogPosts" itemtype="http://schema.org/Blog"<% end %>>
+  <section id="sl_blog">
   <% unless @blogs.empty? %>
   <% @blogs.each do |blog| %>
-  <article class="media p-3 rounded" itemscope itemprop="blogPost" itemtype="http://schema.org/Blog">
+  <article class="media p-3 rounded">
     <%=link_to blog_path(blog), class: "pull-left",rel: "nofollow" do %>
     <% unless blog.blog_pictures_count.zero? %>
-      <%=image_tag blog.blog_picture.picture.small_thumb.url, :class=>"media-object",:itemprop=>"thumbnailUrl",:alt=>"..." %>
+      <%=image_tag blog.blog_picture.picture.small_thumb.url, :class=>"media-object",:alt=>"..." %>
     <% end %>
     <% end %>
     <div class="media-body">

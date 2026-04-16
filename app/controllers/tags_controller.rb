@@ -19,13 +19,10 @@ class TagsController < ApplicationController
   def new
     @tag = Tag.new
     @tag.build_tag_content
-
-    @script="board/new"
   end
 
   # GET /tags/1/edit
   def edit
-    @script="board/edit"
   end
 
   # POST /tags
@@ -33,8 +30,6 @@ class TagsController < ApplicationController
   def create
     @tag = Tag.new(tag_params)
     @tag.user_id=current_user.id
-
-    @script="board/new"
 
     respond_to do |format|
       if @tag.save
@@ -50,8 +45,6 @@ class TagsController < ApplicationController
   # PATCH/PUT /tags/1
   # PATCH/PUT /tags/1.json
   def update
-    @script="board/edit"
-
     respond_to do |format|
       if @tag.update(tag_params)
         format.html { redirect_to @tag, tag: @controller_name +t(:message_success_update)}
