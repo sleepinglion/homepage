@@ -19,7 +19,7 @@
 			<tbody>
 				<% unless @notices.empty? %>
 				<% @notices.each do |notice| %>
-				<tr>
+					<tr data-controller="click-redirect" data-action="click->click-redirect#mediaClick">
 					<td class="sl_t_name hidden-sm hidden-xs"><%=userName(notice,10) %></td>
 					<td><p><%= link_to notice.title, notice  %></p></td>
 					<td class="sl_right"><%=notice.impressionist_count(:filter=>:ip_address) %></td>
