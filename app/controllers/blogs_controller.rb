@@ -29,9 +29,15 @@ class BlogsController < ApplicationController
   # GET /blogs/1.json
   def show
     @comment  = Comment.build_from(@blog, current_user, "")
+    @blog_categories = BlogCategory.where(leaf: true, enable: true)
 
     @meta_description = @blog.description.presence || t(:meta_description_blog)
     @title = @blog.title
+
+    if params[:blog_category_id]
+      @blog_category = BlogCategory.find(params[:blog_category_id])
+    end
+
 
     @related_blogs = Blog.joins(:tags)
                          .where(tags: { id: @blog.tags.ids })
