@@ -65,15 +65,15 @@ class BlogsController < ApplicationController
   # GET /blogs/new
   def new
     @blog = Blog.new
-
-    if(params[:blog_category_id])
-      @blog_category_id=params[:blog_category_id]
+    @blog.build_blog_picture
+    if params[:blog_category_id]
+      @blog_category=params[:blog_category_id]
     end
   end
 
   # GET /blogs/1/edit
   def edit
-    @blog_category_id=@blog.blog_category_id
+    @blog_category=@blog.blog_category_id
   end
 
   # POST /blogs

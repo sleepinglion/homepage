@@ -1,9 +1,9 @@
 <span itemprop="author" itemscope itemtype="http://schema.org/Person">
   <% if user.alternate_name? %>
-  <span class="none" itemprop="name"><%= user.name %></span>
+  <span class="none" itemprop="name"><%= user.nickname %></span>
   <span itemprop="alternateName"><%= user.alternate_name %></span>
   <% else %>
-  <span itemprop="name"><%= user.name %></span>
+  <span itemprop="name"><%= user.nickname %></span>
   <% end %>
   <% if user.gender? %>
   <span class="none" itemprop="gender"><%=user.gender %></span>

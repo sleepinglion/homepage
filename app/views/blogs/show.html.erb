@@ -16,6 +16,11 @@
 			</div>
 		</div>
 	</div>
+	<div class="row">
+		<div class="col-12">
+			<%= render partial: "comments/templete", locals: {commentable: @blog, new_comment: @comment} %>
+		</div>
+	</div>
 	<% unless @blog.tags.count.zero? %>
 	<p>
 		<%=t('activerecord.models.tag') %> : <%= raw @blog.tags.map { |t| link_to t, tag_path(:tag=>t.name) }.join(', ') %>

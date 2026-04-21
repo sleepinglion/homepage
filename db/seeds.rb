@@ -1,4 +1,12 @@
-User.create!(email: 'admin@jedaeroweb.co.kr',nickname: '잠자는-사자', password: 'a12345', password_confirmation: 'a12345', user_picture_attributes: { picture: File.open(Rails.root.join("public", "images","intro","sl.jpg")) },:admin=>true)
+AuthenticationProvider.create!(name: 'kakao')
+AuthenticationProvider.create!(name: 'twitter')
+AuthenticationProvider.create!(name: 'google_oauth2')
+AuthenticationProvider.create!(name: 'apple')
+AuthenticationProvider.create!(name: 'facebook')
+AuthenticationProvider.create!(name: 'naver')
+AuthenticationProvider.create!(name: 'github')
+
+User.create!(email: 'admin@jedaeroweb.co.kr', nickname: '잠자는-사자', password: 'a12345', password_confirmation: 'a12345', user_pictures_attributes: [{ picture: File.open(Rails.root.join("public", "images","intro","sl.jpg")) }],:admin=>true)
 
 GalleryCategory.create!(id: 1, title: '일상')
 GalleryCategory.create!(id: 2, title: '동물')

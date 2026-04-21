@@ -251,4 +251,24 @@ Devise.setup do |config|
   # When using omniauth, Devise cannot automatically set Omniauth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+  config.reset_password_within = 6.hours
+  config.responder.error_status = :unprocessable_content
+  config.responder.redirect_status = :see_other
+
+  # ==> Configuration for :registerable
+
+  # When set to false, does not sign a user in automatically after their password is
+  # changed. Defaults to true, so a user is signed in automatically after changing a password.
+  # config.sign_in_after_change_password = true
+  #config.omniauth :kakao, ENV['KAKAO_KEY'] , ENV['KAKAO_SECRET']
+  config.omniauth :naver, ENV['NAVER_KEY'], ENV['NAVER_SECRET']
+  config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET']
+  config.omniauth :google_oauth2, ENV['GOOGLE_CLIENT_ID'], ENV['GOOGLE_CLIENT_SECRET'], { }
+  config.omniauth :twitter,  ENV['TWITTER_KEY'] ,  ENV['TWITTER_SECRET'], :scope => 'email'
+  config.omniauth :apple, ENV['CLIENT_ID'], '', {
+    scope: 'email name',
+    team_id: ENV['TEAM_ID'],
+    key_id: ENV['KEY_ID'],
+    pem: ENV['PRIVATE_KEY']
+  }
 end
