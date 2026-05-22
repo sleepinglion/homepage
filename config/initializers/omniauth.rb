@@ -15,6 +15,7 @@ end
 
 Rails.application.config.middleware.use OmniAuth::Builder do
   OmniAuth.config.allowed_request_methods = [:post, :get]
+  OmniAuth.config.silence_get_warning = true
 
   # 또는 Redirect Path를 설정하고 싶다면(or if you want to customize your Redirect Path)
   #provider :kakao, ENV['KAKAO_KEY'], {:redirect_path => '/users/auth/kakao/callback'}
