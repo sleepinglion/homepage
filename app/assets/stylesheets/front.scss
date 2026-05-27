@@ -413,6 +413,11 @@ a.left:active {background-position: -60px 0}
     #main-main article ul {margin:0;padding:0;list-style:none}
 	#main-main article ul {margin:0;padding:0;list-style:none}
 	#sl_intro_index #sl_intro_right {float:left;width:100%}
+  .sl_content_text {
+    padding: 1rem 1.5rem;
+    margin: 0;
+    line-height: 190%;
+  }
 	header nav ul a:hover {color:#000}
 	header nav ul a:active {color:red}
 	.page-header {float:left;margin-top:0;margin-bottom:10px}
@@ -428,6 +433,11 @@ a.left:active {background-position: -60px 0}
 	footer {height:5em}
 	#mom {margin:-8em 0 -5em;min-height:100%}
 	#main {padding-top:8em;padding-bottom:5em}
+  .sl_content_text {
+    padding: 2rem 2.5rem;
+    margin: 0;
+    line-height: 190%;
+  }
 }
 
 @media all and (min-width: 992px) {
