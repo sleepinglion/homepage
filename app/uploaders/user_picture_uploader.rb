@@ -41,8 +41,8 @@ class UserPictureUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [50, 50]
     process convert: "webp"
 
-    def full_filename(for_file)
-      "#{File.basename(for_file, '.*')}.webp"
+    def full_filename(filename)
+      "#{File.basename('tiny_thumb_'+filename, '.*')}.webp"
     end
   end
 
@@ -51,8 +51,8 @@ class UserPictureUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [100, 100]
     process convert: "webp"
 
-    def full_filename(for_file)
-      "#{File.basename(for_file, '.*')}.webp"
+    def full_filename(filename)
+      "#{File.basename('small_thumb_'+filename, '.*')}.webp"
     end
   end
 
@@ -60,8 +60,8 @@ class UserPictureUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [300, 300]
     process convert: "webp"
 
-    def full_filename(for_file)
-      "#{File.basename(for_file, '.*')}.webp"
+    def full_filename(filename)
+      "#{File.basename('medium_thumb_'+filename, '.*')}.webp"
     end
   end
 
