@@ -3,8 +3,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable ,:omniauthable, omniauth_providers: [:kakao, :naver, :twitter, :facebook, :apple, :google_oauth2, :github]
   validates_presence_of :nickname
   validates_uniqueness_of :email
+
   has_many :notices, dependent: :destroy
   has_many :blogs, dependent: :destroy
+  has_many :gallery, :dependent=> :destroy
 
   has_many :user_authentications, dependent: :destroy
   has_many :user_pictures, dependent: :destroy
