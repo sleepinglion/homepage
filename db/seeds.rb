@@ -80,9 +80,16 @@ Question.create!(id: 5, user_id: 4, title: '임민야옹', count: 115, content: 
 
 
 
-
-Gallery.create!(id: 1, gallery_category_id: 2, title:'벌서는 짬순이',photo: File.open(Rails.root.join("public", "images","gallery","dog.jpg")), content: '아무데나 오줌싸서 혼나는 짬순이
+begin
+  Gallery.create!(id: 1, gallery_category_id: 2, title:'벌서는 짬순이',photo: File.open(Rails.root.join("public", "images","gallery","dog.jpg")), content: '아무데나 오줌싸서 혼나는 짬순이
  이놈! 아무데나 오줌싸~!!')
+rescue => e
+  puts e.record.errors.full_messages
+  pp e.record.errors.details
+
+  raise
+end
+
 Gallery.create!(id: 2, gallery_category_id: 4, title:'소양호(양구)',photo: File.open(Rails.root.join("public", "images","gallery", "soyangho.jpg")), content: '양구에서 찍은 평화로운 소양호 모습')
 Gallery.create!(id: 3, gallery_category_id: 4, title:'소양호(양구)',photo: File.open(Rails.root.join("public", "images","gallery", "soyangho2.jpg")), content: '양구에서 본 평화로운 소양호수')
 Gallery.create!(id: 4, gallery_category_id: 4, title:'소양댐',photo: File.open(Rails.root.join("public", "images","gallery", "soyangho3.jpg")), content: '소양댐에서 펼쳐진 산들')

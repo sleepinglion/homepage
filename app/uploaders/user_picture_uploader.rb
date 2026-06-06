@@ -1,7 +1,7 @@
 class UserPictureUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
-  include CarrierWave::RMagick
-  #include CarrierWave::MiniMagick
+  #include CarrierWave::RMagick
+  include CarrierWave::MiniMagick
 
   if Rails.env.production?
     storage :fog
@@ -57,7 +57,7 @@ class UserPictureUploader < CarrierWave::Uploader::Base
   end
 
   version :medium_thumb do
-    process resize_to_fill: [300, 300]
+    process resize_to_fill: [200, 200]
     process convert: "webp"
 
     def full_filename(filename)

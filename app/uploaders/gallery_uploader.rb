@@ -1,7 +1,7 @@
 class GalleryUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
-  include CarrierWave::RMagick
-  #include CarrierWave::MiniMagick
+  #include CarrierWave::RMagick
+  include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
   if Rails.env.production?
@@ -40,7 +40,7 @@ class GalleryUploader < CarrierWave::Uploader::Base
   # Create different versions of your uploaded files:
   version :small_thumb do
     process :resize_to_fill => [100, 100]
-    process convert: "webp"
+    process convert: :webp
 
     def full_filename(filename)
       "#{File.basename('small_thumb_'+filename, '.*')}.webp"
@@ -49,7 +49,7 @@ class GalleryUploader < CarrierWave::Uploader::Base
 
   version :medium_thumb do
     process :resize_to_fill => [200, 200]
-    process convert: "webp"
+    process convert: :webp
 
     def full_filename(filename)
       "#{File.basename('medium_thumb_'+filename, '.*')}.webp"
@@ -58,7 +58,7 @@ class GalleryUploader < CarrierWave::Uploader::Base
 
   version :large_thumb do
     process :resize_to_fill => [400, 300]
-    process convert: "webp"
+    process convert: :webp
 
     def full_filename(filename)
       "#{File.basename('large_thumb_'+filename, '.*')}.webp"
