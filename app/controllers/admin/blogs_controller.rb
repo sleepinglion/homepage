@@ -57,6 +57,8 @@ class Admin::BlogsController < Admin::AdminController
         format.html { redirect_to [:admin, @blog], notice: t(:message_success_create) }
         format.json { render :show, status: :created, location: @blog }
       else
+        #Rails.logger.error "BLOG ERRORS: #{@blog.errors.full_messages}"
+
         @blog.build_blog_picture
 
         format.html { render action: 'new' }
@@ -98,6 +100,6 @@ class Admin::BlogsController < Admin::AdminController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def blog_params
-    params.require(:blog).permit(:blog_category_id, :user_id, :title, :content, :enable, blog_picture_attributes: [:picture])
+    params.require(:blog).permit(:blog_category_id, :user_id, :title, :description, :content, :enable, blog_picture_attributes: [:picture])
   end
 end
