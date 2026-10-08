@@ -130,9 +130,9 @@ footer div {margin:0.3em 0 0}
 .c_pointer {cursor:pointer}
 
 .thead-default th {
-    background-color: #868e96;
-    color: #fff;
-    font-weight:600;
+  background-color: #868e96;
+  color: #fff;
+  font-weight:600;
 }
 
 /* header */
@@ -308,20 +308,20 @@ a.left:active {background-position: -60px 0}
 
 .box {float:left;width:100%;margin:20px 0px;}
 .box_header {float:left;width:100%;border: 1px solid #ddd;margin-bottom: -1px;padding: 10px;
- 		background-color: #fafafa;
-  	background-image: -moz-linear-gradient(top, #fafafa, #efefef);
-  	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fafafa), to(#efefef));
-  	background-image: -webkit-linear-gradient(top, #fafafa, #efefef);
-  	background-image: -o-linear-gradient(top, #fafafa, #efefef);
-  	background-image: linear-gradient(to bottom, #fafafa, #efefef);
-  	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fafafa', endColorstr='#efefef', GradientType=0);
-  	-webkit-box-shadow: none;
-     	-moz-box-shadow: none;
-          box-shadow: none;
-  	-webkit-border-radius: 2px 2px 0px 0px;
-       -moz-border-radius: 2px 2px 0px 0px;
-          	border-radius: 2px 2px 0px 0px;
-	overflow: hidden;
+  background-color: #fafafa;
+  background-image: -moz-linear-gradient(top, #fafafa, #efefef);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fafafa), to(#efefef));
+  background-image: -webkit-linear-gradient(top, #fafafa, #efefef);
+  background-image: -o-linear-gradient(top, #fafafa, #efefef);
+  background-image: linear-gradient(to bottom, #fafafa, #efefef);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#fafafa', endColorstr='#efefef', GradientType=0);
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 2px 2px 0px 0px;
+  -moz-border-radius: 2px 2px 0px 0px;
+  border-radius: 2px 2px 0px 0px;
+  overflow: hidden;
 }
 
 .box_header h2 {font-size: 1.2em;line-height: 16px;float:left;margin-top: 2px;margin-bottom: 0;font-weight: normal;text-shadow: 0px 1px 0px #fff;;padding:5px 0 0 10px}
@@ -395,7 +395,7 @@ a.left:active {background-position: -60px 0}
 
 
 @media all and (max-width: 767px) {
-   body {background:#eee}
+  body {background:#eee}
   .container {width: 100%;max-width:none}
   .container>.row {margin-right:0;margin-left:0}
   header {border-bottom:0;margin:0}
@@ -403,36 +403,36 @@ a.left:active {background-position: -60px 0}
   header h1 a:hover {text-decoration:none}
   header h1 a:active {color:red}
   #mom {width:100%;margin:0}
-    #main {margin:0;padding:0 0 2%;width:100%;border-radius:5px}
-	#sl_main_gallery .carousel-inner a.m_nm {margin-right:0}
-	#sl_main_blog li {margin-bottom:10px}
-	#sl_main_blog li.m_nm {margin-right:0}
-    #main-main {margin:0;padding:0;}
-    #main-main article {padding-left:2.5%;padding-right:2.5%}
-    #main-main article .more {right:2.5%}
-    #main-main article ul {margin:0;padding:0;list-style:none}
-	#main-main article ul {margin:0;padding:0;list-style:none}
-	#sl_intro_index #sl_intro_right {float:left;width:100%}
+  #main {margin:0;padding:0 0 2%;width:100%;border-radius:5px}
+  #sl_main_gallery .carousel-inner a.m_nm {margin-right:0}
+  #sl_main_blog li {margin-bottom:10px}
+  #sl_main_blog li.m_nm {margin-right:0}
+  #main-main {margin:0;padding:0;}
+  #main-main article {padding-left:2.5%;padding-right:2.5%}
+  #main-main article .more {right:2.5%}
+  #main-main article ul {margin:0;padding:0;list-style:none}
+  #main-main article ul {margin:0;padding:0;list-style:none}
+  #sl_intro_index #sl_intro_right {float:left;width:100%}
   .sl_content_text {
     padding: 1rem;
     margin: 0;
     line-height: 190%;
   }
-	header nav ul a:hover {color:#000}
-	header nav ul a:active {color:red}
-	.page-header {float:left;margin-top:0;margin-bottom:10px}
-	#sl_intro_index #sl_intro_right, #sl_gallery_index #sl_gallery_right {width:100%;margin:0}
-	#sl_intro_index #sl_intro_left {width:100%}
-	footer {border-radius:5px;margin:1% 0}
+  header nav ul a:hover {color:#000}
+  header nav ul a:active {color:red}
+  .page-header {float:left;margin-top:0;margin-bottom:10px}
+  #sl_intro_index #sl_intro_right, #sl_gallery_index #sl_gallery_right {width:100%;margin:0}
+  #sl_intro_index #sl_intro_left {width:100%}
+  footer {border-radius:5px;margin:1% 0}
 }
 
 @media all and (min-width: 768px) and (max-width: 1199px) {
-	header {height:8em;background:#f8f8f8}
-    header h1 {margin:0.5em 0 0;padding:0;}
-	header nav ul li:first-child {margin-left:0}
-	footer {height:5em}
-	#mom {margin:-8em 0 -5em;min-height:100%}
-	#main {padding-top:8em;padding-bottom:5em}
+  header {height:8em;background:#f8f8f8}
+  header h1 {margin:0.5em 0 0;padding:0;}
+  header nav ul li:first-child {margin-left:0}
+  footer {height:5em}
+  #mom {margin:-8em 0 -5em;min-height:100%}
+  #main {padding-top:8em;padding-bottom:5em}
   .sl_content_text {
     padding: 2rem;
     margin: 0;
@@ -449,64 +449,64 @@ a.left:active {background-position: -60px 0}
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-    header {height:7em;background:#f8f8f8;}
-    #mom {clear:both;float:left;width:100%;padding:0}
-    #mom {margin:-7em 0 -3em;min-height:100%}
-    #main {padding-top:7em;padding-bottom:3em}
-    .sub-main {padding-bottom:2em}
-    #top-menu nav ul li.nav-item {display:block;width:20%;margin:0;padding:0}
-    #top-menu { height: 92px;}
+  header {height:7em;background:#f8f8f8;}
+  #mom {clear:both;float:left;width:100%;padding:0}
+  #mom {margin:-7em 0 -3em;min-height:100%}
+  #main {padding-top:7em;padding-bottom:3em}
+  .sub-main {padding-bottom:2em}
+  #top-menu nav ul li.nav-item {display:block;width:20%;margin:0;padding:0}
+  #top-menu { height: 92px;}
 }
 
 @media (min-width: 1200px) {
-    .container {max-width: none }
-    html,body {font-size:16px}
+  .container {max-width: none }
+  html,body {font-size:16px}
 
-	header {height:6em;background:#fff}
+  header {height:6em;background:#fff}
   aside .box {margin-top:0}
-	footer {height:6em;margin-left: 3%;margin-right:3%}
-    footer address {line-height:180%}
-	#mom {margin:-6em 0 -6em;min-height:100%}
-	#main {padding-top:6em;padding-bottom:6em}
-	.adsbygoogle {height: 100px}
+  footer {height:6em;margin-left: 3%;margin-right:3%}
+  footer address {line-height:180%}
+  #mom {margin:-6em 0 -6em;min-height:100%}
+  #main {padding-top:6em;padding-bottom:6em}
+  .adsbygoogle {height: 100px}
 
   .sl_gallery ol.nav-tabs {margin-bottom:20px}
 
-	/* tag */
-	.sl_content_tags h4 {float:left;margin:0 5px;padding:0;line-height:150%}
-	.sl_content_tags h4:after {content:' :'}
-	.sl_content_tags ul {float:left;margin:0;padding:0}
-	.sl_content_tags ul li {float:left;margin:0 0 0 5px;padding:0;list-style:none;line-height:150%}
-	.sl_content_tags ul li:after {content:','}
-	.sl_content_tags ul li:last-child:after {content:none}
+  /* tag */
+  .sl_content_tags h4 {float:left;margin:0 5px;padding:0;line-height:150%}
+  .sl_content_tags h4:after {content:' :'}
+  .sl_content_tags ul {float:left;margin:0;padding:0}
+  .sl_content_tags ul li {float:left;margin:0 0 0 5px;padding:0;list-style:none;line-height:150%}
+  .sl_content_tags ul li:after {content:','}
+  .sl_content_tags ul li:last-child:after {content:none}
 
-    .top-menu {
-        z-index: 1015;
-        position:absolute;
-        bottom:0;
-        width:100%;
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14);
-    }
+  .top-menu {
+    z-index: 1015;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14);
+  }
   .sub-main {padding-bottom:2.5em}
-    .top-menu { height: 46px;}
-    .container {width:1150px;}
-  }
+  .top-menu { height: 46px;}
+  .container {width:1150px;}
+}
 
-  @media (min-width: 1400px) {
-    header nav a.nav-link {font-size:18px}
-    .container {width:1350px;}
-  }
+@media (min-width: 1400px) {
+  header nav a.nav-link {font-size:18px}
+  .container {width:1350px;}
+}
 
-  @media (min-width: 1200px) and (max-width: 1500px) {
-    #users .right_a nav .nav-item {width:16%;text-align:center;margin:0 5px 5px 0}
-  }
+@media (min-width: 1200px) and (max-width: 1500px) {
+  #users .right_a nav .nav-item {width:16%;text-align:center;margin:0 5px 5px 0}
+}
 
-  @media (min-width: 1500px) {
-    .adsbygoogle {height: 140px}
-    .container {width:1450px}
-    header nav a.nav-link {font-size:20px}
-    .sub-main {padding-bottom:3em}
-  }
+@media (min-width: 1500px) {
+  .adsbygoogle {height: 140px}
+  .container {width:1450px}
+  header nav a.nav-link {font-size:20px}
+  .sub-main {padding-bottom:3em}
+}
 
 .form-group {
   margin-bottom:1.5rem
@@ -533,4 +533,91 @@ a.left:active {background-position: -60px 0}
   .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {border-bottom-color:#f1f1f1}
   .media, aside .box_content, .bg-light-only {background-color:#fff}
   a.btn-primary,a.btn-primary:visited {color:#fff}
+}
+
+
+/*
+ * Bootstrap Light mode polish
+ * ---------------------------
+ * Keep Bootstrap's default Light theme and the existing site layout.
+ * Dark mode is intentionally untouched.
+ */
+@include color-mode(light) {
+
+  /* 1. Header: clean white + very subtle shadow */
+  header {
+    background-color: #fff;
+    border-bottom: 1px solid var(--bs-border-color);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+  }
+
+  /* Keep the existing Bootstrap link color */
+  header a.nav-link,
+  header h1 a.navbar-brand {
+    color: var(--bs-link-color);
+  }
+
+  header a.nav-link:hover,
+  header h1 a.navbar-brand:hover {
+    color: var(--bs-link-hover-color);
+  }
+
+  /* 2. Links: Bootstrap's calm default blue */
+  a {
+    color: var(--bs-link-color);
+  }
+
+  a:hover {
+    color: var(--bs-link-hover-color);
+  }
+
+  /* 3. Boxes: Bootstrap-like rounded corners + subtle shadow */
+  .box_header {
+    background-image: none;
+    border-color: var(--bs-border-color);
+    border-radius: .375rem .375rem 0 0;
+    box-shadow: none;
+  }
+
+  .box_content {
+    background-color: var(--bs-body-bg);
+    border-color: var(--bs-border-color);
+    border-radius: 0 0 .375rem .375rem;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .04);
+  }
+
+  /* Existing Bootstrap cards */
+  .card {
+    border-radius: .375rem;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .04);
+  }
+
+  /* 4. Forms: let Bootstrap Light styling do the work */
+  .slboard_main .sl_input {
+    border: var(--bs-border-width) solid var(--bs-border-color);
+    border-radius: var(--bs-border-radius);
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+    padding: .375rem .75rem;
+  }
+
+  .slboard_main .sl_input:focus {
+    background-color: var(--bs-body-bg);
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
+  }
+
+  .slboard_form input,
+  .slboard_form textarea,
+  .slboard_form select {
+    border-radius: var(--bs-border-radius);
+  }
+
+  /* Keep the existing light-mode Bootstrap surfaces */
+  .media,
+  aside .box_content,
+  .bg-light-only {
+    background-color: var(--bs-body-bg);
+  }
 }
